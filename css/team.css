@@ -1,0 +1,5 @@
+#team-graphic li {
+  width: 16.66%;
+  height: 200px;
+  background-image: url(../images/team.jpg);
+  background-repeat: no-repeat; }

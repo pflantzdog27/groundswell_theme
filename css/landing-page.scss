@@ -1,0 +1,152 @@
+.first-level-intro {
+  @include coverBG;
+    #hero {
+      background: rgba(0,0,0,0.4);
+      color: #fff;
+      .container {
+        @include flexbox;
+        @include flexdirection(row);
+        @include flexAlignItems(center);
+        min-height: 400px;
+      }
+    }
+}
+#landing-page-content {
+  padding: 50px 0 75px;
+    #feature-block {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+}
+.content-title {
+  color: $gsBlue;
+  text-transform: uppercase;
+  padding-top: 0;
+  padding-bottom: 30px;
+}
+#slider-wrapper {
+  padding-top: 20px;
+}
+
+#stats {
+  position: relative;
+  min-height: 275px;
+    .connecting-line {
+     //@include rotate(-45deg);
+      border-top: 10px solid $gsBlue;
+      width: 50px;
+      height: 50px;
+      display: block;
+      position: absolute;
+      top: 60%;
+      z-index: -1;
+    }
+    .circle {
+      width: 75px;
+      height: 75px;
+      margin: 0 auto;
+      background: $gsBlue;
+      @include border-radius(50px);
+      position: relative;
+      @extend %flexboxAlignmentSet;
+      @include box-shadow(0 6px 3px -3px , rgba(0,0,0,0.5));
+      abbr {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        color: #fff;
+        text-align: center;
+        font-weight: 300;
+      }
+    }
+    li {
+      position: absolute;
+      top: 50%;
+      left: 40%;
+      margin-left: -20px;
+      margin-top: -20px;
+        &:first-child {
+          left: 12%;
+          margin-left: 0;
+        }
+        &:last-child {
+          left: 60%;
+          margin-left: 0;
+        }
+        h4 {
+          color: #fff;
+          clear: both;
+          position: absolute;
+          bottom: 10px;
+          left: 0;
+          right: 0;
+          text-align: center;
+        }
+    }
+}
+
+#submit-articles {
+  background: rgba(0,0,0,0.2);
+  padding: 40px 0;
+    h2 {
+      color: $gsBlue;
+    }
+    p {
+      color: #333;
+    }
+}
+
+#get-updates {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#column-buckets {
+  article {
+    border-right: 2px solid $gsOrange;
+    padding-bottom: 60px;
+    position: relative;
+    @include tablets {
+      border-right: 0;
+    }
+    header {
+      margin-top: 20px;
+      height: 100px;
+      /*h2 {
+        color: #333;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-weight: 900;
+      }*/
+    }
+    .bucket-content {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    footer {
+      position: absolute;
+      bottom: 15px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      button {
+        width: 60%;
+      }
+    }
+    &:last-child {
+      border-right: 0;
+    }
+  }
+}
+
+#contact {
+    .form-group {
+      margin-bottom: 15px;
+    }
+}
+

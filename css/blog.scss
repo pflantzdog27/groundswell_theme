@@ -1,0 +1,148 @@
+#blog {
+  @include box-shadow(0,0);
+}
+.post-intro {
+  border-right: 1px solid #eaeaea;
+}
+.author {
+  padding-left: 0;
+}
+
+.blog-post {
+  margin-bottom: 25px;
+    article {
+      margin-top: 10px;
+        > figure {
+          height: 250px;
+          overflow: hidden;
+          position: relative;
+          margin-bottom: 15px;
+          background: #eaeaea;
+            &:hover img {
+              @include scale(1.25);
+            }
+            img {
+              margin: 0 auto;
+              @include transition(all 0.5s);
+            }
+            figcaption {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              background: rgba(0,0,0,0.5);
+              color: #fff;
+              padding: 10px;
+            }
+        }
+        footer {
+          a {
+            text-decoration: underline;
+          }
+        }
+    }
+}
+#blog-video {
+  padding-bottom: 50px;
+    .blog-post-full {
+      margin-bottom: 40px;
+    }
+    .author-info {
+      figure {
+        margin: 0 15px;
+      }
+    }
+    footer {
+       margin-top: 20px;
+       strong {
+         color: $gsBlue;
+         text-transform: uppercase;
+       }
+     }
+}
+
+
+.author-info {
+  margin-bottom: 10px;
+    h5, h4 {
+      color: $gsBlue;
+      padding: 0;
+      margin: 0 0 0 10px;
+      font-weight: 300;
+    }
+    figure {
+      overflow: hidden;
+      margin: 0;
+      float: left;
+    }
+}
+
+//STRUCTURE
+.single-post-header {
+  padding: 75px 0 40px;
+    @include tablets {
+      padding-bottom: 20px;
+    }
+    h1 {
+      color: $gsBlue;
+      font-weight: 900;
+    }
+}
+.author-name {
+  @include flexbox;
+  @include flexAlignItems(flex-start);
+  @include flexdirection(column);
+  height: 50px;
+    b {
+      padding-left: 10px;
+    }
+}
+
+#right-sidebar {
+  padding: 90px 15px 40px 15px;
+    @include tablets {
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+    .sidebar-widget {
+      margin-bottom: 30px;
+        .widget-title {
+          color: $gsBlue;
+          font-weight: 300;
+        }
+    }
+}
+
+#social-navigation {
+    position: relative;
+      .social-link-column {
+        position: fixed;
+        top: 90px;
+        width: 5%;
+        z-index: 9;
+      }
+}
+
+.contact-curator {
+  margin: 8px 0;
+  color: $gsBlue;
+}
+#curator-info-block {
+  min-height: 150px;
+    figure {
+      position: relative;
+      height: 150px;
+      display: block;
+        img {
+          border: 3px solid #eaeaea;
+        }
+    }
+    h1, p {
+      color: #333;
+    }
+
+}
+
+.outro {
+  padding-top: 10px;
+}

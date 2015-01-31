@@ -1,0 +1,341 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,900);
+@import 'glyphs';
+@import 'variable';
+@import 'mixins';
+@import 'primary-navigation';
+@import 'videojs';
+@import 'intro';
+@import 'sections';
+@import 'petitions';
+@import 'custom-scrollbar';
+@import 'blog';
+@import 'team';
+@import 'landing-page';
+@import 'modal';
+@import 'fancybox';
+@import 'carousel';
+@import 'footer';
+
+
+
+
+/* gs bootstrap */
+body {
+  font-size: 16px;
+  font-family: $alphaCustomFont;
+  word-spacing: .047em;
+}
+
+a, button {
+  @include transition(all 0.4s);
+  color: inherit;
+    &:hover {
+      text-decoration: none;
+      color: $defaultHoverColor!important;
+    }
+}
+p a {
+  text-decoration: underline;
+}
+
+p {
+  @include font-size(30px);
+}
+
+
+.blue-background {
+  background: $gsBlue;
+  padding: 3px;
+  @include border-radius(5px);
+}
+
+.no-border {
+  @include box-shadow(0,0);
+  border: 0;
+  padding-bottom: 0;
+}
+
+strong {
+  font-weight: 900;
+  @include font-size(30px);
+}
+.gs-btn {
+  @include border-radius(0);
+  @include font-size(22px);
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-top: 0;
+  line-height: 1.6;
+  padding: 7px 12px;
+}
+.gs-btn-blue {
+  background: $gsBlue;
+  color: #fff;
+}
+.gs-btn-orange {
+  background: $gsOrange;
+  color: #fff;
+    &:hover, a:hover {
+      color: #333!important;
+    }
+}
+.gs-btn-white {
+  background: #fff;
+  color: #333;
+    &:hover {
+      color: #333!important;
+    }
+}
+
+button:active {
+  border: 0;
+}
+
+.alert {
+  padding: 3px 0;
+  margin: 0;
+}
+
+#back-top {
+  position: fixed;
+  bottom: 50px;
+  right: 0;
+  @include font-size(75px);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  opacity: 0;
+  cursor: pointer;
+  @include border-radius(5px 0 0 5px);
+  padding: 0 10px;
+    &:hover {
+      background: rgba(0,0,0,1);
+    }
+    @include tablets {
+      @include font-size(40px);
+    }
+}
+
+.section-title {
+  text-transform: uppercase;
+  font-weight: 900;
+  padding-bottom: 20px;
+}
+
+
+.page-header {
+  border-bottom: 0;
+  min-height: 100px;
+  @include flexbox;
+  @include flexAlignItems(center);
+  margin: 80px 0 0;
+  padding-bottom: 0;
+      h1 {
+        color: $gsBlue;
+        @extend %imageBgH1;
+        text-transform: uppercase;
+        text-shadow: none;
+        padding: 0;
+        margin: 0;
+      }
+      h2 {
+        @extend %imageBgH2;
+        font-weight: 900;
+        color: $gsBlue;
+      }
+      p {
+        margin: 0;
+        color: $gsBlue;
+      }
+}
+.jumbotron {
+  background: none;
+  color: #fff;
+  padding-left: 0 !important;
+  padding-right: 0;
+  text-transform: uppercase;
+  h1 {
+    @extend %imageBgH1;
+  }
+  h2 {
+    @extend %imageBgH2;
+  }
+}
+
+.coverBG {
+  @include coverBG();
+}
+
+.social-link-bar, .social-link-column {
+  padding: 15px 0;
+    li {
+      display: inline-block;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: 900;
+      text-align: center;
+      @include transition(all 0.5s);
+        &.facebook a  {
+          background: #3b5998;
+        }
+        &.twitter a {
+          background: #4099FF;
+        }
+        &.email a {
+          background: #ccc;
+        }
+        a {
+          display: block;
+          padding: 8px 0;
+            &:hover {
+              color: #fff!important;
+            }
+        }
+      &:hover {
+        margin-top: -10px;
+      }
+    }
+}
+.social-link-column {
+  li {
+    display: block;
+    margin-bottom: 10px;
+      &:hover {
+        margin-top: 0;
+      }
+  }
+}
+
+
+
+#full-width-slider {
+  position: relative;
+  .item {
+    height: 500px;
+    @include coverBG();
+    .text-overlay {
+      position: absolute;
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  }
+  .carousel-control {
+    span {
+      @include font-size(90px);
+      margin-top: -40px;
+    }
+  }
+  #toggle-display {
+    color: #fff;
+    padding: 5px;
+    position: absolute;
+    @include font-size(40px);
+    bottom: 5px;
+    right: 15px;
+    cursor: pointer;
+  }
+}
+
+.company-meta-block {
+    > div {
+      height: 200px;
+      overflow: hidden;
+      @include flexbox;
+      @include flexAlignItems(center);
+      @include justifyContent(center);
+      .large-icon {
+        @include font-size(200px);
+      }
+      a:hover {
+        color: inherit !important;
+      }
+    }
+}
+
+// SELECT MENU
+.select-menu {
+  position: relative;
+  z-index: 2;
+  margin-top: 4px;
+  margin-bottom: 15px;
+  .select-box {
+    border: 1px solid #eaeaea;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 0 10px;
+    line-height: 2;
+    position: relative;
+    cursor: pointer;
+    span {
+      color: $gsBlue;
+      border-left: 1px solid #eaeaea;
+      padding: 10px;
+      margin-left: 10px;
+    }
+    b {
+      color: $gsBlue;
+      position: absolute;
+      right: 5px;
+      top: 10px;
+    }
+  }
+  .select-options {
+    overflow: hidden;
+    max-height: 175px;
+    background:#fff;
+    display: none;
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    top: 100%;
+    @include box-shadow(0px 1px 4px 4px, rgba(68,174,234,0.1));
+    li {
+      padding: 8px;
+      cursor: pointer;
+      &:last-child {
+        border-bottom: 0;
+      }
+      &:hover {
+        background: #eaeaea;
+      }
+    }
+  }
+}
+
+// SEARCH
+form {
+  width:100%;
+  .form-group {
+    margin: 0;
+    padding: 1px 0;
+    position: relative;
+    border: 1px solid #eaeaea;
+    input {
+      padding-right: 50px;
+      @include border-radius(0);
+      text-transform: uppercase;
+      border: 0;
+      box-shadow: none;
+    }
+    button {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    #emailInput {
+      width: 100%;
+    }
+  }
+
+}
+
+
+
+
+
+

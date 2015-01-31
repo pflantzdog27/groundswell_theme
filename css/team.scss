@@ -1,0 +1,49 @@
+#team-graphic {
+  li {
+    max-width: 16.66%;
+    display: block;
+    float: left;
+      @include desktops {
+        max-width: 33.33%;
+      }
+      @include tablets {
+        max-width: 50%;
+      }
+      header {
+        text-align: center;
+        cursor: pointer;
+          img {
+            opacity: 1;
+          }
+          h4 {
+            font-weight: 900;
+            border-top: 5px solid $gsBlue;
+            margin: 0;
+            padding-top: 10px;
+          }
+      }
+  }
+}
+.active {
+  h4 {
+    border-top: 5px solid $gsOrange!important;
+    color: $gsOrange!important;
+  }
+  img {
+    opacity: 1!important;
+  }
+}
+
+#team-member-bio {
+  color: #333;
+    footer {
+      text-transform: uppercase;
+      color: #888;
+      font-weight: 900;
+      a {
+        padding-left: 5px;
+        padding-right: 5px;
+        text-decoration: none;
+      }
+    }
+}

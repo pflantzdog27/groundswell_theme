@@ -1,0 +1,17 @@
+.modal {
+  h4 {
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .form-group {
+    margin-top: 10px;
+      input {
+        width: 100%;
+        padding: 7px 15px;
+      }
+  }
+  #new_signature_button {
+    width: 100%;
+    @include border-radius(0);
+  }
+}

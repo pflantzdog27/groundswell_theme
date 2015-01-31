@@ -1,0 +1,232 @@
+.content-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+  overflow: hidden;
+  @include box-shadow(inset 0px 1px 3px 0px, rgba(0, 0, 0, 0.2));
+    .section-number {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      @include font-size(300px);
+      font-style: italic;
+      color: rgba(255,255,255,1);
+      font-family: $numberCustomFont;
+      font-weight: 900;
+      line-height: .6;
+        span {
+          padding-right: 15px;
+        }
+        &:nth-child(1) {
+          color: rgba(0,0,0,0.1);
+        }
+    }
+    .section-template {
+        .section-left-column, .section-right-column {
+          padding-bottom: 50px;
+        }
+        .section-overlay {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: rgba(0,0,0,0.7);
+          padding: 20px;
+            article {
+              max-width: 768px;
+              margin: 0 auto;
+              padding: 15px 0;
+              position: relative;
+              font-weight: 300;
+                .icon-comment {
+                  color: rgba(0,0,0,0.3);
+                  position: absolute;
+                  top: 0;
+                  left: -100px;
+                  @include font-size(200px);
+                }
+                footer {
+                  position: absolute;
+                  right: 0;
+                  bottom: 0;
+                }
+            }
+        }
+        .section-right-column {
+          @include flexbox;
+          min-height: 250px;
+          @include flexAlignItems(center);
+          @include flexwrap(wrap);
+        }
+    }
+    .gs-btn {
+      margin-top: 25px;
+    }
+    .top-corner-btn {
+      position: absolute;
+      top: 0;
+      right: 15px;
+      margin-top: 15px;
+    }
+}
+
+.training-section {
+    .container {
+      position: relative;
+    }
+}
+
+.section-breaker {
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+    h2 {
+      padding: 0;
+      margin: 0;
+      color: #fff;
+      line-height: 1.75;
+      @include font-size(45px);
+      text-transform: uppercase;
+        @include large-desktops {
+          @include font-size(40px);
+        }
+        @include desktops {
+          @include font-size(35px);
+        }
+        @include tablets {
+          @include font-size(30px);
+          padding-bottom: 10px;
+          line-height: 1;
+        }
+    }
+    button {
+      text-transform: uppercase;
+    }
+  .form-group {
+    margin-bottom: 0;
+    float: left;
+  }
+  a {
+    text-decoration: underline;
+    &:hover {
+      color: #fff !important;
+      text-decoration: underline;
+    }
+  }
+}
+
+#training {
+  min-height: 600px;
+  padding-bottom: 300px;
+    .section-number {
+      color: rgba(255,255,255,0.4);
+    }
+    .section-overlay {
+      background: #fff;
+      color: #333;
+    }
+}
+
+#inspiration {
+  .section-number {
+    color: rgba(255,255,255,0.4); 
+  }
+}
+
+#fine-print {
+  font-style: italic;
+  p {
+    @include font-size(30px);
+    color: $gsBlue;
+    opacity: 0.9;
+  }
+}
+
+#numbered-bg {
+  ul {
+    padding-top: 50px;
+      li {
+        color: #666;
+        position: relative;
+        margin-bottom: 50px;
+        span {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          text-align: center;
+          @include font-size(350px);
+          font-style: italic;
+          font-family: $numberCustomFont;
+          color: rgba(68, 174, 234, 0.2);
+          line-height: 0.5;
+        }
+      }
+  }
+}
+
+#faq {
+  li {
+    position: relative;
+    cursor: pointer;
+    border-top: 1px solid #eaeaea;
+      > span{
+        position: absolute;
+        left: 0;
+        top: 7px;
+        color: $gsBlue;
+      }
+      .faq-question {
+        padding-left: 25px;
+        font-weight: 900;
+          &.active {
+            color: $gsBlue;
+          }
+      }
+      &:first-child  {
+        border-top: none;
+      }
+  }
+      .faq-answer {
+        cursor: auto;
+        display: none;
+        padding-left: 25px;
+      }
+}
+
+.full-width-image-bg {
+  @include coverBG();
+  min-height: 500px;
+    .overlay-text {
+      padding: 15px;
+      color: #fff;
+      background: rgba(0,0,0,0.75);
+      margin-top: 50px;
+      font-style:italic;
+    }
+}
+
+#slider-wrapper {
+  .carousel-indicators {
+    bottom: 0;
+  }
+}
+#contact {
+  margin-top: 50px;
+}
+#contact-form {
+    > div {
+      padding: 20px 0;
+        .form-group {
+          padding: 11px 15px;
+          border: 0;
+          input {
+            @include border-radius(3px);
+            text-transform: initial;
+          }
+        }
+        button {
+          @include font-size(50px);
+        }
+    }
+}

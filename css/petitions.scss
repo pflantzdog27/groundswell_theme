@@ -1,0 +1,154 @@
+#petition-wrap {
+  color: #333;
+}
+#petition-content {
+  position: relative;
+}
+.groundswell-campaigns {
+  border: 1px solid #eaeaea;
+  margin: 0;
+  width: 100%;
+  background: #fff;
+    h3 {
+      text-transform: uppercase;
+      color: #333;
+        @include tablets {
+          @include font-size(25px);
+        }
+    }
+    #cat-selector {
+      margin: 20px 0 10px;
+      font-weight: 300;
+      @include font-size(28px);
+      position: relative;
+      cursor: pointer;
+      line-height: 1.5;
+      border-left: 1px solid black;
+        b {
+          position: absolute;
+          right: 5px;
+          top: 5px;
+        }
+     }
+    #cat-list {
+      background: #eaeaea;
+      padding: 15px;
+      display: none;
+      margin-bottom: 0;
+      position: absolute;
+      top: 60px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 9;
+      @include box-shadow(inset 0px 1px 3px 0px, rgba(0, 0, 0, 0.2));
+        li {
+          padding: 5px 10px;
+          margin: 10px 5px;
+          font-weight: 300;
+          border: 1px solid rgba(0,0,0,0.4);
+          @include font-size(22px);
+          cursor: pointer;
+          float: left;
+          display: block;
+          background: #fff;
+            @include tablets {
+              @include font-size(16px);
+              margin: 2px;
+            }
+        }
+    }
+}
+
+.petition-widget {
+  border: 1px solid #eaeaea;
+  overflow: auto;
+  height: 250px;
+  position: relative;
+  background: #fff;
+  @include box-shadow(0 8px 12px -8px, gray);
+    .item {
+      padding: 10px;
+      margin: 0;
+      border-bottom: 1px solid rgba(0,0,0,0.2);
+        h4 {
+          margin-top: 0;
+        }
+        figure {
+          @include box-shadow(0 4px 2px -2px, gray);
+          padding: 0;
+            figcaption {
+              position: relative;
+              span {
+                position: absolute;
+                top: 2px;
+                left: 3px;
+                @include font-size(18px);
+                color: #fff;
+              }
+            }
+        }
+        .petition-meta-info {
+            a {
+              color: $gsOrange;
+            }
+        }
+    }
+}
+
+
+.progress {
+  margin-bottom: 0;
+  height: auto;
+  background: rgba(234,90,58,0.5);
+  @include border-radius(0);
+  .status-bar {
+    background-color: $gsOrange;
+    color: #fff;
+    padding: 0 5px;
+      p {
+        margin: 0;
+        text-align: left;
+        @include font-size(14px);
+          strong {
+            @include font-size(18px);
+          }
+      }
+  }
+}
+
+#loading-image {
+  background: #fff url(../images/loading.gif) no-repeat 50% 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.block-layout-petitions {
+  figure {
+    overflow: hidden;
+      img {
+        max-height: 170px;
+        min-width: 100%;
+      }
+  }
+    .progress {
+      position: relative;
+        span {
+          position: absolute;
+          left: 20px;
+          color: #fff;
+          bottom: 0;
+        }
+    }
+}
+.petition {
+  margin-bottom: 25px;
+}
+
+.mCSB_inside > .mCSB_container {
+   margin-right: 0!important;
+}

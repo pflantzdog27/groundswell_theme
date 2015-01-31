@@ -1,0 +1,6 @@
+#primary-navigation {
+  position: relative; }
+  #primary-navigation form {
+    position: absolute;
+    right: 0;
+    top: 100%; }
