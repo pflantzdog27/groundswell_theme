@@ -29,6 +29,7 @@
         wp_register_script( 'fancybox', get_template_directory_uri().'/js/jquery.fancybox.pack.js',array('jquery'), '2.1.5',null );
         wp_register_script( 'counter', get_template_directory_uri().'/js/jquery.counter.js',array('jquery'), '1.0',null );
         wp_register_script( 'scrollorama', get_template_directory_uri().'/js/jquery.superscrollorama.js',array('jquery'), '1.0',null );
+        wp_register_script( 'cookies', get_template_directory_uri().'/js/jquery.cookie.js',array('jquery'), '1.4.1',null );
 			// then enqueue
             wp_enqueue_script( 'jquery' );
 			wp_enqueue_script( 'modernizr' );
@@ -41,6 +42,7 @@
             wp_enqueue_script( 'mustache' );
             wp_enqueue_script( 'counter' );
             wp_enqueue_script( 'fancybox' );
+            wp_enqueue_script( 'cookies' );
             wp_enqueue_script( 'custom' );
     }
 

@@ -3600,3 +3600,23 @@ form {
       top: 0; }
     form .form-group #emailInput {
       width: 100%; }
+
+#slideDisplayWindow {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: -1000px;
+  color: #fff; }
+  #slideDisplayWindow > div {
+    background: rgba(234, 90, 58, 0.8);
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+    padding-bottom: 20px; }
+    #slideDisplayWindow > div .closePopup {
+      font-size: 30px;
+      font-size: 1.875rem;
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      cursor: pointer; }
