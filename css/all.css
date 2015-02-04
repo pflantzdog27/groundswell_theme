@@ -1189,8 +1189,6 @@ body.vjs-full-window {
       padding-right: 15px; }
     .content-section .section-number:nth-child(1) {
       color: rgba(0, 0, 0, 0.1); }
-  .content-section .section-template .section-left-column, .content-section .section-template .section-right-column {
-    padding-bottom: 50px; }
   .content-section .section-template .section-overlay {
     position: absolute;
     bottom: 0;

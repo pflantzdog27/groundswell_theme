@@ -38,15 +38,17 @@ GS.navigation = new function(){
 
     this.navigationBoxShadow = function() {
         $('#primary-navigation-wrapper').css('box-shadow', 'none');
-        var distance = $('.content-section').eq(0).offset().top;
-        var offset = 70;
-        $(window).scroll(function() {
-            if ($(window).scrollTop() >= distance - offset) {
-                $('#primary-navigation-wrapper').css('box-shadow', '0px 1px 8px 0px rgba(0, 0, 0, 0.6)');
-            } else {
-                $('#primary-navigation-wrapper').css('box-shadow', 'none');
-            }
-        });
+        if($('.content-section').eq(0).length > 0) {
+            var distance = $('.content-section').eq(0).offset().top;
+            var offset = 50;
+            $(window).scroll(function () {
+                if ($(window).scrollTop() >= distance - offset) {
+                    $('#primary-navigation-wrapper').css('box-shadow', '0px 1px 8px 0px rgba(0, 0, 0, 0.6)');
+                } else {
+                    $('#primary-navigation-wrapper').css('box-shadow', 'none');
+                }
+            });
+        }
     }
 
 };
@@ -570,29 +572,6 @@ $(function() {
 
     GS.navigation.searchDisplay();
 
-    if(bodyClass == 'home') { // JUST THE HOME
-        GS.navigation.navigateDown();
-        if($(window).width() > 768) {
-            GS.backgroundVideo.sizingFunction();
-        };
-        GS.teamDisplay.clickAction();
-        GS.teamDisplay.hoverAction();
-        GS.navigation.backToTop();
-
-        //scrollorama
-        GS.scrolloramaEffects.mainNavBackground();
-        GS.scrolloramaEffects.introSection();
-        GS.scrolloramaEffects.steps('#action');
-        GS.scrolloramaEffects.steps('#training');
-        GS.scrolloramaEffects.steps('#inspiration');
-        GS.scrolloramaEffects.parallax('#blog');
-        GS.scrolloramaEffects.parallax('#team');
-        GS.scrolloramaEffects.parallax('#partners');
-        GS.scrolloramaEffects.trainings();
-
-        //navigation
-        GS.navigation.navigationBoxShadow();
-    }
 
     if(bodyClass == 'inspiration') { // INSPIRATION
         GS.scrolloramaEffects.stats('#landing-page-content');
@@ -614,6 +593,17 @@ $(function() {
         GS.carousel.toggleTextDisplay();
     }
 
+    if(bodyClass == 'home') { // JUST THE HOME
+        //scrollorama
+        GS.scrolloramaEffects.steps('#action');
+        GS.scrolloramaEffects.steps('#training');
+        GS.scrolloramaEffects.steps('#inspiration');
+        GS.scrolloramaEffects.parallax('#blog');
+        GS.scrolloramaEffects.parallax('#team');
+        GS.scrolloramaEffects.parallax('#partners');
+        GS.scrolloramaEffects.trainings();
+    }
+
     if($('body').hasClass('page-template-landing-page')) { // LANDING PAGES (previously WHO WE ARE)
         GS.scrolloramaEffects.mainNavBackground();
         GS.navigation.navigationBoxShadow();
@@ -621,6 +611,13 @@ $(function() {
         GS.teamDisplay.hoverAction();
         GS.carousel.carouselInit('.carousel');
         GS.scrolloramaEffects.parallax('.section-template');
+        // originally from home only section
+        GS.navigation.navigateDown();
+        GS.navigation.backToTop();
+        GS.scrolloramaEffects.introSection();
+        if($(window).width() > 768 && $('.video-js').length > 0) {
+            GS.backgroundVideo.sizingFunction();
+        };
     }
 
     if(bodyClass == 'action') { // ACTION

@@ -30,11 +30,13 @@
         wp_register_script( 'counter', get_template_directory_uri().'/js/jquery.counter.js',array('jquery'), '1.0',null );
         wp_register_script( 'scrollorama', get_template_directory_uri().'/js/jquery.superscrollorama.js',array('jquery'), '1.0',null );
         wp_register_script( 'cookies', get_template_directory_uri().'/js/jquery.cookie.js',array('jquery'), '1.4.1',null );
+        wp_register_script( 'youtubeVideo', get_template_directory_uri().'/js/youtube.js',array('videojs'), '1',null );
 			// then enqueue
             wp_enqueue_script( 'jquery' );
 			wp_enqueue_script( 'modernizr' );
             wp_enqueue_script( 'custom-bootstrap' );
             wp_enqueue_script( 'videojs' );
+            wp_enqueue_script( 'youtubeVideo' );
             wp_enqueue_script( 'scrollorama' );
             wp_enqueue_script( 'tweenMax' );
             wp_enqueue_script( 'momentjs' );

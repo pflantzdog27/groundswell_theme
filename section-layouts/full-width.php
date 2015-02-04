@@ -3,14 +3,14 @@
         <h2 class="section-title"><?php echo $sectionTitle; ?></h2>
     <?php endif; /* END section title */ ?>
 
-    <!-- STAFF WIDGET -->
-    <?php if($fullBlock == 'Staff Info Widget') : ?>
+
+    <?php if($fullBlock == 'Team Widget') : // ******* TEAM WIDGET ******* ?>
         <div id="team-graphic" class="col-sm-12">
-            <?php if( have_rows('layout_section_full_width_staff_info_widget') ): /* Check if the widget has entries */?>
+            <?php if( have_rows('layout_section_full_width_team_widget') ): /* Check if the widget has entries */?>
                 <ul class="list-unstyled clearfix">
-                    <?php while( have_rows('layout_section_full_width_staff_info_widget') ): the_row(); ?>
+                    <?php while( have_rows('layout_section_full_width_team_widget') ): the_row(); ?>
                         <?php //Vars
-                            $stafferSelection = get_sub_field('staff_info_widget_staffer');
+                            $stafferSelection = get_sub_field('team_widget_team_member');
                             $user_info = get_userdata($stafferSelection['ID']);
                         ?>
                         <li>
@@ -34,11 +34,10 @@
             <?php endif; /* Widget entries */ ?>
         </div>
         <div id="team-member-bio" class="col-sm-12"></div>
-    <?php endif; /*  END staff widget app*/ ?>
-    <!-- END STAFF WIDGET -->
+    <?php endif; /*  END team widget */ ?>
 
-    <!-- CURATED CAROUSEL -->
-    <?php if($fullBlock == 'Curated Carousel') : ?>
+
+    <?php if($fullBlock == 'Curated Carousel') : // ****** CURATED CAROUSEL ***** ?>
         <?php if( $fullBlockCarouselItems ): /* If items exist carousel has items */ ?>
             <div id="<?php echo $fullBlockCarouselID; ?>" class="carousel slide">
                 <div class="carousel-inner" role="listbox">
@@ -52,11 +51,10 @@
                                 <div class="item <?php echo ($i == 0 ? 'active' : '');?>">
                             <?php }?>
 
-                                <!-- this layout "template" will only work for PARTNERS -->
+                                <?php // partners template ?>
                                 <figure class="col-xs-6 col-sm-3 partner-figure">
                                     <a target="_blank" href="<?php the_field('partner_link'); ?>"><img class="img-responsive" src="<?php the_field('partner_logo'); ?>" alt="<?php the_title(); ?>"></a>
                                 </figure>
-                                <!-- end Partners -->
 
                             <?php if($i == 3 || $i == 7 || $i == 11 || $i == 15 || $i == 19 || $i == 23 || $i == $len - 1) { // end the new slide (4 items per slide) ?>
                                 </div>
@@ -64,7 +62,7 @@
                         <?php $i++;?>
                     <?php endforeach; ?>
                 </div>
-                <!-- Controls -->
+                <?php // carousel controls ?>
                 <ol class="carousel-indicators">
                     <?php for ($c = 0; $c < $len /4; $c++) { ?>
                         <li class="<?php echo ($c == 0 ? 'active' : '');?>" data-target="#<?php echo $fullBlockCarouselID; ?>" data-slide-to="<?php echo $c; ?>"></li>
@@ -82,6 +80,16 @@
             <?php wp_reset_postdata(); ?>
         <?php endif; /* END carousel items  */ ?>
     <?php endif; /*  END curated carousel*/ ?>
-    <!-- END CURATED CAROUSEL -->
+
+
+    <?php if($fullBlock == 'Text Block') :  // ***** TEXT BLOCK ****** ?>
+        <h2><?php echo $fullBlockTextBlockContent;?></h2>
+        <button class="btn gs-btn gs-btn-blue"><a href="<?php echo $fullBlockTextBlockActionLink;?>"><?php echo $fullBlockTextBlockActionText;?></a></button>
+    <?php endif; /*  END text block*/ ?>
+
+    <?php if($fullBlock == 'Content Block') :  // ***** CONTENT BLOCK ****** ?>
+        <?php echo $fullBlockContent; ?>
+    <?php endif; /*  END text block*/ ?>
+
 </div>
 
