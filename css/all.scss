@@ -163,6 +163,7 @@ button:active {
 
 .coverBG {
   @include coverBG();
+  min-height: 500px;
 }
 
 .social-link-bar, .social-link-column {

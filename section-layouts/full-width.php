@@ -3,7 +3,6 @@
         <h2 class="section-title"><?php echo $sectionTitle; ?></h2>
     <?php endif; /* END section title */ ?>
 
-
     <?php if($fullBlock == 'Team Widget') : // ******* TEAM WIDGET ******* ?>
         <div id="team-graphic" class="col-sm-12">
             <?php if( have_rows('layout_section_full_width_team_widget') ): /* Check if the widget has entries */?>

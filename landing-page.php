@@ -34,15 +34,19 @@ $introContent = get_field('landing_page_sub_intro_content');
 
 
 <?php if( have_rows('section_builder') ): ?>
-    <?php while( have_rows('section_builder') ): the_row(); ?>
+    <?php $i = 0; ?>
 
+    <?php while( have_rows('section_builder') ): the_row(); ?>
         <?php
         // Sub Fields
+        $sectionDividerCheck =  get_sub_field('section_divider');
         $sectionTitle = get_sub_field('layout_section_title');
         $sectionTextColor = get_sub_field('layout_section_text_color');
         $sectionBackground = get_sub_field('section_background');
         $sectionBackgroundColor = get_sub_field('section_background_color');
         $sectionBackgroundImage = get_sub_field('section_background_image');
+        $sectionNumberCheck = get_sub_field('section_layout_number_check');
+        $sectionNumber = get_sub_field('section_layout_number');
         $layout = get_sub_field('section_layout');
         // Nine and Three Layout options // Two Halves Layout Options
         $leftBlock = get_sub_field('layout_section_left');
@@ -70,12 +74,18 @@ $introContent = get_field('landing_page_sub_intro_content');
         $fullBlockTextBlockActionLink = get_sub_field('layout_section_text_block_action_link');
         ?>
 
-        <section class="<?php echo ($fullBlock == 'Text Block' ? 'section-breaker' : 'content-section');?>" style="<?php echo ($sectionBackground == 'Image' ? 'background:url('.$sectionBackgroundImage.');' : 'background:'. $sectionBackgroundColor.';');?> color: <?php echo $sectionTextColor; ?>">
+        <section id="section-<?php echo $i; ?>" class="<?php echo ($sectionBackground == 'Image' ? 'coverBG' : false);?> <?php echo ($sectionDividerCheck ? 'section-breaker' : 'content-section');?>" style="<?php echo ($sectionBackground == 'Image' ? 'background-image:url('.$sectionBackgroundImage.');' :'background:'. $sectionBackgroundColor.';');?> color: <?php echo $sectionTextColor; ?>">
+            <?php if($sectionNumberCheck) : ?>
+                <aside class="section-number hidden-xs hidden-sm">
+                    <span><?php echo $sectionNumber; ?></span>
+                </aside>
+            <?php endif; ?>
             <div class="container">
                 <?php include ('section-layouts/'.$layout.'.php'); // get the layout specified ?>
             </div>
         </section>
 
+        <?php $i++; ?>
     <?php endwhile; ?>
 <?php endif; /* END Section Builder */ ?>
 

@@ -25,33 +25,6 @@
         .section-left-column, .section-right-column {
           //padding-bottom: 50px;
         }
-        .section-overlay {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          background: rgba(0,0,0,0.7);
-          padding: 20px;
-            article {
-              max-width: 768px;
-              margin: 0 auto;
-              padding: 15px 0;
-              position: relative;
-              font-weight: 300;
-                .icon-comment {
-                  color: rgba(0,0,0,0.3);
-                  position: absolute;
-                  top: 0;
-                  left: -100px;
-                  @include font-size(200px);
-                }
-                footer {
-                  position: absolute;
-                  right: 0;
-                  bottom: 0;
-                }
-            }
-        }
         .section-right-column {
           @include flexbox;
           min-height: 250px;
@@ -113,23 +86,32 @@
       text-decoration: underline;
     }
   }
-}
-
-#training {
-  min-height: 600px;
-  padding-bottom: 300px;
-    .section-number {
-      color: rgba(255,255,255,0.4);
+  .section-overlay {
+    article {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 15px 0;
+      position: relative;
+      font-weight: 300;
+      .icon-comment {
+        color: rgba(0,0,0,0.3);
+        position: absolute;
+        top: 0;
+        left: -100px;
+        @include font-size(200px);
+      }
+      footer {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
     }
-    .section-overlay {
-      background: #fff;
-      color: #333;
-    }
+  }
 }
 
 #inspiration {
   .section-number {
-    color: rgba(255,255,255,0.4); 
+    color: rgba(255,255,255,0.4);
   }
 }
 

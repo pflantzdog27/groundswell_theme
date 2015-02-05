@@ -40,7 +40,7 @@ GS.navigation = new function(){
         $('#primary-navigation-wrapper').css('box-shadow', 'none');
         if($('.content-section').eq(0).length > 0) {
             var distance = $('.content-section').eq(0).offset().top;
-            var offset = 50;
+            var offset = 0;
             $(window).scroll(function () {
                 if ($(window).scrollTop() >= distance - offset) {
                     $('#primary-navigation-wrapper').css('box-shadow', '0px 1px 8px 0px rgba(0, 0, 0, 0.6)');
@@ -254,19 +254,23 @@ GS.scrolloramaEffects = new function() {
     };
 
     this.steps = function(tweeningElement) {
-        var heightOfTweeningElement = $(tweeningElement).innerHeight();
-        controller.addTween(
-            tweeningElement,
-            (new TimelineLite())
-                .append([
-                    TweenMax.fromTo($(tweeningElement+ ' .section-number'),1 ,
-                        {css:{top: 70 }, immediateRender:true},
-                        {css:{top: '80%'}}),
-                    TweenMax.fromTo($(tweeningElement+ ' .parallax'), .5 ,
-                        {css:{top: 0 }, immediateRender:true},
-                        {css:{top: -50}})
-                ]),
-            heightOfTweeningElement);
+        $(tweeningElement).each(function() {
+            var contentSection = $(this).parent('section').attr('id');
+            console.log(contentSection);
+            var heightOfTweeningElement = $('#'+contentSection).innerHeight();
+            controller.addTween(
+                '#'+contentSection,
+                (new TimelineLite())
+                    .append([
+                        TweenMax.fromTo($('#'+contentSection).find('.section-number'),1 ,
+                            {css:{top: 70 }, immediateRender:true},
+                            {css:{top: '80%'}}),
+                        TweenMax.fromTo($('#'+contentSection).find('.parallax'), .5 ,
+                            {css:{top: 0 }, immediateRender:true},
+                            {css:{top: -50}})
+                    ]),
+                heightOfTweeningElement);
+        });
     };
 
     this.blog_single_video = function(section) {
@@ -615,6 +619,9 @@ $(function() {
         GS.navigation.navigateDown();
         GS.navigation.backToTop();
         GS.scrolloramaEffects.introSection();
+        if($('.section-number').length > 0) {
+            GS.scrolloramaEffects.steps('.section-number');
+        }
         if($(window).width() > 768 && $('.video-js').length > 0) {
             GS.backgroundVideo.sizingFunction();
         };

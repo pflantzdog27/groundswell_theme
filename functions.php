@@ -48,18 +48,12 @@
             wp_enqueue_script( 'custom' );
     }
 
-/* MENUS
+// MENUS
     if ( function_exists( 'register_nav_menus' ) ) {
         register_nav_menus( array(
-            'primary_nav' => 'Main navigation displayed at the top of any page',
-            'schedules' => 'Navigation for Schedules',
-            'region_9' => 'Navigation for Region 9',
-            'transportation_relocation_vehicles' => 'Navigation for Transportation, Relocation and Vehicles',
-            'household_goods_transportation' => 'Navigation for Household Goods & Transportation',
-            'sandbox_nav' => 'Sandbox Navigation'
-            //'footer_nav' => 'Navigation displayed in footer'
-        ) );
-    }*/
+            'primary_nav' => 'Main navigation displayed at the top of any page'
+        ));
+    }
 
 /* THUMBNAIL SUPPORT
 if ( function_exists( 'add_theme_support' ) ) {

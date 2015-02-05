@@ -18,7 +18,17 @@
 </head>  
 <body <?php body_class(); ?>>
 
-<!-- Navigation -->
+<?php // Navigation
+$navigationArgs = array(
+    'theme_location'  => 'primary_nav',
+    'container'       => false,
+    'menu_class'      => 'menu',
+    'echo'            => true,
+    'fallback_cb'     => 'wp_page_menu',
+    'items_wrap'      => '<ul class="nav navbar-nav navbar-right">%3$s</ul>'
+);
+
+?>
 <nav id="primary-navigation-wrapper" class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -33,7 +43,10 @@
 
         <div class="collapse navbar-collapse pull-right" id="primary-navigation">
             <h4 class="visible-xs" style="text-align:center;color:#fff">Menu</h4>
-            <ul class="nav navbar-nav navbar-right">
+
+            <?php wp_nav_menu( $navigationArgs ); // NAVIGATION HERE ?>
+
+            <!--<ul class="nav navbar-nav navbar-right">
                 <li class="visible-xs darker-blue-bg"><a href="#">Action</a></li>
                 <li class="visible-xs darker-blue-bg"><a href="#">Trainings</a></li>
                 <li class="visible-xs darker-blue-bg"><a href="#">Inspiration</a></li>
@@ -43,11 +56,11 @@
                 <li class="visible-xs"><a href="#">Donate</a></li>
                 <li class="orange-bg"><a href="#">Talk to Us</a></li>
                 <li class="hidden-xs search-toggle"><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
-            </ul>
-            <form id="primary-search-field" role="search">
+            </ul>-->
+            <form id="primary-search-field" method="get" role="search" action="<?php echo home_url( '/' ); ?>">
                 <div class="form-group col-sm-12">
-                    <input type="text" class="form-control" placeholder="Search">
-                    <button class="btn gs-btn gs-btn-blue"><span class="icon-arrow-right"></span></button>
+                    <input type="text" class="form-control" value="" name="s" placeholder="Search">
+                    <button type="submit" class="btn gs-btn gs-btn-blue"><span class="icon-arrow-right"></span></button>
                 </div>
             </form>
         </div>

@@ -1189,30 +1189,6 @@ body.vjs-full-window {
       padding-right: 15px; }
     .content-section .section-number:nth-child(1) {
       color: rgba(0, 0, 0, 0.1); }
-  .content-section .section-template .section-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px; }
-    .content-section .section-template .section-overlay article {
-      max-width: 768px;
-      margin: 0 auto;
-      padding: 15px 0;
-      position: relative;
-      font-weight: 300; }
-      .content-section .section-template .section-overlay article .icon-comment {
-        color: rgba(0, 0, 0, 0.3);
-        position: absolute;
-        top: 0;
-        left: -100px;
-        font-size: 200px;
-        font-size: 12.5rem; }
-      .content-section .section-template .section-overlay article footer {
-        position: absolute;
-        right: 0;
-        bottom: 0; }
   .content-section .section-template .section-right-column {
     display: -webkit-box;
     display: -moz-box;
@@ -1276,18 +1252,23 @@ body.vjs-full-window {
     .section-breaker a:hover {
       color: #fff !important;
       text-decoration: underline; }
-
-#training {
-  min-height: 600px;
-  padding-bottom: 300px; }
-  #training .section-number {
-    color: rgba(255, 255, 255, 0.4); }
-  #training .section-overlay {
-    background: #fff;
-    color: #333; }
-
-#inspiration .section-number {
-  color: rgba(255, 255, 255, 0.4); }
+  .section-breaker .section-overlay article {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 15px 0;
+    position: relative;
+    font-weight: 300; }
+    .section-breaker .section-overlay article .icon-comment {
+      color: rgba(0, 0, 0, 0.3);
+      position: absolute;
+      top: 0;
+      left: -100px;
+      font-size: 200px;
+      font-size: 12.5rem; }
+    .section-breaker .section-overlay article footer {
+      position: absolute;
+      right: 0;
+      bottom: 0; }
 
 #fine-print {
   font-style: italic; }
@@ -3441,7 +3422,8 @@ button:active {
   -o-background-size: cover;
   background-size: cover;
   background-position: center center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  min-height: 500px; }
 
 .social-link-bar, .social-link-column {
   padding: 15px 0; }
