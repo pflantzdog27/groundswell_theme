@@ -47,6 +47,7 @@ $introContent = get_field('landing_page_sub_intro_content');
         $sectionBackgroundImage = get_sub_field('section_background_image');
         $sectionNumberCheck = get_sub_field('section_layout_number_check');
         $sectionNumber = get_sub_field('section_layout_number');
+        $sectionNumberColor = get_sub_field('section_layout_number_color');
         $layout = get_sub_field('section_layout');
         // Nine and Three Layout options // Two Halves Layout Options
         $leftBlock = get_sub_field('layout_section_left');
@@ -67,6 +68,7 @@ $introContent = get_field('landing_page_sub_intro_content');
         $fullBlockCarouselItems = get_sub_field('layout_section_full_width_carousel');
         $fullBlockCarouselID = get_sub_field('layout_section_full_width_carousel_id');
         $fullBlockStaffWidget = get_sub_field('layout_section_full_width_team_widget');
+        $fullBlockPhotoGallery = get_sub_field('layout_section_full_width_photo_gallery');
         $fullBlockRowOfBlocks = get_sub_field('layout_section_full_width_blocks_per_row');
         $fullBlockRowOfBlocksContent = get_sub_field('layout_section_full_width_content_of_blocks');
         $fullBlockTextBlockContent = get_sub_field('layout_section_text_block_content');
@@ -77,7 +79,7 @@ $introContent = get_field('landing_page_sub_intro_content');
         <section id="section-<?php echo $i; ?>" class="<?php echo ($sectionBackground == 'Image' ? 'coverBG' : false);?> <?php echo ($sectionDividerCheck ? 'section-breaker' : 'content-section');?>" style="<?php echo ($sectionBackground == 'Image' ? 'background-image:url('.$sectionBackgroundImage.');' :'background:'. $sectionBackgroundColor.';');?> color: <?php echo $sectionTextColor; ?>">
             <?php if($sectionNumberCheck) : ?>
                 <aside class="section-number hidden-xs hidden-sm">
-                    <span><?php echo $sectionNumber; ?></span>
+                    <span style="color:<?php echo ($sectionNumberColor == 'Dark' ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.2)');?>"><?php echo $sectionNumber; ?></span>
                 </aside>
             <?php endif; ?>
             <div class="container">

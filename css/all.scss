@@ -13,7 +13,7 @@
 @import 'landing-page';
 @import 'modal';
 @import 'fancybox';
-@import 'carousel';
+@import 'carousel_gallery';
 @import 'footer';
 
 
@@ -261,8 +261,6 @@ button:active {
 .select-menu {
   position: relative;
   z-index: 2;
-  margin-top: 4px;
-  margin-bottom: 15px;
   .select-box {
     border: 1px solid #eaeaea;
     color: #333;
@@ -291,20 +289,28 @@ button:active {
     background:#fff;
     display: none;
     position: absolute;
-    left: 2px;
-    right: 2px;
+    left: 15px;
+    right: 15px;
     top: 100%;
     @include box-shadow(0px 1px 4px 4px, rgba(68,174,234,0.1));
-    li {
-      padding: 8px;
-      cursor: pointer;
-      &:last-child {
-        border-bottom: 0;
+      ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+        li {
+          padding: 8px;
+          cursor: pointer;
+          &:last-child {
+            border-bottom: 0;
+          }
+          &:hover {
+            background: #eaeaea;
+          }
+            a {
+              display: block;
+            }
+        }
       }
-      &:hover {
-        background: #eaeaea;
-      }
-    }
   }
 }
 

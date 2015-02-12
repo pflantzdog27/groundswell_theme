@@ -1187,8 +1187,6 @@ body.vjs-full-window {
     line-height: .6; }
     .content-section .section-number span {
       padding-right: 15px; }
-    .content-section .section-number:nth-child(1) {
-      color: rgba(0, 0, 0, 0.1); }
   .content-section .section-template .section-right-column {
     display: -webkit-box;
     display: -moz-box;
@@ -1269,6 +1267,9 @@ body.vjs-full-window {
       position: absolute;
       right: 0;
       bottom: 0; }
+
+#inspiration .section-number {
+  color: rgba(255, 255, 255, 0.4); }
 
 #fine-print {
   font-style: italic; }
@@ -2567,6 +2568,17 @@ body.vjs-full-window {
 .author {
   padding-left: 0; }
 
+#blog-post-index {
+  min-height: 300px;
+  position: relative; }
+  #blog-post-index .loading {
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    top: 50%;
+    margin-top: -25px;
+    display: none; }
+
 .blog-post {
   margin-bottom: 25px; }
   .blog-post article {
@@ -2576,7 +2588,22 @@ body.vjs-full-window {
       overflow: hidden;
       position: relative;
       margin-bottom: 15px;
-      background: #eaeaea; }
+      background: #eaeaea;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      justify-content: center; }
       .blog-post article > figure:hover img {
         -webkit-transform: scale(1.25);
         -moz-transform: scale(1.25);
@@ -2635,23 +2662,7 @@ body.vjs-full-window {
     font-weight: 900; }
 
 .author-name {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  -webkit-align-items: flex-start;
-  -moz-align-items: flex-start;
-  align-items: flex-start;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 50px; }
+  margin-top: 10px; }
   .author-name b {
     padding-left: 10px; }
 
@@ -3132,14 +3143,25 @@ body.vjs-full-window {
 #photo-gallery figure {
   position: relative;
   height: 260px;
-  overflow: hidden; }
+  overflow: hidden;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  background: #eaeaea; }
   #photo-gallery figure figcaption {
     position: absolute;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
-    left: 15px;
-    right: 15px; }
+    left: 0;
+    right: 0; }
     #photo-gallery figure figcaption h3 {
       padding: 0 5px; }
   #photo-gallery figure img {
@@ -3517,9 +3539,7 @@ button:active {
 
 .select-menu {
   position: relative;
-  z-index: 2;
-  margin-top: 4px;
-  margin-bottom: 15px; }
+  z-index: 2; }
   .select-menu .select-box {
     border: 1px solid #eaeaea;
     color: #333;
@@ -3545,19 +3565,25 @@ button:active {
     background: #fff;
     display: none;
     position: absolute;
-    left: 2px;
-    right: 2px;
+    left: 15px;
+    right: 15px;
     top: 100%;
     -webkit-box-shadow: 0px 1px 4px 4px rgba(68, 174, 234, 0.1);
     -moz-box-shadow: 0px 1px 4px 4px rgba(68, 174, 234, 0.1);
     box-shadow: 0px 1px 4px 4px rgba(68, 174, 234, 0.1); }
-    .select-menu .select-options li {
-      padding: 8px;
-      cursor: pointer; }
-      .select-menu .select-options li:last-child {
-        border-bottom: 0; }
-      .select-menu .select-options li:hover {
-        background: #eaeaea; }
+    .select-menu .select-options ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0; }
+      .select-menu .select-options ul li {
+        padding: 8px;
+        cursor: pointer; }
+        .select-menu .select-options ul li:last-child {
+          border-bottom: 0; }
+        .select-menu .select-options ul li:hover {
+          background: #eaeaea; }
+        .select-menu .select-options ul li a {
+          display: block; }
 
 form {
   width: 100%; }

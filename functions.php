@@ -55,12 +55,12 @@
         ));
     }
 
-/* THUMBNAIL SUPPORT
+//THUMBNAIL SUPPORT
 if ( function_exists( 'add_theme_support' ) ) {
     add_theme_support( 'post-thumbnails' );
     set_post_thumbnail_size( 150, 150, true ); // default Post Thumbnail dimensions (cropped)
-    add_image_size( 'rfb', 238, 230, true );
-}*/
+    add_image_size( 'blog', 400, 400, true );
+}
 
 //----------------------------//
     // Customizing Profile Input Fields
@@ -210,6 +210,25 @@ function wpbeginner_numeric_posts_nav() {
     echo '</ul>' . "\n";
 
 }
+
+//----------------------------//
+// ACF EXCERPTS
+//----------------------------//
+function custom_field_excerpt($title) {
+    global $post;
+    $text = get_field($title);
+    if ( '' != $text ) {
+        $text = strip_shortcodes( $text );
+        $text = apply_filters('the_content', $text);
+        $text = str_replace(']]>', ']]>', $text);
+        $excerpt_length = 35; // 20 words
+        $excerpt_more = apply_filters('excerpt_more', ' ' . '[...]');
+        $text = wp_trim_words( $text, $excerpt_length, $excerpt_more );
+    }
+    return apply_filters('the_excerpt', $text);
+}
+
+
 
 /* REGISTER SIDEBARS
 if ( function_exists('register_sidebar') ) {

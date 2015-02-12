@@ -38,7 +38,7 @@ $navigationArgs = array(
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="<?php get_home_url(); ?>"><img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/logo.svg" alt="Groundswell Logo"></a>
+            <a class="navbar-brand" href="<?php echo get_home_url(); ?>"><img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/logo.svg" alt="Groundswell Logo"></a>
         </div>
 
         <div class="collapse navbar-collapse pull-right" id="primary-navigation">
