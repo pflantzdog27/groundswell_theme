@@ -11,14 +11,6 @@
 #blog-post-index {
   min-height: 300px;
   position: relative;
-  .loading {
-    position: absolute;
-    left: 50%;
-    margin-left: -25px;
-    top: 50%;
-    margin-top: -25px;
-    display: none;
-  }
 }
 .blog-post {
   margin-bottom: 25px;
@@ -157,4 +149,15 @@
 
 .outro {
   padding-top: 10px;
+}
+
+#blog-loading {
+  position: absolute;
+  left: 50%;
+  margin-left: -25px;
+  top: 50%;
+  margin-top: -25px;
+  background: url(../images/loading.gif) no-repeat 0 0;
+  width: 50px;
+  height: 50px;
 }

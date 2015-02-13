@@ -12,7 +12,9 @@
     }
 
 
-// ENQUEUE SCRIPTS
+//----------------------------//
+// Enqueue scripts
+//----------------------------//
 	add_action( 'wp_enqueue_scripts', 'load_javascript_files' ); 
 	function load_javascript_files() {
         wp_deregister_script( 'jquery' );
@@ -48,20 +50,23 @@
             wp_enqueue_script( 'custom' );
     }
 
-// MENUS
+//----------------------------//
+// Menus
+//----------------------------//
     if ( function_exists( 'register_nav_menus' ) ) {
         register_nav_menus( array(
             'primary_nav' => 'Main navigation displayed at the top of any page'
         ));
     }
 
-//THUMBNAIL SUPPORT
-if ( function_exists( 'add_theme_support' ) ) {
-    add_theme_support( 'post-thumbnails' );
-    set_post_thumbnail_size( 150, 150, true ); // default Post Thumbnail dimensions (cropped)
-    add_image_size( 'blog', 400, 400, true );
-}
-
+//----------------------------//
+// Thumbnail Support
+//----------------------------//
+    if ( function_exists( 'add_theme_support' ) ) {
+        add_theme_support( 'post-thumbnails' );
+        set_post_thumbnail_size( 360, 250, true ); // default Post Thumbnail dimensions (cropped)
+        add_image_size( 'blog', 400, 400, true );
+    }
 //----------------------------//
     // Customizing Profile Input Fields
 //----------------------------//
