@@ -40,7 +40,8 @@
     <section id="blog" class="content-section">
         <div class="container">
             <div class="section-template parallax three-column-section row" id="blog-post-index">
-                <script id="blog-post-long-template" type="text/html">
+                <img class="loading" src="<?php bloginfo('template_url') ?>/images/loading.gif" alt="Loading graphic">
+                <script id="blog-post-template" type="text/html">
                     {{#.}}
                         <div class="col-sm-4 blog-post">
                             <article>
@@ -76,7 +77,7 @@
         <div class="container">
             <div class="row">
                 <header class="col-sm-12">
-                    <button id="load-posts" class="btn gs-btn-orange col-sm-offset-3 col-sm-6">Load More Posts</button>
+                    <button class="btn gs-btn-orange col-sm-offset-3 col-sm-6">Load More Posts</button>
                 </header>
             </div>
         </div>
