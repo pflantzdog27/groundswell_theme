@@ -3,6 +3,80 @@ if(!GS){
 }
 
 
+
+GS.apiCall = 'get_recent_posts/?count=6';
+GS.wrapper = '#blog-post-index';
+GS.template = '#blog-post-template';
+GS.pagination = 1;
+
+GS.displayPosts = function() {
+    GS.loadPosts();
+};
+
+GS.changePostCategory = function(slug) {
+    GS.resetPosts();
+    GS.apiCall = 'get_category_posts/?category_slug='+slug+'&count=6&status=publish';
+    GS.loadPosts();
+};
+
+GS.loadMorePosts = function() {
+    GS.pagination++;
+    GS.apiCall += '&page=' + GS.pagination;
+    var postHeight = $('.blog-post').eq(1).height();
+    var wrapperHeight = $(GS.wrapper).height();
+    $(GS.wrapper).height(postHeight + wrapperHeight);
+    $('html, body').animate({
+        scrollTop: $(".blog-post:last-child").offset().top
+    }, 500);
+    GS.loadPosts();
+};
+
+GS.resetPosts = function() {
+    $(GS.wrapper).find('.blog-post').fadeOut(300, function() {
+        $('.blog-post').remove();
+    })
+    $(GS.wrapper).css('height','auto');
+    GS.pagination = 1;
+};
+
+GS.loadPosts = function() {
+    //initiate the load icon
+    $('<div></div>').attr('id', 'blog-loading').appendTo(GS.wrapper);
+    //start request
+    //USE THIS IN PRODUCTION ----- var baseURL = window.location.protocol + "//" + window.location.host + "/";
+    var api = 'http://localhost/groundswell/redesign_wordpress/api/' + GS.apiCall;
+    $.getJSON(api, function (data) {
+        var templateData = [];
+        $.each(data.posts, function (i, item) {
+            templateData.push({
+                title: item.title,
+                url: item.url,
+                image: item.thumbnail_images.full.url,
+                excerpt: item.custom_fields.blog_posts_excerpt,
+                author: item.author.name,
+                postType: item.custom_fields.blog_posts_post_type,
+                tags: []
+            });
+            $.each(item.tags, function (index, object) {
+                var link = '/tag/' + object.slug;
+                templateData[i].tags.push({
+                    tagName: object.title,
+                    tagID: object.id,
+                    tagUrl: link
+                });
+            });
+        });
+        var galleryTemplate = $(GS.template).html();
+        $(GS.wrapper).append(Mustache.render(galleryTemplate, templateData));
+        // make all the blogs the same height (even rows)
+        GS.blog.blogRowHeights();
+        // get rid of loading icon
+        $(GS.wrapper).find('#blog-loading').fadeOut(800, function() {
+            $(this).remove();
+        });
+    });
+}
+
 /* ===========================================
         FUNCTIONS
 // ========================================== */
@@ -49,6 +123,24 @@ GS.navigation = new function(){
                 }
             });
         }
+    }
+    this.mobileMenu = function() {
+        $('.navbar-toggle').click(function() {
+            var windowHeight = $(window).height();
+            if($('.collapse.in').length == 0) {
+                $('#primary-navigation').addClass('menu-expanded');
+                setTimeout(function() {
+                    $('body > *').animate({'margin-left': '-190px', 'margin-right': '190px'}, 500);
+                    $('#primary-navigation').height(windowHeight);
+                    $('.menu-expanded').animate({right: 0},500);
+                }, 1);
+
+            } else {
+                $('body > *').animate({'margin-left': '0', 'margin-right': '0'}, 500);
+                $('.menu-expanded').animate({right: '-190px'},500);
+                $('#primary-navigation').removeClass('menu-expanded');
+            }
+        })
     }
 
 };
@@ -524,44 +616,21 @@ GS.blog = new function() {
             $('.select-options').slideToggle(300);
             $('.select-box span').text(cat);
 
-            GS.blog.mustacheTemplating('get_category_posts/?category_slug='+catSlug);
+            GS.changePostCategory(catSlug);
         })
-    }
+    };
 
-
-    this.mustacheTemplating = function(requestDetails) {
-        //USE THIS IN PRODUCTION ----- var baseURL = window.location.protocol + "//" + window.location.host + "/";
-        var wrapper =  $('#blog-post-index');
-        var api = 'http://localhost/groundswell/redesign_wordpress/' + 'api/' + requestDetails;
-        $('.blog-post').remove();
-        wrapper.find('.loading').fadeIn(300);
-        // ajax request
-        $.getJSON(api, function (data) {
-            var templateData = [];
-            $.each(data.posts, function (i, item) {
-                templateData.push({
-                    title: item.title,
-                    url : item.url,
-                    image: item.thumbnail_images.medium.url,
-                    excerpt: item.custom_fields.blog_posts_excerpt,
-                    author : item.author.name,
-                    postType: item.custom_fields.blog_posts_post_type,
-                    tags : []
-                });
-                $.each(item.tags, function (index, object) {
-                    var link = '/tag/'+ object.slug;
-                    templateData[i].tags.push({
-                        tagName : object.title,
-                        tagID : object.id,
-                        tagUrl : link
-                    });
-                });
+    this.blogRowHeights = function() {
+        setTimeout(function() {
+            var maxHeight = 0;
+            $('.blog-post > article').each(function(){
+                maxHeight = $(this).height() > maxHeight ? $(this).height() : maxHeight;
             });
-            var galleryTemplate = $('#blog-post-template').html();
-            wrapper.append(Mustache.render(galleryTemplate, templateData));
-            wrapper.find('.loading').fadeOut(300);
-        });
-    }
+            $('.blog-post > article').height(maxHeight);
+        },100)
+    };
+
+
 
 };
 
@@ -616,6 +685,7 @@ GS.carousel = new function() {
 $(function() {
 
     var bodyClass = $('body').attr('class');
+    $('.fancybox').fancybox();
 
     GS.navigation.searchDisplay();
     GS.forms.emailSubscription();
@@ -657,7 +727,10 @@ $(function() {
 
     if($('body').hasClass('blog')) { // BLOG INDEX (previously just blog-index)
         GS.blog.selectMenu();
-        GS.blog.mustacheTemplating('get_recent_posts/?count=6');
+        GS.displayPosts();
+        $('#load-posts').click(function() {
+            GS.loadMorePosts();
+        })
     }
 
 
@@ -725,39 +798,6 @@ $(function() {
         GS.scrolloramaEffects.blog_single_video('.blog-single-video');
         GS.blog.selectMenu();
     }
-
-
-
-
-
-
-
-    // MOVE EVERYTHING BELOW HERE!!!
-
-    $('.fancybox').fancybox();
-
-    $('.navbar-toggle').click(function() {
-        var windowHeight = $(window).height();
-        if($('.collapse.in').length == 0) {
-            $('#primary-navigation').addClass('menu-expanded');
-            setTimeout(function() {
-                $('body > *').animate({'margin-left': '-190px', 'margin-right': '190px'}, 500);
-                $('#primary-navigation').height(windowHeight);
-                $('.menu-expanded').animate({right: 0},500);
-            }, 1);
-
-        } else {
-            $('body > *').animate({'margin-left': '0', 'margin-right': '0'}, 500);
-            $('.menu-expanded').animate({right: '-190px'},500);
-            $('#primary-navigation').removeClass('menu-expanded');
-        }
-    })
-
-
-
-
-
-
 
 });
 
