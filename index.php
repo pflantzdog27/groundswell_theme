@@ -52,9 +52,10 @@
                                         </figcaption>
                                     </a>
                                 </figure>
+                                <span class="{{postType}}"></span>
                                 <div class="author-info row">
                                     <figure class="col-sm-2">
-                                        <img class="img-responsive" src="http://placehold.it/50x50" alt="Author Name">
+                                        <?php echo get_avatar(1, 30 ); ?>
                                     </figure>
                                     <div class="author-name">
                                         <h5>{{author}}</h5>
@@ -85,7 +86,7 @@
     <section id="petition-wrap" class="content-section" style="background: #44aeea;">
         <div class="container">
             <div class="parallax">
-                <?php include('partials/petitions-app-large.php');?>
+                <?php include('section-layouts/components/petitions-app-large.php');?>
             </div>
         </div>
     </section>

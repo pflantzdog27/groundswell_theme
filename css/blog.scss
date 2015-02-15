@@ -51,6 +51,15 @@
               padding: 10px;
             }
         }
+        .Inspiration {
+          width: 50px;
+          height: 50px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: block;
+          background: url(../images/icon-inspiration-notext.svg) no-repeat 0 0;
+        }
         footer {
           a {
             text-decoration: underline;

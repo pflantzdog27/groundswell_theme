@@ -54,6 +54,7 @@ GS.loadPosts = function() {
                 image: item.thumbnail_images.full.url,
                 excerpt: item.custom_fields.blog_posts_excerpt,
                 author: item.author.name,
+                authorID: item.author.id,
                 postType: item.custom_fields.blog_posts_post_type,
                 tags: []
             });
