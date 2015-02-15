@@ -1,6 +1,8 @@
 <?php
 
-// ACF OPTIONS PAGE
+//----------------------------//
+// ACF Options Page
+//----------------------------//
     add_filter('acf/options_page/settings', 'my_options_page_settings');
     function my_options_page_settings($options) {
         $options['title'] = _('Global');
@@ -12,7 +14,9 @@
     }
 
 
-// ENQUEUE SCRIPTS
+//----------------------------//
+// Enqueue Scripts
+//----------------------------//
 	add_action( 'wp_enqueue_scripts', 'load_javascript_files' ); 
 	function load_javascript_files() {
         wp_deregister_script( 'jquery' );
@@ -48,14 +52,18 @@
             wp_enqueue_script( 'custom' );
     }
 
-// MENUS
+//----------------------------//
+// Menus
+//----------------------------//
     if ( function_exists( 'register_nav_menus' ) ) {
         register_nav_menus( array(
             'primary_nav' => 'Main navigation displayed at the top of any page'
         ));
     }
 
-//THUMBNAIL SUPPORT
+///----------------------------//
+// Thumbnail Support
+//----------------------------//
 if ( function_exists( 'add_theme_support' ) ) {
     add_theme_support( 'post-thumbnails' );
     set_post_thumbnail_size( 150, 150, true ); // default Post Thumbnail dimensions (cropped)

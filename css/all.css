@@ -2637,15 +2637,18 @@ body.vjs-full-window {
     .blog-post article footer a {
       text-decoration: underline; }
 
-#blog-video {
+#blog-block {
   padding-bottom: 50px; }
-  #blog-video .blog-post-full {
+  #blog-block .blog-post-full {
     margin-bottom: 40px; }
-  #blog-video .author-info figure {
-    margin: 0 15px; }
-  #blog-video footer {
+  #blog-block .author-info figure {
+    margin: 0;
+    float: left; }
+  #blog-block .author-info .author-name {
+    float: left; }
+  #blog-block footer {
     margin-top: 20px; }
-    #blog-video footer strong {
+    #blog-block footer strong {
       color: #44aeea;
       text-transform: uppercase; }
 

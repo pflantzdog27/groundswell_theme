@@ -67,14 +67,18 @@
         }
     }
 }
-#blog-video {
+#blog-block {
   padding-bottom: 50px;
     .blog-post-full {
       margin-bottom: 40px;
     }
     .author-info {
       figure {
-        margin: 0 15px;
+        margin: 0;      
+        float: left;
+      }
+      .author-name {
+        float: left;
       }
     }
     footer {
