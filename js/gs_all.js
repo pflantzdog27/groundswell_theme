@@ -113,7 +113,6 @@ GS.navigation = new function(){
 
     this.navigationBoxShadow = function() {
         $('#primary-navigation-wrapper').css('box-shadow', 'none');
-        if($('.content-section').eq(0).length > 0) {
             var distance = $('.content-section').eq(0).offset().top;
             var offset = 0;
             $(window).scroll(function () {
@@ -123,8 +122,7 @@ GS.navigation = new function(){
                     $('#primary-navigation-wrapper').css('box-shadow', 'none');
                 }
             });
-        }
-    }
+    };
     this.mobileMenu = function() {
         $('.navbar-toggle').click(function() {
             var windowHeight = $(window).height();
@@ -352,7 +350,6 @@ GS.scrolloramaEffects = new function() {
     this.steps = function(tweeningElement) {
         $(tweeningElement).each(function() {
             var contentSection = $(this).parent('section').attr('id');
-            console.log(contentSection);
             var heightOfTweeningElement = $('#'+contentSection).innerHeight();
             controller.addTween(
                 '#'+contentSection,
@@ -606,7 +603,7 @@ GS.blog = new function() {
         $('.select-box').click(function() {
             $('.select-options').slideToggle(300);
             $(this).find('b').toggleClass('icon-arrow-down, icon-arrow-up');
-        })
+        });
 
         $('.select-options li a').click(function(e) {
             e.preventDefault();

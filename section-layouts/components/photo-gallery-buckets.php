@@ -13,7 +13,7 @@
                     <figcaption>
                         <h3><?php echo $photoGalleryTitle ?></h3>
                     </figcaption>
-                    <span class="photo-count">3 <i class="icon-pictures"></i></span>
+                    <span class="photo-count"></span>
                 </figure>
 
                 <?php if( $photoGalleryImages ): ?>
