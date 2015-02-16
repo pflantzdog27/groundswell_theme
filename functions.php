@@ -61,6 +61,25 @@
         ));
     }
 
+
+//----------------------------//
+// Register Sidebar and Widgetize
+//----------------------------//
+function arphabet_widgets_init() {
+
+    register_sidebar( array(
+        'name'          => 'Blog Sidebar',
+        'id'            => 'sidebar_blog_single',
+        'before_widget' => '<div class="sidebar-widget hidden-xs">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
+
+}
+add_action( 'widgets_init', 'arphabet_widgets_init' );
+
+
 ///----------------------------//
 // Thumbnail Support
 //----------------------------//

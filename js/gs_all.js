@@ -369,7 +369,7 @@ GS.scrolloramaEffects = new function() {
         });
     };
 
-    this.blog_single_video = function(section) {
+    this.blog_single_social_icons = function(section) {
         controller.addTween(
             section,
             (new TimelineLite())
@@ -658,6 +658,14 @@ GS.landingPages = new function() {
             $(this).parent('li').find('.faq-answer').slideToggle(300);
         })
     }
+
+    this.photoGallery = function() {
+        $('.fancybox').fancybox();
+        $('#photo-gallery > div').each(function() {
+            var itemCount = $(this).find('.hidden > a').length;
+            $(this).find('.photo-count').html(itemCount + '<i class="icon-pictures"></i>');
+        })
+    }
 };
 
 GS.carousel = new function() {
@@ -686,10 +694,10 @@ GS.carousel = new function() {
 $(function() {
 
     var bodyClass = $('body').attr('class');
-    $('.fancybox').fancybox();
 
     GS.navigation.searchDisplay();
     GS.forms.emailSubscription();
+    GS.navigation.mobileMenu();
 
 
     if($('#petition-wrap').length > 0) { // IF PETITIONS EXIST ON THE PAGE
@@ -726,12 +734,21 @@ $(function() {
         }
     }
 
-    if($('body').hasClass('blog')) { // BLOG INDEX (previously just blog-index)
+    if($('#blog-post-index').length > 0) { // BLOG INDEX (previously just blog-index)
         GS.blog.selectMenu();
         GS.displayPosts();
         $('#load-posts').click(function() {
             GS.loadMorePosts();
         })
+    }
+
+    if($('body').hasClass('single-post')) {
+        GS.blog.affixSocialIcons();
+        GS.scrolloramaEffects.blog_single_social_icons('.blog-two-columns');
+    }
+
+    if($('#photo-gallery').length > 0) {
+        GS.landingPages.photoGallery();
     }
 
 
@@ -789,14 +806,8 @@ $(function() {
         GS.scrolloramaEffects.talk_to_us('.talk-to-us');
     }
 
-    if(bodyClass == 'blog-two-columns') { // BLOG REG
-        GS.blog.selectMenu();
-        GS.blog.affixSocialIcons();
-        GS.scrolloramaEffects.blog_single_video('.blog-two-columns');
-    }
-
     if(bodyClass == 'blog-single-video') { // Blog VIDEO
-        GS.scrolloramaEffects.blog_single_video('.blog-single-video');
+        GS.scrolloramaEffects.blog_single_social_icons('.blog-single-video');
         GS.blog.selectMenu();
     }
 

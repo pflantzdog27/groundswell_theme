@@ -1,7 +1,7 @@
 <header id="intro-section-wrapper">
     <div id="intro-section">
         <video id="homepage-videoBG" class="video-js hidden-xs"
-               poster="images/training-bg.jpg"
+               poster="<?php bloginfo('template_url') ?>/images/training-bg.jpg"
                controls="false"
                preload="auto"
                autoplay="autoplay"

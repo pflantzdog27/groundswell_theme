@@ -37,14 +37,9 @@
                             <article class="blog-post-full">
                                 <?php the_field('blog_posts_standard_content');?>
                             </article>
-                            <footer class="row">
-                                <div class="col-sm-12 text-center">
-                                    <p>If you like this post <a href="#">Subscribe</a> or <a href="#">Donate</a></p>
-                                </div>
-                            </footer>
                         </section>
                     </div>
-                    <?php include('partials/blog-right-sidebar.php');?>
+                    <?php get_sidebar();?>
                 </div>
             </div>
         <?php endwhile; ?>
@@ -52,10 +47,7 @@
 
 <section id="blog" class="content-section">
     <div class="container">
-        <div class="section-template parallax three-column-section row">
-            <?php include('partials/row-blog-posts-short.php');?>
-            <?php include('partials/row-blog-posts-short.php');?>
-        </div>
+        <?php require_once('section-layouts/blog-widget-small.php'); ?>
     </div>
 </section>
 

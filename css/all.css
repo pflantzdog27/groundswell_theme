@@ -368,6 +368,14 @@ Extenders
           color: #fff; } }
     #primary-navigation ul li.darker-blue-bg {
       background: #8B8EEA; }
+    #primary-navigation ul li.search-toggle {
+      padding-top: 15px;
+      color: #fff;
+      padding-left: 10px;
+      padding-bottom: 0;
+      cursor: pointer; }
+      #primary-navigation ul li.search-toggle a {
+        display: none; }
   #primary-navigation form {
     padding: 15px 20px;
     -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
@@ -2689,6 +2697,9 @@ body.vjs-full-window {
     #right-sidebar .sidebar-widget .widget-title {
       color: #44aeea;
       font-weight: 300; }
+    #right-sidebar .sidebar-widget ul {
+      list-style: none;
+      padding: 0; }
 
 #social-navigation {
   position: relative; }
