@@ -11,7 +11,7 @@
 <section id="blog-video">
     <div class="container">
         <div class="row">
-            <div class="col-sm-9">
+            <div class="col-sm-12">
                 <div class="author-info row">
                     <div class="post-intro col-sm-9">
                        <p><?php echo $inspirationIntro; ?></p>
@@ -31,16 +31,28 @@
                     <!-- video embed -->
                     <?php if($inspirationContent == 'Video') : ?>
                         <div class="embed-responsive embed-responsive-16by9" id="video-content">
-                            <?php echo do_shortcode( '[video src="'. $videoSrc.'" width="850" height="440"]' ); ?>
+                            <?php echo do_shortcode( '[video src="'. $videoSrc.'" width="1160" height="600"]' ); ?>`
                         </div>
                     <?php endif; ?>
                     <?php echo $inspirationOutro ?>
                     <?php include('components/social-share-bar.php');?>
                 </article>
-            </div>
-            <div class="recent-article-sidebar col-sm-3">
-                <h2 class="section-title visible-xs">More Inspiration</h2>
-                <?php// include('partials/column-blog-posts-short.php'); ?>
+                <footer class="row">
+
+                    <div class="col-sm-12">
+                        <strong>Topics: </strong>
+                        <?php  $posttags = get_the_tags();
+                        if ($posttags) {
+                            foreach($posttags as $tag) {
+                                echo '<a href="' . get_site_url() .'/'. $tag->slug . '">' . $tag->name . '</a> | ';
+                            }
+                        }
+                        ?><br>
+                        <?php if($inspirationAbout) { ?>
+                            <strong>About: </strong><?php echo $inspirationAbout; ?><br>
+                        <?php } ?>
+                    </div>
+                </footer>
             </div>
         </div>
     </div>

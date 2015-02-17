@@ -2631,14 +2631,15 @@ body.vjs-full-window {
         background: rgba(0, 0, 0, 0.5);
         color: #fff;
         padding: 10px; }
-    .blog-post article .Inspiration {
+    .blog-post article .single-inspiration {
       width: 50px;
       height: 50px;
       position: absolute;
       top: 0;
       right: 0;
       display: block;
-      background: url(../images/icon-inspiration-notext.svg) no-repeat 0 0; }
+      background: url(../images/icon-inspiration-notext.svg) no-repeat 0 0;
+      z-index: 2; }
     .blog-post article footer a {
       text-decoration: underline; }
 

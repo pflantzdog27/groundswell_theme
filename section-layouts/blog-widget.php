@@ -7,7 +7,7 @@
 
             <div class="select-menu col-sm-6 col-md-5 col-xs-12 pull-right">
                 <div class="select-box">
-                    <h5>Topics <span> ------ </span> <b class="icon-arrow-down"></b></h5>
+                    <h5>Topics <span> --- select --- </span> <b class="icon-arrow-down"></b></h5>
                 </div>
                 <div class="select-options scroll-area">
                     <?php
@@ -25,15 +25,14 @@
     </div>
 </header>
 
-
-<!-- THIS SECTION SHOULD NOT USE A LOOP BUT RATHER A MUSTACHE TEMPLATE USING JSON API (http://localhost/groundswell/redesign_wordpress/api/get_category_posts/?category_slug=domestic-violence) -->
 <section id="blog" class="content-section">
     <div class="container">
         <div class="section-template parallax three-column-section row" id="blog-post-index">
             <script id="blog-post-template" type="text/html">
                 {{#.}}
-                <div class="col-sm-4 blog-post">
+                <div class="col-sm-4 blog-post" id="post-{{id}}">
                     <article>
+                        <span class="{{postType}}"></span>
                         <figure>
                             <a href="{{url}}">
                                 <img class="img-responsive" src="{{image}}" alt="{{title}}">
@@ -54,7 +53,7 @@
     </div>
 </section>
 
-<aside class="section-breaker" style="background: #fff;">
+<aside class="section-breaker" id="load-more-posts" style="background: #fff;">
     <div class="container">
         <div class="row">
             <header class="col-sm-12">

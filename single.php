@@ -2,17 +2,21 @@
 
     <?php if ( have_posts() ) :
         while ( have_posts() ) : the_post();
-
+            $postID = get_the_ID();
             $postType = get_field('blog_posts_post_type');
             $standardContent = get_field('blog_posts_standard_content');
             $inspirationIntro = get_field('blog_posts_inspiration_intro');
             $inspirationOutro = get_field('blog_posts_inspiration_outro');
+            $inspirationAbout = get_field('blog_posts_inspiration_about');
             $inspirationContent = get_field('blog_posts_inspiration_content');
-            $videoSrc = get_field('blog_posts_inspiration_video');
-            include('section-layouts/'. $postType . '.php') ;
+            $videoSrc = get_field('blog_posts_inspiration_video');?>
 
-        endwhile;
-    endif;?>
+            <div id="<?php echo $postID ?>" class="single-post-page-wrapper">
+                <?php include('section-layouts/'. $postType . '.php') ; ?>
+            </div>
+
+        <?php endwhile;
+    endif; ?>
 
 <section id="blog" class="content-section">
     <div class="container">

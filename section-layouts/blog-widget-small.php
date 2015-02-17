@@ -4,7 +4,7 @@
     </div>
     <div class="select-menu col-sm-6 col-md-5 col-xs-12 pull-right">
         <div class="select-box">
-            <h5>Topics <span> ------ </span> <b class="icon-arrow-down"></b></h5>
+            <h5>Topics <span> --- select --- </span> <b class="icon-arrow-down"></b></h5>
         </div>
         <div class="select-options scroll-area">
             <?php
@@ -23,7 +23,7 @@
     <script id="blog-post-template" type="text/html">
         {{#.}}
         <div class="col-sm-4 blog-post">
-            <article>
+            <article id="{{id}}">
                 <figure>
                     <a href="{{url}}">
                         <img class="img-responsive" src="{{image}}" alt="{{title}}">
@@ -38,7 +38,7 @@
     </script><!-- template end -->
 </div>
 
-<aside class="section-breaker" style="background: #fff;">
+<aside class="section-breaker" id="load-more-posts" style="background: #fff;">
     <div class="container">
         <div class="row">
             <header class="col-sm-12">

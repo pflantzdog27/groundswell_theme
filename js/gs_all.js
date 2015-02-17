@@ -7,7 +7,7 @@ if(!GS){
 GS.apiCall = 'get_recent_posts/?count=6';
 GS.wrapper = '#blog-post-index';
 GS.template = '#blog-post-template';
-GS.pagination = 1;
+GS.pageNumber = 1;
 
 GS.displayPosts = function() {
     GS.loadPosts();
@@ -20,15 +20,17 @@ GS.changePostCategory = function(slug) {
 };
 
 GS.loadMorePosts = function() {
-    GS.pagination++;
-    GS.apiCall += '&page=' + GS.pagination;
-    var postHeight = $('.blog-post').eq(1).height();
-    var wrapperHeight = $(GS.wrapper).height();
-    $(GS.wrapper).height(postHeight + wrapperHeight);
-    $('html, body').animate({
-        scrollTop: $(".blog-post:last-child").offset().top
-    }, 500);
-    GS.loadPosts();
+    if(GS.pageNumber < GS.numberOfPages) {
+        GS.pageNumber++;
+        GS.apiCall += '&page=' + GS.pageNumber;
+        var postHeight = $('.blog-post').eq(1).height();
+        var wrapperHeight = $(GS.wrapper).height();
+        $(GS.wrapper).height(postHeight + wrapperHeight);
+        $('html, body').animate({
+            scrollTop: $(".blog-post:last-child").offset().top
+        }, 500);
+        GS.loadPosts();
+    }
 };
 
 GS.resetPosts = function() {
@@ -36,19 +38,22 @@ GS.resetPosts = function() {
         $('.blog-post').remove();
     })
     $(GS.wrapper).css('height','auto');
-    GS.pagination = 1;
+    GS.pageNumber = 1;
+    GS.numberOfPages = 1;
+    $('#load-more-posts').fadeIn(300);
 };
 
 GS.loadPosts = function() {
-    //initiate the load icon
     $('<div></div>').attr('id', 'blog-loading').appendTo(GS.wrapper);
-    //start request
     //USE THIS IN PRODUCTION ----- var baseURL = window.location.protocol + "//" + window.location.host + "/";
     var api = 'http://localhost/groundswell/redesign_wordpress/api/' + GS.apiCall;
     $.getJSON(api, function (data) {
         var templateData = [];
+        GS.numberOfPages = data.pages;
         $.each(data.posts, function (i, item) {
+            pageNumber = item.pages;
             templateData.push({
+                id : item.id,
                 title: item.title,
                 url: item.url,
                 image: item.thumbnail_images.full.url,
@@ -69,14 +74,16 @@ GS.loadPosts = function() {
         });
         var galleryTemplate = $(GS.template).html();
         $(GS.wrapper).append(Mustache.render(galleryTemplate, templateData));
-        // make all the blogs the same height (even rows)
         GS.blog.blogRowHeights();
-        // get rid of loading icon
         $(GS.wrapper).find('#blog-loading').fadeOut(800, function() {
             $(this).remove();
         });
+        if(GS.pageNumber == GS.numberOfPages) {
+            $('#load-more-posts').fadeOut(300);
+        }
     });
-}
+};
+
 
 /* ===========================================
         FUNCTIONS
@@ -619,13 +626,15 @@ GS.blog = new function() {
     };
 
     this.blogRowHeights = function() {
-        setTimeout(function() {
+            var pageID = $('.single-post-page-wrapper').attr('id');
             var maxHeight = 0;
             $('.blog-post > article').each(function(){
                 maxHeight = $(this).height() > maxHeight ? $(this).height() : maxHeight;
+                if($(this).attr('id') == pageID && pageID != undefined) {
+                    $(this).parent('div').css('display','none');
+                }
             });
             $('.blog-post > article').height(maxHeight);
-        },100)
     };
 
 
