@@ -2570,9 +2570,6 @@ body.vjs-full-window {
   -moz-box-shadow: 0 0;
   box-shadow: 0 0; }
 
-.post-intro {
-  border-right: 1px solid #eaeaea; }
-
 .author {
   padding-left: 0; }
 
@@ -3425,6 +3422,11 @@ button:active {
   text-transform: uppercase;
   font-weight: 900;
   padding-bottom: 20px; }
+
+.mejs-video {
+  -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.75); }
 
 .page-header {
   border-bottom: 0;

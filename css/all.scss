@@ -17,8 +17,6 @@
 @import 'footer';
 
 
-
-
 /* gs bootstrap */
 body {
   font-size: 16px;
@@ -121,7 +119,9 @@ button:active {
   padding-bottom: 20px;
 }
 
-
+.mejs-video {
+  @include box-shadow(0px 2px 10px 1px, rgba(0,0,0,0.75));
+}
 .page-header {
   border-bottom: 0;
   min-height: 100px;

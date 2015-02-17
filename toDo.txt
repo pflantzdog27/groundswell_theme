@@ -1,0 +1,10 @@
+Blog:
+1) Load More posts button
+2) Remove current post from lists of posts on single post page.
+3) Featured thumbnails in index display
+
+Landing Pages:
+1) Make Poster for background videos unique
+2) Video intro creates navigation box shadow issue.
+3) Poster flashes before play of video
+4) Youtube icon shown on pause

@@ -366,9 +366,9 @@ GS.scrolloramaEffects = new function() {
         });
     };
 
-    this.blog_single_social_icons = function(section) {
+    this.blog_single_social_icons = function() {
         controller.addTween(
-            section,
+            'body',
             (new TimelineLite())
                 .append([
                     TweenMax.fromTo($('.social-link-bar ul li'),.1,
@@ -378,7 +378,7 @@ GS.scrolloramaEffects = new function() {
                         {css: {'padding-top': 8, 'padding-bottom': 8 }, immediateRender: true},
                         {css: {'padding-top': 15, 'padding-bottom': 15}})
                 ]),
-            100, false);
+            200, false);
     };
 
 
@@ -731,7 +731,7 @@ $(function() {
         }
     }
 
-    if($('#blog-post-index').length > 0) { // BLOG INDEX (previously just blog-index)
+    if($('#blog-post-index').length > 0) { // BLOG INDEX
         GS.blog.selectMenu();
         GS.displayPosts();
         $('#load-posts').click(function() {
@@ -740,8 +740,10 @@ $(function() {
     }
 
     if($('body').hasClass('single-post')) {
-        GS.blog.affixSocialIcons();
-        GS.scrolloramaEffects.blog_single_social_icons('.blog-two-columns');
+        if($('#social-navigation').length > 0) {
+            GS.blog.affixSocialIcons();
+        };
+        GS.scrolloramaEffects.blog_single_social_icons();
     }
 
     if($('#photo-gallery').length > 0) {
@@ -770,18 +772,6 @@ $(function() {
         GS.carousel.toggleTextDisplay();
     }
 
-    if(bodyClass == 'home') { // JUST THE HOME
-        //scrollorama
-        GS.scrolloramaEffects.steps('#action');
-        GS.scrolloramaEffects.steps('#training');
-        GS.scrolloramaEffects.steps('#inspiration');
-        GS.scrolloramaEffects.parallax('#blog');
-        GS.scrolloramaEffects.parallax('#team');
-        GS.scrolloramaEffects.parallax('#partners');
-        GS.scrolloramaEffects.trainings();
-    }
-
-
     if(bodyClass == 'action') { // ACTION
         GS.scrolloramaEffects.mainNavBackground();
         GS.navigation.navigationBoxShadow();
@@ -801,11 +791,6 @@ $(function() {
 
     if(bodyClass == 'talk-to-us') { // Talk to US
         GS.scrolloramaEffects.talk_to_us('.talk-to-us');
-    }
-
-    if(bodyClass == 'blog-single-video') { // Blog VIDEO
-        GS.scrolloramaEffects.blog_single_social_icons('.blog-single-video');
-        GS.blog.selectMenu();
     }
 
 });

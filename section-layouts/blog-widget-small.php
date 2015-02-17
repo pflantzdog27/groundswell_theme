@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" style="margin-bottom: 25px;">
     <div class="col-sm-6">
         <p>If you like this post <strong><a href="#">Subscribe</a></strong>, <strong><a href="#">Donate</a></strong> or read another below:</p>
     </div>
