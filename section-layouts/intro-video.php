@@ -1,13 +1,13 @@
 <header id="intro-section-wrapper">
     <div id="intro-section">
         <video id="homepage-videoBG" class="video-js hidden-xs"
-               poster="<?php bloginfo('template_url') ?>/images/training-bg.jpg"
                controls="false"
-               preload="auto"
+               preload="false"
                autoplay="autoplay"
                muted="muted"
-               data-setup='{ "techOrder": ["youtube"], "src": "<?php echo $introYoutubeSrc ;?>"}'>
-            <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+               data-setup='{ "techOrder": ["youtube"], "src": "<?php echo $introYoutubeSrc ;?>"}'
+               poster="false">
+            <img class="vjs-no-js" src="<?php bloginfo('template_url') ?>/images/training-bg.jpg">
         </video>
 
         <div id="hero">

@@ -43,7 +43,7 @@
                         </figure>
                         <p>{{excerpt}}</p>
                         <footer>
-                            <small>{{#tags}}<a href="<?php echo get_site_url(); ?>{{tagUrl}}">{{tagName}}</a>  &nbsp;{{/tags}}</small><br>
+                            <small>{{#tags}}<a href="<?php echo get_site_url(); ?>tag/{{tagUrl}}">{{tagName}}</a>  &nbsp;{{/tags}}</small><br>
                         </footer>
                     </article>
                 </div>

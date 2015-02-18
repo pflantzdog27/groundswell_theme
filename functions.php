@@ -198,7 +198,7 @@ function wpbeginner_numeric_posts_nav() {
         $links[] = $paged + 1;
     }
 
-    echo '<ul>' . "\n";
+    echo '<ul class="pagination">' . "\n";
 
     /**	Previous Post Link */
     if ( get_previous_posts_link() )
@@ -283,6 +283,35 @@ if ( function_exists('register_sidebar') ) {
 
 }*/
 
+
+//----------------------------//
+// bit.ly URL SHORTENER
+//----------------------------//
+function bitly()
+{
+    //login information
+    $url = get_permalink();  //for wordpress permalink
+    $login = 'mreyf';   //your bit.ly login
+    $apikey = 'R_4353512fc164bcd1828c0e60fa3e94cb'; //add your bit.ly API
+    $format = 'json';   //choose between json or xml
+    $version = '2.0.1';
+    //generate the URL
+    $bitly = 'http://api.bit.ly/shorten?version='.$version.'&longUrl='.urlencode($url).'&login='.$login.'&apiKey='.$apikey.'&format='.$format;
+
+    //fetch url
+    $response = file_get_contents($bitly);
+//for json formating
+    if(strtolower($format) == 'json')
+    {
+        $json = @json_decode($response,true);
+        echo $json['results'][$url]['shortUrl'];
+    }
+    else //for xml formatting
+    {
+        $xml = simplexml_load_string($response);
+        echo 'http://bit.ly/'.$xml->results->nodeKeyVal->hash;
+    }
+}
 
 
 

@@ -646,6 +646,19 @@ GS.blog = new function() {
             $('.blog-post > article').height(maxHeight);
     };
 
+    this.socialShare = function() {
+        var url = window.location.href;
+        var call = 'http://api.bit.ly/v3/shorten?format=txt&login=mreyf&apiKey=R_4353512fc164bcd1828c0e60fa3e94cb&longUrl='+url;
+        var tweetIntent = $('.twitter > a').attr('href');
+        if(tweetIntent) {
+            var splitTweet = tweetIntent.split('url=');
+            //url shortner for tweets
+            $.get(call, function(data) {
+                $('.twitter-share > a').attr('href', splitTweet[0]+'url='+data+splitTweet[1]);
+            });
+        }
+    }
+
 
 
 };
@@ -762,6 +775,7 @@ $(function() {
             GS.blog.affixSocialIcons();
         };
         GS.scrolloramaEffects.blog_single_social_icons();
+        GS.blog.socialShare();
     }
 
     if($('#photo-gallery').length > 0) {

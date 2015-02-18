@@ -39,7 +39,11 @@ p a {
 p {
   @include font-size(30px);
 }
-
+ a:active, a:visited {
+   color: inherit;
+   border: none;
+   text-decoration: none;
+ }
 
 .blue-background {
   background: $gsBlue;

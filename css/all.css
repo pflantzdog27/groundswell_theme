@@ -2716,7 +2716,7 @@ body.vjs-full-window {
 
 .author-name {
   margin-top: 10px; }
-  .author-name b {
+  .author-name span {
     padding-left: 10px; }
 
 #right-sidebar {
@@ -3378,6 +3378,11 @@ p a {
 p {
   font-size: 30px;
   font-size: 1.875rem; }
+
+a:active, a:visited {
+  color: inherit;
+  border: none;
+  text-decoration: none; }
 
 .blue-background {
   background: #44aeea;

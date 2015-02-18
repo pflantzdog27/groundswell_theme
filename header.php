@@ -18,6 +18,31 @@
 </head>  
 <body <?php body_class(); ?>>
 
+<!-- fb script -->
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({       appId      : '779313252079735',
+                        channelUrl : '<?php bloginfo('template_url') ?>/channel.html',
+                        cookies    : true,
+                        status     : true,
+                        xfbml      : true
+        });
+        /*FB.Event.subscribe('edge.create', function(response) {
+            $('#resulting-view h2').fadeOut(200,function() {
+                $('.split h4').text('You can now look forward to getting inspiring, faithful stuff delivered regularly to your Facebook feed.');
+            });
+        });  */
+    };
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script><!-- end FB script -->
+
 <?php // Navigation
 $navigationArgs = array(
     'theme_location'  => 'primary_nav',
@@ -59,7 +84,7 @@ $navigationArgs = array(
             </ul>-->
             <form id="primary-search-field" method="get" role="search" action="<?php echo home_url( '/' ); ?>">
                 <div class="form-group col-sm-12">
-                    <input type="text" class="form-control" value="" name="s" placeholder="Search">
+                    <input type="text" class="form-control" value="" name="s" placeholder="Search Blog Posts">
                     <button type="submit" class="btn gs-btn gs-btn-blue"><span class="icon-arrow-right"></span></button>
                 </div>
             </form>

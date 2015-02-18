@@ -44,7 +44,7 @@
                         <?php  $posttags = get_the_tags();
                         if ($posttags) {
                             foreach($posttags as $tag) {
-                                echo '<a href="' . get_site_url() .'/'. $tag->slug . '">' . $tag->name . '</a> | ';
+                                echo '<a href="' . get_site_url() .'/tag/'. $tag->slug . '">' . $tag->name . '</a> | ';
                             }
                         }
                         ?><br>

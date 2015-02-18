@@ -1,18 +1,16 @@
 Blog:
 4) Add option for inspiration slideshow or simple image
-5) Tag and Archive Pages
-6) Social Sharing
 10) Related Posts list -- remove current
+11) Author Page
+12) Search Page
 
 
 Landing Pages:
-1) Make Poster for background videos unique
 2) Video intro creates navigation box shadow issue.
-3) Poster flashes before play of video
-4) Youtube icon shown on pause
 
 
 General:
 1) Install WP SEO plugin -- will use for Facebook Open Graph
 2) Set WP option to allow site to be indexed by search engines
 3) Caching software.
+4) 404 page
