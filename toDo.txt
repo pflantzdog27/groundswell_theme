@@ -1,9 +1,9 @@
 Blog:
-3) Featured thumbnails in index display
 4) Add option for inspiration slideshow or simple image
 5) Tag and Archive Pages
 6) Social Sharing
-7) Inspiration ICON for suck posts in index
+10) Related Posts list -- remove current
+
 
 Landing Pages:
 1) Make Poster for background videos unique

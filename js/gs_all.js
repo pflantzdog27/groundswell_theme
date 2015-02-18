@@ -45,10 +45,11 @@ GS.resetPosts = function() {
 
 GS.loadPosts = function() {
     $('<div></div>').attr('id', 'blog-loading').appendTo(GS.wrapper);
+    $('#no-content-message').remove();
     //USE THIS IN PRODUCTION ----- var baseURL = window.location.protocol + "//" + window.location.host + "/";
     var api = 'http://localhost/groundswell/redesign_wordpress/api/' + GS.apiCall;
+    var templateData = [];
     $.getJSON(api, function (data) {
-        var templateData = [];
         GS.numberOfPages = data.pages;
         $.each(data.posts, function (i, item) {
             pageNumber = item.pages;
@@ -81,8 +82,16 @@ GS.loadPosts = function() {
         if(GS.pageNumber == GS.numberOfPages) {
             $('#load-more-posts').fadeOut(300);
         }
+        GS.noContentDisplay();
     });
 };
+
+GS.noContentDisplay = function() {
+    var blogPost = $('.blog-post');
+    if(blogPost.length === 0) {
+        $(GS.wrapper).append('<div id="no-content-message"><span class="icon-earth"></span><p class="bg-info">Couldn\'t generate any posts for that one. Maybe you\'d have better luck heading over to the <a href="#">Index</a> </p></div>')
+    }
+}
 
 
 /* ===========================================
@@ -631,7 +640,7 @@ GS.blog = new function() {
             $('.blog-post > article').each(function(){
                 maxHeight = $(this).height() > maxHeight ? $(this).height() : maxHeight;
                 if($(this).attr('id') == pageID && pageID != undefined) {
-                    $(this).parent('div').css('display','none');
+                    $(this).parent('div').remove();
                 }
             });
             $('.blog-post > article').height(maxHeight);
