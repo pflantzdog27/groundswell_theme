@@ -3,11 +3,16 @@ if(!GS){
 }
 
 
-
-GS.apiCall = 'get_recent_posts/?count=6';
+if($('#single-row-blogs').length > 0) {
+    GS.postCount = 3;
+} else {
+    GS.postCount = 6;
+}
+GS.apiCall = 'get_recent_posts/?count='+GS.postCount;
 GS.wrapper = '#blog-post-index';
 GS.template = '#blog-post-template';
 GS.pageNumber = 1;
+
 
 GS.displayPosts = function() {
     GS.loadPosts();
@@ -15,7 +20,7 @@ GS.displayPosts = function() {
 
 GS.changePostCategory = function(slug) {
     GS.resetPosts();
-    GS.apiCall = 'get_category_posts/?category_slug='+slug+'&count=6&status=publish';
+    GS.apiCall = 'get_category_posts/?category_slug='+slug+'&count='+GS.postCount+'&status=publish';
     GS.loadPosts();
 };
 

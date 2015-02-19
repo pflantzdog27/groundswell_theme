@@ -26,5 +26,13 @@
         <?php include('components/photo-gallery-buckets.php'); ?>
     <?php endif; ?>
 
+    <?php if($fullBlock == 'Blog Block') : // ***** BLOG POSTS ****** ?>
+        <div id="single-row-blogs">
+            <?php require_once('components/blog-widget.php'); ?>
+            <button class="btn gs-btn gs-btn-orange"><a href="#">Read more of the latest on our blog</a></button>
+        </div>
+    <?php endif; ?>
+
+
 </div>
 

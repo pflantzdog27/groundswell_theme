@@ -2,7 +2,8 @@ Blog:
 4) Add option for inspiration slideshow or simple image
 10) Related Posts list -- remove current
 11) Author Page
-12) Search Page
+12) Start Blog Widget on specific category
+
 
 
 Landing Pages:
