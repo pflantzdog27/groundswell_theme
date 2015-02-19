@@ -9,13 +9,15 @@
 
 
     <?php if($fullBlock == 'Curated Carousel') : // ****** CURATED CAROUSEL ***** ?>
-        <?php include('components/photo-gallery-buckets.php'); ?>
+        <?php include('components/curated-carousel.php'); ?>
     <?php endif; /*  END curated carousel*/ ?>
 
 
     <?php if($fullBlock == 'Text Block') :  // ***** TEXT BLOCK ****** ?>
         <h2><?php echo $fullBlockTextBlockContent;?></h2>
-        <button class="btn gs-btn gs-btn-blue"><a href="<?php echo $fullBlockTextBlockActionLink;?>"><?php echo $fullBlockTextBlockActionText;?></a></button>
+        <?php if($fullBlockTextBlockActionText) { ?>
+            <button class="btn gs-btn gs-btn-blue"><a href="<?php echo $fullBlockTextBlockActionLink;?>"><?php echo $fullBlockTextBlockActionText;?></a></button>
+        <?php } ?>
     <?php endif; /*  END text block*/ ?>
 
     <?php if($fullBlock == 'Content Block') :  // ***** CONTENT BLOCK ****** ?>
@@ -28,9 +30,12 @@
 
     <?php if($fullBlock == 'Blog Block') : // ***** BLOG POSTS ****** ?>
         <div id="single-row-blogs">
-            <?php require_once('components/blog-widget.php'); ?>
+            <?php include('components/blog-widget.php'); ?>
             <button class="btn gs-btn gs-btn-orange"><a href="#">Read more of the latest on our blog</a></button>
         </div>
+    <?php endif; ?>
+    <?php if($fullBlock == 'Recent Campaigns') : // ***** RECENT CAMPAIGNS ****** ?>
+        <?php include('components/petition-blocks.php'); ?>
     <?php endif; ?>
 
 

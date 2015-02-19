@@ -11,10 +11,10 @@
                     <div class="item <?php echo ($i == 0 ? 'active' : '');?>">
                 <?php }?>
 
-                <?php // partners template ?>
-                <figure class="col-xs-6 col-sm-3 partner-figure">
-                    <a target="_blank" href="<?php the_field('partner_link'); ?>"><img class="img-responsive" src="<?php the_field('partner_logo'); ?>" alt="<?php the_title(); ?>"></a>
-                </figure>
+                    <?php // partners template ?>
+                    <figure class="col-xs-6 col-sm-3 partner-figure">
+                        <a target="_blank" href="<?php the_field('partner_link'); ?>"><img class="img-responsive" src="<?php the_field('partner_logo'); ?>" alt="<?php the_title(); ?>"></a>
+                    </figure>
 
                 <?php if($i == 3 || $i == 7 || $i == 11 || $i == 15 || $i == 19 || $i == 23 || $i == $len - 1) { // end the new slide (4 items per slide) ?>
                     </div>

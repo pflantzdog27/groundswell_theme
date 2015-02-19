@@ -9,11 +9,13 @@
                 $photoGalleryImages = get_sub_field('photo_gallery_images');
                 ?>
                 <figure>
-                    <a rel="<?php echo $photoGalleryID ?>" class="fancybox" href="<?php echo $photoGalleryPoster ?>"><img class="img-responsive" src="<?php echo $photoGalleryPoster ?>" alt=""/></a>
-                    <figcaption>
-                        <h3><?php echo $photoGalleryTitle ?></h3>
-                    </figcaption>
-                    <span class="photo-count"></span>
+                    <a rel="<?php echo $photoGalleryID ?>" class="fancybox" href="<?php echo $photoGalleryPoster ?>">
+                        <img class="img-responsive" src="<?php echo $photoGalleryPoster ?>" alt=""/>
+                        <figcaption>
+                            <h3><?php echo $photoGalleryTitle ?></h3>
+                        </figcaption>
+                        <span class="photo-count"></span>
+                    </a>
                 </figure>
 
                 <?php if( $photoGalleryImages ): ?>

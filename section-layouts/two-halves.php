@@ -3,12 +3,16 @@
         <?php if($sectionTitle) : ?>
             <h2 class="section-title"><?php echo $sectionTitle; ?></h2>
         <?php endif; /* END section title */ ?>
-        <article>
-            <?php echo $leftBlockContent; ?>
-            <?php if($leftBlockActionButtonTest == 'Yes') { ?>
-                <button class="btn gs-btn gs-btn-orange"><a href="<?php echo $leftBlockActionLink;?>"><?php echo $leftBlockActionButton;?></a></button>
-            <?php } ?>
-        </article>
+        <?php if($leftBlock == 'Content Field') { ?>
+            <article>
+                <?php echo $leftBlockContent; ?>
+                <?php if($leftBlockActionButtonTest == 'Yes') { ?>
+                    <button class="btn gs-btn gs-btn-orange"><a href="<?php echo $leftBlockActionLink;?>"><?php echo $leftBlockActionButton;?></a></button>
+                <?php } ?>
+            </article>
+        <?php } elseif ($leftBlock == 'Image') { ?>
+            <img class="img-responsive" src="<?php echo $leftBlockImage; ?>" alt="Image">
+        <?php } ?>
     </div>
     <div class="section-right-column <?php echo (!$sectionDividerCheck ? 'parallax' : false);?> col-sm-6" <?php echo ($rightBlock == 'Petition App' ? 'id="petition-wrap"' : false);?> <?php echo ($rightBlock == 'Email Signup' ? 'id="email-subscription"' : false);?>>
         <?php if($rightBlock == 'Petition App') {

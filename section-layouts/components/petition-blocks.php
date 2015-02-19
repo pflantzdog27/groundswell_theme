@@ -1,4 +1,4 @@
-<div id="petitions" class="block-layout-petitions"></div>
+<div id="petitions" class="block-layout-petitions" style="color: #333;"></div>
 
 <script id="petitionsLayout" type="text/html">
     <div class="row">
@@ -14,6 +14,9 @@
                     </figcaption>
                 </figure>
                 <h4>{{title}}</h4>
+                <footer class="petition-meta-info">
+                    <p><small><a href="{{url}}" target="_blank">Click to sign petition</a> or <a href="{{url}}" target="_blank">Learn more</a></small></p>
+                </footer>
             </div>
         {{/.}}
     </div>

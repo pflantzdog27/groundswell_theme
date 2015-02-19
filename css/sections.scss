@@ -24,7 +24,7 @@
         }
         .section-right-column {
           @include flexbox;
-          min-height: 250px;
+          //min-height: 250px;
           @include flexAlignItems(center);
           @include flexwrap(wrap);
         }
@@ -176,13 +176,6 @@
 .full-width-image-bg {
   @include coverBG();
   min-height: 500px;
-    .overlay-text {
-      padding: 15px;
-      color: #fff;
-      background: rgba(0,0,0,0.75);
-      margin-top: 50px;
-      font-style:italic;
-    }
 }
 
 #slider-wrapper {
@@ -208,4 +201,12 @@
           @include font-size(50px);
         }
     }
+}
+
+.overlay-text {
+  padding: 15px;
+  color: #fff;
+  background: rgba(0,0,0,0.75);
+  margin-top: 50px;
+  font-style:italic;
 }

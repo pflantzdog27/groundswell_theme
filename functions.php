@@ -143,6 +143,12 @@ if ( function_exists( 'add_theme_support' ) ) {
                 'classes' => 'blue-background',
                 'wrapper' => false,
             ),
+            array(
+                'title' => 'Black Underlay',
+                'block' => 'p',
+                'classes' => 'overlay-text',
+                'wrapper' => false,
+            )
         );
         $init_array['style_formats'] = json_encode( $style_formats );
         return $init_array;
@@ -255,33 +261,6 @@ function custom_field_excerpt($title) {
     return apply_filters('the_excerpt', $text);
 }
 
-
-
-/* REGISTER SIDEBARS
-if ( function_exists('register_sidebar') ) {
-    register_sidebar(array(
-        'name' => 'Schedules',
-        'before_widget' => '<div id="%2$s" class="sidebar-bucket">',
-        'after_widget' => '</div>',
-        'before_title' => '<h4>',
-        'after_title' => '</h4>'
-    ));
-    register_sidebar(array(
-        'name' => 'Transportation Relocation Vehicles',
-        'before_widget' => '<div id="%2$s" class="sidebar-bucket">',
-        'after_widget' => '</div>',
-        'before_title' => '<h4>',
-        'after_title' => '</h4>'
-    ));
-    register_sidebar(array(
-        'name' => 'Region 9',
-        'before_widget' => '<div id="%2$s" class="sidebar-bucket">',
-        'after_widget' => '</div>',
-        'before_title' => '<h4>',
-        'after_title' => '</h4>'
-    ));
-
-}*/
 
 
 //----------------------------//
