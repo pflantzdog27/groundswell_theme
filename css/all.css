@@ -2702,7 +2702,12 @@ body.vjs-full-window {
   .author-info figure {
     overflow: hidden;
     margin: 0;
-    float: left; }
+    float: left;
+    padding-right: 8px; }
+  .author-info .post-intro {
+    border-right: 1px solid #eaeaea; }
+  .author-info .author {
+    padding: 10px 0 10px 10px; }
 
 .single-post-header {
   padding: 75px 0 40px; }
@@ -2764,6 +2769,30 @@ body.vjs-full-window {
 
 .outro {
   padding-top: 10px; }
+
+#inspiration-sidebar {
+  margin-top: 75px; }
+  #inspiration-sidebar ul {
+    margin-left: 0;
+    padding-left: 0; }
+    #inspiration-sidebar ul .cat-post-item {
+      position: relative;
+      overflow: hidden;
+      list-style: none;
+      margin-bottom: 20px; }
+      #inspiration-sidebar ul .cat-post-item .post-title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        padding: 10px; }
+      #inspiration-sidebar ul .cat-post-item:hover {
+        color: #fff; }
+
+.featured-image-content img {
+  margin: 0 auto; }
 
 #team-graphic li {
   max-width: 16.66%;
@@ -3546,9 +3575,6 @@ button:active {
     .social-link-bar li:hover, .social-link-column li:hover {
       margin-top: -10px;
       text-decoration: none; }
-
-.social-link-bar {
-  padding: 0; }
 
 .social-link-column li {
   display: block;

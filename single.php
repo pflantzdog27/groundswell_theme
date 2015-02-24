@@ -9,7 +9,9 @@
         $inspirationOutro = get_field('blog_posts_inspiration_outro');
         $inspirationAbout = get_field('blog_posts_inspiration_about');
         $inspirationContent = get_field('blog_posts_inspiration_content');
-        $videoSrc = get_field('blog_posts_inspiration_video');?>
+        $videoSrc = get_field('blog_posts_inspiration_video');
+        $videoObject = get_field('blog_posts_inspiration_video_object');
+        $imageSrc = get_field('blog_posts_inspiration_image');?>
 
         <div id="<?php echo $postID ?>" class="single-post-page-wrapper">
             <?php include('section-layouts/'. $postType . '.php') ; ?>

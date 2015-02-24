@@ -1,12 +1,8 @@
 Blog:
-4) Add option for inspiration slideshow or simple image
+4) Add option for inspiration slideshow
 12) Start Blog Widget on a specific category
-13) What if the video is not youtube, vimeo, etc
-14) Image sharing for facebook share
-15) remove tags - display categories as Topics
-16) No more inspiration icon in upper right
-17) Add recent posts under related instead of archives
 18) port content from production site
+19) Check to see if inspiration posts display sidebar MINUS current item
 
 
 

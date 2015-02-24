@@ -16,9 +16,3 @@
     </aside>
 <?php endif; ?>
 
-
-<?php if ( is_active_sidebar( 'sidebar_inspiration_single' ) ) : ?>
-    <div class="recent-article-sidebar col-sm-3">
-        <?php dynamic_sidebar( 'sidebar_inspiration_single' ); //WIDGETS ?>
-    </div>
-<?php endif; ?>

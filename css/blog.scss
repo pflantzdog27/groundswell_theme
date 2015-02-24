@@ -121,6 +121,13 @@
       overflow: hidden;
       margin: 0;
       float: left;
+      padding-right: 8px;
+    }
+    .post-intro {
+      border-right: 1px solid #eaeaea;
+    }
+    .author {
+      padding: 10px 0 10px 10px;
     }
 }
 
@@ -197,3 +204,34 @@
   padding-top: 10px;
 }
 
+#inspiration-sidebar {
+  margin-top: 75px;
+    ul {
+      margin-left: 0;
+      padding-left: 0;
+        .cat-post-item {
+          position: relative;
+          overflow: hidden;
+          list-style: none;
+          margin-bottom: 20px;
+            .post-title {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              background: rgba(0,0,0,0.5);
+              color: #fff;
+              padding: 10px;
+            }
+          &:hover {
+            color: #fff;
+          }
+        }
+    }
+}
+
+.featured-image-content {
+  img {
+    margin: 0 auto;
+  }
+}
