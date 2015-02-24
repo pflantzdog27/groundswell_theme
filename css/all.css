@@ -1228,7 +1228,6 @@ body.vjs-full-window {
   .section-breaker h2 {
     padding: 0;
     margin: 0;
-    color: #fff;
     line-height: 1.75;
     font-size: 45px;
     font-size: 2.8125rem;
@@ -1305,23 +1304,23 @@ body.vjs-full-window {
       color: rgba(68, 174, 234, 0.2);
       line-height: 0.5; }
 
-#faq li {
+.faq li {
   position: relative;
   cursor: pointer;
   border-top: 1px solid #eaeaea; }
-  #faq li > span {
+  .faq li > span {
     position: absolute;
     left: 0;
     top: 7px;
     color: #44aeea; }
-  #faq li .faq-question {
+  .faq li .faq-question {
     padding-left: 25px;
     font-weight: 900; }
-    #faq li .faq-question.active {
+    .faq li .faq-question.active {
       color: #44aeea; }
-  #faq li:first-child {
+  .faq li:first-child {
     border-top: none; }
-#faq .faq-answer {
+.faq .faq-answer {
   cursor: auto;
   display: none;
   padding-left: 25px; }
@@ -2753,7 +2752,13 @@ body.vjs-full-window {
     height: 150px;
     display: block; }
     #curator-info-block figure img {
-      border: 3px solid #eaeaea; }
+      border: 3px solid #eaeaea;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      -webkit-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+      box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75); }
   #curator-info-block h1, #curator-info-block p {
     color: #333; }
 
@@ -3534,17 +3539,25 @@ button:active {
       background: #ccc; }
     .social-link-bar li a, .social-link-column li a {
       display: block;
-      padding: 8px 0; }
+      padding: 8px 0;
+      text-decoration: none; }
       .social-link-bar li a:hover, .social-link-column li a:hover {
         color: white !important; }
     .social-link-bar li:hover, .social-link-column li:hover {
-      margin-top: -10px; }
+      margin-top: -10px;
+      text-decoration: none; }
+
+.social-link-bar {
+  padding: 0; }
 
 .social-link-column li {
   display: block;
   margin-bottom: 10px; }
   .social-link-column li:hover {
     margin-top: 0; }
+
+#email-subscription {
+  padding-top: 5px; }
 
 #full-width-slider {
   position: relative; }

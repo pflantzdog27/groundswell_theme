@@ -22,7 +22,7 @@
                         <?php echo get_avatar( $post->post_author, 50 ); ?>
                     </figure>
                     <div class="author-name">
-                        <h4><?php the_author();?></h4>
+                        <h4><?php the_author_posts_link(); ?></h4>
                         <span><?php the_date();?></span>
                     </div>
                     <div class="clearfix"></div>
@@ -32,6 +32,6 @@
                 </article>
             </section>
         </div>
-        <?php get_sidebar();?>
+        <?php get_sidebar('sidebar_blog_single');?>
     </div>
 </div

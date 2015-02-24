@@ -6,7 +6,7 @@
             <div class="sidebar-widget">
                 <h2 class="widget-title">Related<?php //echo $all_cats_of_post[$i]->cat_name; ?> Posts</h2>
                 <ul>
-                    <?php global $post; $cat_posts = get_posts('numberposts=4&category='.$all_cats_of_post[$i]->cat_ID); foreach($cat_posts as $post) : ?>
+                    <?php global $post; $cat_posts = get_posts('numberposts=4&exclude='.$post_ID.'&category='.$all_cats_of_post[$i]->cat_ID); foreach($cat_posts as $post) : ?>
                         <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
                     <?php endforeach; ?>
                 </ul>
@@ -16,3 +16,9 @@
     </aside>
 <?php endif; ?>
 
+
+<?php if ( is_active_sidebar( 'sidebar_inspiration_single' ) ) : ?>
+    <div class="recent-article-sidebar col-sm-3">
+        <?php dynamic_sidebar( 'sidebar_inspiration_single' ); //WIDGETS ?>
+    </div>
+<?php endif; ?>

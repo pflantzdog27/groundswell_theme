@@ -37,7 +37,13 @@
     <?php if($fullBlock == 'Recent Campaigns') : // ***** RECENT CAMPAIGNS ****** ?>
         <?php include('components/petition-blocks.php'); ?>
     <?php endif; ?>
-
+    <?php if($fullBlock == 'Expandable Tabs') : // ***** EXPANDABLE TABS ****** ?>
+        <?php echo $expandableTabsContent;?>
+    <?php endif; ?>
 
 </div>
+
+<?php if($expandableTabs) {
+    include('components/expandable-tabs.php');
+} ?>
 

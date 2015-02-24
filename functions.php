@@ -75,6 +75,14 @@ function arphabet_widgets_init() {
         'before_title'  => '<h2 class="widget-title">',
         'after_title'   => '</h2>',
     ) );
+    register_sidebar( array(
+        'name'          => 'Inspiration Sidebar',
+        'id'            => 'sidebar_inspiration_single',
+        'before_widget' => '<div class="sidebar-widget hidden-xs">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
 
 }
 add_action( 'widgets_init', 'arphabet_widgets_init' );
@@ -145,7 +153,7 @@ if ( function_exists( 'add_theme_support' ) ) {
             ),
             array(
                 'title' => 'Black Underlay',
-                'block' => 'p',
+                'block' => 'div',
                 'classes' => 'overlay-text',
                 'wrapper' => false,
             )
@@ -291,6 +299,8 @@ function bitly()
         echo 'http://bit.ly/'.$xml->results->nodeKeyVal->hash;
     }
 }
+
+
 
 
 

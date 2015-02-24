@@ -1,14 +1,22 @@
 Blog:
 4) Add option for inspiration slideshow or simple image
-10) Related Posts list -- remove current
-11) Author Page
 12) Start Blog Widget on a specific category
+13) What if the video is not youtube, vimeo, etc
+14) Image sharing for facebook share
+15) remove tags - display categories as Topics
+16) No more inspiration icon in upper right
+17) Add recent posts under related instead of archives
+18) port content from production site
+
 
 
 
 Landing Pages:
 2) Video intro creates navigation box shadow issue.
-3) FAQ section (open close content)
+3) Full width image slider is to be updated. (who we are)
+4) No account for linkedin --- team widget
+5) Different post types other than partners
+6) Photo Gallery -- center
 
 
 General:
@@ -16,6 +24,11 @@ General:
 2) Set WP option to allow site to be indexed by search engines
 3) Caching software.
 4) 404 page
+5) Privileged level access
+6) favicon
 
 Trainings:
 1) Section Option for the layout with FAQ like open/close buttons
+
+Contact Page:
+1) Where's the form going?

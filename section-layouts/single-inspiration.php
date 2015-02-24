@@ -11,7 +11,7 @@
 <section id="blog-video">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-9">
                 <div class="author-info row">
                     <div class="post-intro col-sm-9">
                        <p><?php echo $inspirationIntro; ?></p>
@@ -31,29 +31,31 @@
                     <!-- video embed -->
                     <?php if($inspirationContent == 'Video') : ?>
                         <div class="embed-responsive embed-responsive-16by9" id="video-content">
-                            <?php echo do_shortcode( '[video src="'. $videoSrc.'" width="1160" height="600"]' ); ?>`
+                            <?php echo do_shortcode( '[video src="'. $videoSrc.'" width="960" height="540"]' ); ?>`
                         </div>
                     <?php endif; ?>
                     <?php echo $inspirationOutro ?>
                     <?php include('components/social-share-bar.php');?>
                 </article>
-                <footer class="row">
-
-                    <div class="col-sm-12">
-                        <strong>Topics: </strong>
-                        <?php  $posttags = get_the_tags();
-                        if ($posttags) {
-                            foreach($posttags as $tag) {
-                                echo '<a href="' . get_site_url() .'/tag/'. $tag->slug . '">' . $tag->name . '</a> | ';
-                            }
+                <footer>
+                    <strong>Topics: </strong>
+                    <?php  $posttags = get_the_tags();
+                    if ($posttags) {
+                        foreach($posttags as $tag) {
+                            echo '<a href="' . get_site_url() .'/tag/'. $tag->slug . '">' . $tag->name . '</a> | ';
                         }
-                        ?><br>
-                        <?php if($inspirationAbout) { ?>
-                            <strong>About: </strong><?php echo $inspirationAbout; ?><br>
-                        <?php } ?>
-                    </div>
+                    }
+                    ?><br>
+                    <?php if($inspirationAbout) { ?>
+                        <strong>About: </strong><?php echo $inspirationAbout; ?><br>
+                    <?php } ?>
                 </footer>
             </div>
+
+            <div class="recent-article-sidebar col-sm-3">
+                <?php dynamic_sidebar( 'sidebar_inspiration_single' ); //SIDEBAR WIDGETS ?>
+            </div>
+
         </div>
     </div>
 </section>

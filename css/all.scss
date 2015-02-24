@@ -191,14 +191,19 @@ button:active {
         a {
           display: block;
           padding: 8px 0;
+          text-decoration: none;
             &:hover {
               color: #fff!important;
             }
         }
       &:hover {
         margin-top: -10px;
+        text-decoration: none;
       }
     }
+}
+.social-link-bar {
+  padding: 0;
 }
 .social-link-column {
   li {
@@ -210,6 +215,9 @@ button:active {
   }
 }
 
+#email-subscription {
+  padding-top: 5px;
+}
 
 
 #full-width-slider {

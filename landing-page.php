@@ -74,6 +74,8 @@ $introContent = get_field('landing_page_sub_intro_content');
         $fullBlockTextBlockContent = get_sub_field('layout_section_text_block_content');
         $fullBlockTextBlockActionText = get_sub_field('layout_section_text_block_action_text');
         $fullBlockTextBlockActionLink = get_sub_field('layout_section_text_block_action_link');
+        $expandableTabs = get_sub_field('layout_section_expandable_tabs');
+        $expandableTabsContent = get_sub_field('layout_section_expandable_tabs_content');
         ?>
 
         <section id="section-<?php echo $i; ?>" class="<?php echo ($sectionBackground == 'Image' ? 'coverBG' : false);?> <?php echo ($sectionDividerCheck ? 'section-breaker' : 'content-section');?>" style="<?php echo ($sectionBackground == 'Image' ? 'background-image:url('.$sectionBackgroundImage.');' :'background:'. $sectionBackgroundColor.';');?> color: <?php echo $sectionTextColor; ?>">

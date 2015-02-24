@@ -51,8 +51,9 @@ GS.resetPosts = function() {
 GS.loadPosts = function() {
     $('<div></div>').attr('id', 'blog-loading').appendTo(GS.wrapper);
     $('#no-content-message').remove();
-    //USE THIS IN PRODUCTION ----- var baseURL = window.location.protocol + "//" + window.location.host + "/";
-    var api = 'http://localhost/groundswell/redesign_wordpress/api/' + GS.apiCall;
+    var baseURL = 'http://localhost/groundswell/redesign_wordpress';
+    //var baseURL = window.location.protocol + "//" + window.location.host + "/";
+    var api = baseURL + '/api/' + GS.apiCall;
     var templateData = [];
     $.getJSON(api, function (data) {
         GS.numberOfPages = data.pages;
@@ -769,8 +770,14 @@ $(function() {
         if($('.section-number').length > 0) {
             GS.scrolloramaEffects.steps('.section-number');
         }
+        if($('#stats').length > 0) {
+            GS.scrolloramaEffects.stats('.content-section');
+        }
         if($(window).width() > 768 && $('.video-js').length > 0) {
             GS.backgroundVideo.sizingFunction();
+        }
+        if($('.faq').length > 0) {
+            GS.landingPages.FAQ();
         }
     }
 
