@@ -19,7 +19,10 @@ $introHeroMessage = get_field('landing_page_hero_message');
 $introYoutubeSrc = get_field('landing_page_intro_video_src');
 $introContentChecker = get_field('landing_page_sub_intro_content_checker');
 $introContent = get_field('landing_page_sub_intro_content');
-?>
+$flyoutMessage = get_field('flyout_message_checker');
+$flyoutContent = get_field('flyout_message_content');
+$flyoutBackground = get_field('flyout_message_background');
+    ?>
 
 <?php if($introBackground != 'Video') { // test which layout to use
     include ('section-layouts/intro-non-video.php');
@@ -93,7 +96,19 @@ $introContent = get_field('landing_page_sub_intro_content');
     <?php endwhile; ?>
 <?php endif; /* END Section Builder */ ?>
 
-
+<?php if($flyoutMessage) : ?>
+    <!-- overlay message -->
+    <aside class="container" id="slideDisplayWindow" data-switch="<?php echo ($flyoutMessage == true ? 'active' : false);?>">
+        <div class="col-sm-6 col-xs-12" style="background: rgba(<?php echo $flyoutBackground; ?>,0.9);">
+            <span class="closePopup icon-cross"></span>
+            <h2>The title here</h2>
+            <article>
+                <?php echo $flyoutContent; ?>
+            </article>
+            <button class="btn gs-btn gs-btn-white"><span class="icon-facebook"></span> Like Us on Facebook</button>
+        </div>
+    </aside>
+<?php endif; ?>
 <?php endwhile; endif; // END primary if/while statements ?>
 
 

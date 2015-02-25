@@ -100,6 +100,8 @@ GS.noContentDisplay = function() {
 }
 
 
+// END
+
 GS.navigation = new function(){
     var searchButton = $('.search-toggle');
     var form = $('#primary-search-field')
@@ -160,6 +162,40 @@ GS.navigation = new function(){
         })
     }
 
+};
+
+GS.cookies = new function()  {
+    var flyout = $('#slideDisplayWindow');
+    var pageHasFlyout = flyout.find('active');
+    var cookieValue = $.cookie('slideOverlay');
+
+    this.displayTrigger = function() {
+        var distance = $('#footer').offset().top,
+            aboveFooter = parseInt(distance) - 600,
+            $window = $(window);
+
+        $window.scroll(function() {
+            if ( $window.scrollTop() >= aboveFooter ) {
+                GS.cookies.testCookie();
+            }
+        });
+    };
+
+    this.testCookie = function() {
+        if(pageHasFlyout && cookieValue != 'true') {
+            flyout.animate({bottom : '0'}, 600);
+            $.cookie('slideOverlay', 'true', { expires: 30, path: '/' });
+        } else {
+            flyout.remove();
+        }
+    };
+    this.removeOverlay = function() {
+       $('.closePopup').click(function() {
+            flyout.animate({bottom : '-1000px'}, 600,function() {
+                $(this).remove();
+            });
+        });
+    }
 };
 
 GS.forms = new function() {
@@ -735,6 +771,8 @@ $(function() {
     GS.navigation.searchDisplay();
     GS.forms.emailSubscription();
     GS.navigation.mobileMenu();
+    GS.cookies.displayTrigger();
+    GS.cookies.removeOverlay();
 
 
     if($('#petition-wrap').length > 0) { // IF PETITIONS EXIST ON THE PAGE
@@ -801,7 +839,7 @@ $(function() {
         GS.landingPages.photoGallery();
     }
 
-
+// END
 
     if(bodyClass == 'inspiration') { // INSPIRATION
         GS.scrolloramaEffects.stats('#landing-page-content');

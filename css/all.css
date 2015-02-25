@@ -3338,7 +3338,8 @@ body.vjs-full-window {
   color: #fff;
   -webkit-box-shadow: inset 0px 5px 8px 0px rgba(0, 0, 0, 0.7);
   -moz-box-shadow: inset 0px 5px 8px 0px rgba(0, 0, 0, 0.7);
-  box-shadow: inset 0px 5px 8px 0px rgba(0, 0, 0, 0.7); }
+  box-shadow: inset 0px 5px 8px 0px rgba(0, 0, 0, 0.7);
+  z-index: -1; }
   #footer #site-map li {
     padding: 5px 0;
     text-transform: uppercase;
@@ -3717,7 +3718,8 @@ form {
   left: 0;
   right: 0;
   bottom: -1000px;
-  color: #fff; }
+  color: #fff;
+  z-index: 9; }
   #slideDisplayWindow > div {
     background: rgba(234, 90, 58, 0.8);
     -webkit-border-radius: 5px 5px 0 0;

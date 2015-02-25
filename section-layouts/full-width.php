@@ -1,4 +1,4 @@
-<div class="section-template parallax single-column-section row">
+<div class="section-template parallax single-column-section">
     <?php if($sectionTitle) : ?>
         <h2 class="section-title"><?php echo $sectionTitle; ?></h2>
     <?php endif; /* END section title */ ?>

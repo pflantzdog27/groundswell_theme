@@ -9,10 +9,7 @@
                 <div class="col-sm-8">
                     <?php if(is_category()) :
                         $category = get_the_category(); ?>
-                        <h1>Blog &nbsp; / &nbsp; Category : <b><?php echo $category[0]->cat_name;  ?></b></h1>
-                    <?php endif ?>
-                    <?php if(is_tag()) :?>
-                        <h1>Blog &nbsp; / &nbsp; Topic : <b><?php single_tag_title(); ?></b></h1>
+                        <h1>Blog &nbsp; / &nbsp; Topic : <b><?php echo $category[0]->cat_name;  ?></b></h1>
                     <?php endif ?>
                     <?php if(single_month_title()) :?>
                         <h1>Blog &nbsp; / &nbsp; Month : <b><?php single_month_title(' '); ?></b></h1>
