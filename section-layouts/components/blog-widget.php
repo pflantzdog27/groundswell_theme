@@ -3,7 +3,6 @@
         {{#.}}
         <div class="col-sm-4 blog-post" id="post-{{id}}">
             <article>
-                <span class="{{postType}}"></span>
                 <figure>
                     <a href="{{url}}">
                         <img class="img-responsive" src="{{image}}" alt="{{title}}">

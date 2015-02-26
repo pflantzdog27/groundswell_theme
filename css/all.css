@@ -3277,7 +3277,8 @@ body.vjs-full-window {
     font-size: 3.125rem;
     margin-top: -20px; }
   .carousel-control.left {
-    background: none; }
+    background: none;
+    display: none; }
     .carousel-control.left span {
       left: 0; }
   .carousel-control.right {

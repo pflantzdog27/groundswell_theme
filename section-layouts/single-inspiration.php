@@ -38,6 +38,12 @@
                         </figure>
                     <?php endif; ?>
 
+                    <?php if($inspirationContent == 'Slideshow') :
+                       include('components/inspiration-content-carousel.php');
+                    endif; ?>
+
+
+
 
 
                     <?php echo $inspirationOutro ?>

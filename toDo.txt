@@ -3,15 +3,10 @@ Blog:
 12) Start Blog Widget on a specific category
 18) port content from production site
 19) remove current post from list of inspiration posts in sidebar
-20) Posts other than Partner in slider
-21) Next post flyout
 
 
 Landing Pages:
 2) Video intro creates navigation box shadow issue.
-3) Full width image slider is to be updated. (who we are)
-4) Don't display social network if the user doesn't input anything --- team widget
-5) Different post types other than partners
 6) Photo Gallery -- center
 
 

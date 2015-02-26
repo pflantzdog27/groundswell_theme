@@ -735,8 +735,9 @@ GS.landingPages = new function() {
     this.photoGallery = function() {
         $('.fancybox').fancybox();
         $('#photo-gallery > div').each(function() {
-            var itemCount = $(this).find('.hidden > a').length;
-            $(this).find('.photo-count').html(itemCount + '<i class="icon-pictures"></i>');
+            var itemCount = $(this).find('.hidden > a').length,
+                itemsAndPoster = parseInt(itemCount) + 1;
+            $(this).find('.photo-count').html(itemsAndPoster + '<i class="icon-pictures"></i>');
         })
     }
 };
@@ -744,11 +745,13 @@ GS.landingPages = new function() {
 GS.carousel = new function() {
     this.carouselInit = function(element) {
         // init carousel
+        $(element).each
         var theCarousel = $(element);
         theCarousel.carousel({
             interval: false,
             wrap: false
         });
+        GS.carousel.navigationControls(element);
     };
 
     this.toggleTextDisplay = function() {
@@ -756,6 +759,29 @@ GS.carousel = new function() {
             $('.text-overlay').slideToggle(300);
             $('#toggle-display').find('i').toggleClass('icon-minus, icon-plus');
         })
+    }
+
+    this.navigationControls = function(carouselID) {
+        var numberOfItems = $(carouselID).find('.item').length;
+        var eqValue = parseInt(numberOfItems) - 1;
+        $(carouselID).on('slid.bs.carousel', function () {
+            var firstSlide = $(this).find('.item:eq(0)');
+            var lastSlide = $(this).find('.item:eq('+eqValue+')');
+            console.log()
+            // check if it's the first slide
+            if(firstSlide.hasClass('active')) {
+                $(this).find('.left').css('display','none');
+            } else {
+                $(this).find('.left').css('display','block');
+            }
+            // check if it's the last slide
+            if(lastSlide.hasClass('active')) {
+                $(this).find('.right').css('display','none');
+            } else {
+                $(this).find('.right').css('display','block');
+            }
+        });
+
     }
 
 };
@@ -799,7 +825,6 @@ $(function() {
         GS.navigation.navigationBoxShadow();
         GS.teamDisplay.clickAction();
         GS.teamDisplay.hoverAction();
-        GS.carousel.carouselInit('.carousel');
         GS.scrolloramaEffects.parallax('.parallax');
         GS.navigation.navigateDown();
         GS.navigation.backToTop();
@@ -835,7 +860,11 @@ $(function() {
         GS.blog.socialShare();
     }
 
-    if($('#photo-gallery').length > 0) {
+    if($('.carousel').length > 0) { // Carousels
+        GS.carousel.carouselInit('.carousel')
+    }
+
+    if($('#photo-gallery').length > 0) { // Photo Galleries
         GS.landingPages.photoGallery();
     }
 

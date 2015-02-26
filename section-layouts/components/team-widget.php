@@ -16,8 +16,8 @@
                         <footer>
                             <p>Connect with <?php echo $stafferSelection['user_firstname'];?>:
                                 <a href="mailto:<?php echo $stafferSelection['user_email'];?>"><i class="icon-mail"></i></a>
-                                <a href="https://twitter.com/<?php echo $user_info->twitter ?>" target="_blank"><i class="icon-twitter"></i></a>
-                                <a href="<?php echo $user_info->linkedin ?>" target="_blank"><i class="icon-linkedin"></i></a>
+                                <?php if($user_info->twitter) : ?><a href="https://twitter.com/<?php echo $user_info->twitter ?>" target="_blank"><i class="icon-twitter"></i></a><?php endif; ?>
+                                <?php if($user_info->linkedin) : ?><a href="<?php echo $user_info->linkedin ?>" target="_blank"><i class="icon-linkedin"></i></a><?php endif; ?>
                             </p>
                         </footer>
                     </article>
