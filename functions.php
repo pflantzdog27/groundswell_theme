@@ -8,7 +8,8 @@
         $options['title'] = _('Global');
         $options['pages'] = array(
             _('Header'),
-            _('Footer')
+            _('Footer'),
+            _('Flyout'),
         );
         return $options;
     }

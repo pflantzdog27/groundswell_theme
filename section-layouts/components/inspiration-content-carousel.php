@@ -1,18 +1,30 @@
-<?php $carouselItems = get_field('repeater_field_name');
-if($carouselItems): ?>
+<?php
+$carouselItems = get_field('blog_posts_inpiration_slideshow');
+$carouselType = get_field('blog_posts_inspiration_slideshow_type'); ?>
+<?php if( have_rows('blog_posts_inpiration_slideshow') ): /* Check if the widget has entries */?>
     <div id="full-width-slider" class="carousel slide">
         <div class="carousel-inner" role="listbox">
             <?php  $i = 0;
             $len = count($carouselItems); ?>
-                <?php while ( have_rows('repeater_field_name') ) : the_row(); ?>
-                    <div class="item <?php echo ($i == 0 ? 'active' : '');?>">
-                        <figure>
-                            <img src="img-responsive" src="{{}}" alt="{{}}">
-                            <figcaption>
-                                <p>When you get rid of ONE text overlay, they all go away until it is again expanded... <a href="#">READ MORE</a></p>
-                            </figcaption>
-                        </figure>
-                    </div>
+                <?php while( have_rows('blog_posts_inpiration_slideshow') ): the_row(); ?>
+                    <?php
+                    $slideshowImage = get_sub_field('blog_posts_inpiration_slideshow_image');
+                    $slideshowTweet = get_sub_field('blog_posts_inpiration_slideshow_tweet');
+                    $slideshowCaption = get_sub_field('blog_posts_inpiration_slideshow_caption');
+                    ?>
+
+                        <div class="item <?php echo ($i == 0 ? 'active' : false);?>">
+                            <?php if($carouselType == 'images') { ?>
+                                <figure>
+                                    <img class="img-responsive" src="<?php echo $slideshowImage; ?>" alt="Slideshow Image">
+                                    <figcaption>
+                                        <?php echo $slideshowCaption; ?>
+                                    </figcaption>
+                                </figure>
+                            <?php } else { ?>
+                                 <?php echo $slideshowTweet; ?>
+                            <?php } ?>
+                        </div>
                     <?php $i++;?>
                 <?php endwhile; ?>
         </div>

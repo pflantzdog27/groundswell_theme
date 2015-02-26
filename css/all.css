@@ -3301,27 +3301,26 @@ body.vjs-full-window {
   overflow: hidden; }
 
 #full-width-slider {
-  position: relative; }
+  position: relative;
+  background: #333;
+  padding: 25px;
+  margin-bottom: 60px; }
   #full-width-slider .item {
-    height: 500px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat; }
-    #full-width-slider .item .text-overlay {
-      position: absolute;
-      background: rgba(0, 0, 0, 0.5);
-      color: #fff;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding-top: 15px;
-      padding-bottom: 15px; }
+    color: #fff; }
+    #full-width-slider .item figure {
+      overflow: hidden; }
+      #full-width-slider .item figure img {
+        max-height: 400px;
+        margin: 0 auto; }
+      #full-width-slider .item figure figcaption {
+        padding-top: 20px; }
+    #full-width-slider .item iframe {
+      margin: 0 auto !important; }
+  #full-width-slider .carousel-indicators {
+    bottom: 0; }
   #full-width-slider .carousel-control span {
-    font-size: 90px;
-    font-size: 5.625rem;
+    font-size: 80px;
+    font-size: 5rem;
     margin-top: -40px; }
   #full-width-slider #toggle-display {
     color: #fff;
@@ -3588,39 +3587,6 @@ button:active {
 
 #email-subscription {
   padding-top: 5px; }
-
-#full-width-slider {
-  position: relative; }
-  #full-width-slider .item {
-    height: 500px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat; }
-    #full-width-slider .item .text-overlay {
-      position: absolute;
-      background: rgba(0, 0, 0, 0.5);
-      color: #fff;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding-top: 15px;
-      padding-bottom: 15px; }
-  #full-width-slider .carousel-control span {
-    font-size: 90px;
-    font-size: 5.625rem;
-    margin-top: -40px; }
-  #full-width-slider #toggle-display {
-    color: #fff;
-    padding: 5px;
-    position: absolute;
-    font-size: 40px;
-    font-size: 2.5rem;
-    bottom: 5px;
-    right: 15px;
-    cursor: pointer; }
 
 .company-meta-block > div {
   height: 200px;

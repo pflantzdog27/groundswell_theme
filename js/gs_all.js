@@ -781,9 +781,7 @@ GS.carousel = new function() {
                 $(this).find('.right').css('display','block');
             }
         });
-
-    }
-
+    };
 };
 
 /* ===========================================

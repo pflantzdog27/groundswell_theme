@@ -82,23 +82,31 @@
 
 #full-width-slider {
   position: relative;
+  background: #333;
+  padding: 25px;
+  margin-bottom: 60px;
   .item {
-    height: 500px;
-    @include coverBG();
-    .text-overlay {
-      position: absolute;
-      background: rgba(0,0,0,0.5);
-      color: #fff;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding-top: 15px;
-      padding-bottom: 15px;
+    color: #fff;
+    figure {
+      overflow: hidden;
+      img {
+        max-height: 400px;
+        margin: 0 auto;
+      }
+      figcaption {
+        padding-top: 20px;
+      }
     }
+    iframe {
+      margin: 0 auto!important;
+    }
+  }
+  .carousel-indicators {
+    bottom: 0;
   }
   .carousel-control {
     span {
-      @include font-size(90px);
+      @include font-size(80px);
       margin-top: -40px;
     }
   }

@@ -1,13 +1,12 @@
 Blog:
-4) Add option for inspiration slideshow
 12) Start Blog Widget on a specific category
 18) port content from production site
 19) remove current post from list of inspiration posts in sidebar
+20) Have more blog posts slide up from bottom;
 
 
 Landing Pages:
 2) Video intro creates navigation box shadow issue.
-6) Photo Gallery -- center
 
 
 General:
@@ -18,6 +17,7 @@ General:
 6) favicon
 7) Flyout doesn't close consistently using the X
 8) In page links
+9) Global option for flyout
 
 Questions for Michelle:
 1) Where's the form going on contact page?

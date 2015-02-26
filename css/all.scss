@@ -219,40 +219,6 @@ button:active {
   padding-top: 5px;
 }
 
-
-#full-width-slider {
-  position: relative;
-  .item {
-    height: 500px;
-    @include coverBG();
-    .text-overlay {
-      position: absolute;
-      background: rgba(0,0,0,0.5);
-      color: #fff;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding-top: 15px;
-      padding-bottom: 15px;
-    }
-  }
-  .carousel-control {
-    span {
-      @include font-size(90px);
-      margin-top: -40px;
-    }
-  }
-  #toggle-display {
-    color: #fff;
-    padding: 5px;
-    position: absolute;
-    @include font-size(40px);
-    bottom: 5px;
-    right: 15px;
-    cursor: pointer;
-  }
-}
-
 .company-meta-block {
     > div {
       height: 200px;
