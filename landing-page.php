@@ -19,9 +19,19 @@ $introHeroMessage = get_field('landing_page_hero_message');
 $introYoutubeSrc = get_field('landing_page_intro_video_src');
 $introContentChecker = get_field('landing_page_sub_intro_content_checker');
 $introContent = get_field('landing_page_sub_intro_content');
+    // flyout
 $flyoutMessage = get_field('flyout_message_checker');
+$flyoutTitle = get_field('flyout_message_title');
 $flyoutContent = get_field('flyout_message_content');
+$flyoutContentWysiwyg = get_field('flyout_message_content_wysiwyg_editor');
 $flyoutBackground = get_field('flyout_message_background');
+$flyoutAction = get_field('flyout_message_action');
+$flyoutActionText = get_field('flyout_message_action_text');
+$flyoutActionLink = get_field('flyout_message_action_link');
+$flyoutActionLinkChecker = get_field('flyout_message_action_link_checker');
+$flyoutActionTextTwo = get_field('flyout_message_action_text_two');
+$flyoutActionLinkTwo = get_field('flyout_message_action_link_two');
+$flyoutActionLinkCheckerTwo = get_field('flyout_message_action_link_checker_two');
     ?>
 
 <?php if($introBackground != 'Video') { // test which layout to use
@@ -97,17 +107,8 @@ $flyoutBackground = get_field('flyout_message_background');
 <?php endif; /* END Section Builder */ ?>
 
 <?php if($flyoutMessage) : ?>
-    <!-- overlay message -->
-    <aside class="container" id="slideDisplayWindow" data-switch="<?php echo ($flyoutMessage == true ? 'active' : false);?>">
-        <div class="col-sm-6 col-xs-12" style="background: rgba(<?php echo $flyoutBackground; ?>,0.9);">
-            <span class="closePopup icon-cross"></span>
-            <h2>The title here</h2>
-            <article>
-                <?php echo $flyoutContent; ?>
-            </article>
-            <button class="btn gs-btn gs-btn-white"><span class="icon-facebook"></span> Like Us on Facebook</button>
-        </div>
-    </aside>
+   <?php include('section-layouts/flyout-message.php'); ?>
+
 <?php endif; ?>
 <?php endwhile; endif; // END primary if/while statements ?>
 

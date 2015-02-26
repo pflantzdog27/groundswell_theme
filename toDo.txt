@@ -4,7 +4,7 @@ Blog:
 18) port content from production site
 19) remove current post from list of inspiration posts in sidebar
 20) Posts other than Partner in slider
-21) Next post
+21) Next post flyout
 
 
 Landing Pages:
@@ -22,7 +22,9 @@ General:
 4) 404 page
 6) favicon
 7) Flyout doesn't close consistently using the X
+8) In page links
 
 Questions for Michelle:
 1) Where's the form going on contact page?
 2) Full width image slider is to be updated -- who we are page -- what should we do with that?
+3) Where does donate link go?

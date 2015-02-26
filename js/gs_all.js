@@ -184,7 +184,7 @@ GS.cookies = new function()  {
     this.testCookie = function() {
         if(pageHasFlyout && cookieValue != 'true') {
             flyout.animate({bottom : '0'}, 600);
-            $.cookie('slideOverlay', 'true', { expires: 30, path: '/' });
+            //$.cookie('slideOverlay', 'true', { expires: 30, path: '/' });
         } else {
             flyout.remove();
         }

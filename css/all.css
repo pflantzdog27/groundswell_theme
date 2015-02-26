@@ -3453,6 +3453,8 @@ strong {
 .gs-btn-blue {
   background: #44aeea;
   color: #fff; }
+  .gs-btn-blue:hover, .gs-btn-blue a:hover {
+    color: #333333 !important; }
 
 .gs-btn-orange {
   background: #ea5a3a;
@@ -3721,11 +3723,13 @@ form {
   color: #fff;
   z-index: 9; }
   #slideDisplayWindow > div {
-    background: rgba(234, 90, 58, 0.8);
     -webkit-border-radius: 5px 5px 0 0;
     -moz-border-radius: 5px 5px 0 0;
     border-radius: 5px 5px 0 0;
-    padding-bottom: 20px; }
+    padding-bottom: 20px;
+    -webkit-box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.5); }
     #slideDisplayWindow > div .closePopup {
       font-size: 30px;
       font-size: 1.875rem;
@@ -3733,3 +3737,13 @@ form {
       right: 15px;
       top: 15px;
       cursor: pointer; }
+    #slideDisplayWindow > div header {
+      padding: 10px;
+      border-bottom: 2px solid #eaeaea;
+      text-align: center;
+      text-transform: uppercase; }
+    #slideDisplayWindow > div footer {
+      text-align: center;
+      margin-top: 20px; }
+      #slideDisplayWindow > div footer a {
+        display: block; }
