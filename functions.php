@@ -58,7 +58,8 @@
 //----------------------------//
     if ( function_exists( 'register_nav_menus' ) ) {
         register_nav_menus( array(
-            'primary_nav' => 'Main navigation displayed at the top of any page'
+            'primary_nav' => 'Main navigation displayed at the top of any page',
+            'mobile_nav' => 'Mobile navigation displayed at the top of any page'
         ));
     }
 

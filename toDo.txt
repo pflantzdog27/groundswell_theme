@@ -19,7 +19,14 @@ General:
 8) In page links
 9) Global option for flyout
 
+
 Questions for Michelle:
 1) Where's the form going on contact page?
 2) Full width image slider is to be updated -- who we are page -- what should we do with that?
 3) Where does donate link go?
+
+Completed:
+Home
+Who we are
+What We Do
+Talk to Us

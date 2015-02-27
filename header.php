@@ -50,7 +50,15 @@ $navigationArgs = array(
     'menu_class'      => 'menu',
     'echo'            => true,
     'fallback_cb'     => 'wp_page_menu',
-    'items_wrap'      => '<ul class="nav navbar-nav navbar-right">%3$s</ul>'
+    'items_wrap'      => '<ul class="nav navbar-nav navbar-right hidden-xs">%3$s</ul>'
+);
+$mobileNavigationArgs = array(
+    'theme_location'  => 'mobile_nav',
+    'container'       => false,
+    'menu_class'      => 'menu',
+    'echo'            => true,
+    'fallback_cb'     => 'wp_page_menu',
+    'items_wrap'      => '<ul class="nav navbar-nav navbar-right visible-xs">%3$s</ul>'
 );
 
 ?>
@@ -70,6 +78,7 @@ $navigationArgs = array(
             <h4 class="visible-xs" style="text-align:center;color:#fff">Menu</h4>
 
             <?php wp_nav_menu( $navigationArgs ); // NAVIGATION HERE ?>
+            <?php wp_nav_menu( $mobileNavigationArgs ); // MOBILE NAVIGATION HERE ?>
 
             <!--<ul class="nav navbar-nav navbar-right">
                 <li class="visible-xs darker-blue-bg"><a href="#">Action</a></li>

@@ -840,6 +840,9 @@ $(function() {
         if($('.faq').length > 0) {
             GS.landingPages.FAQ();
         }
+        if($('#column-buckets').length > 0 && $(window).width() > 768) {
+            GS.sectionHacks.evenLengthColumns();
+        }
     }
 
     if($('#blog-post-index').length > 0) { // BLOG INDEX
