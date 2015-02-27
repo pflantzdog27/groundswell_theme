@@ -11,6 +11,8 @@
         <?php if($rightBlockImage) : ?>
             <img src="<?php echo $rightBlockImage;?>" class="img-responsive" alt="Image">
         <?php endif; /* END right block image */ ?>
+
+
     </div>
 </div>
 

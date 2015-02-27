@@ -1361,6 +1361,9 @@ body.vjs-full-window {
   margin-top: 50px;
   font-style: italic; }
 
+.in-section-social {
+  padding: 0 !important; }
+
 #petition-wrap {
   color: #333; }
 
