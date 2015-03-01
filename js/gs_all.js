@@ -93,7 +93,7 @@ GS.loadPosts = function() {
 };
 
 GS.noContentDisplay = function() {
-    var blogPost = $('.blog-post');
+    var blogPost = $(GS.wrapper + ' .blog-post');
     if(blogPost.length === 0) {
         $(GS.wrapper).append('<div id="no-content-message"><span class="icon-earth"></span><p class="bg-info">Couldn\'t generate any posts for that one. Maybe you\'d have better luck heading over to the <a href="#">Index</a> </p></div>')
     }
@@ -558,7 +558,7 @@ GS.petitions = new function() {
             })
             // error handling here
             .fail(function () {
-                console.log("Error");
+                petitions.append('<div id="no-content-message"><span class="icon-earth"></span><p class="bg-info">Sorry, there must be somthing wrong with our Petition display. Please <a href="/talk-to-us">contact us</a> so we can look into this. </p></div>')
             });
     };
 
@@ -581,7 +581,7 @@ GS.petitions = new function() {
         })
         // error handling here
         .fail(function () {
-            console.log("Error");
+            $('#cat-list').append('<p></p>').text('Sorry, there is something wrong with the category display at this moment.')
         });
     };
     this.scrollBar = function() {
@@ -723,7 +723,7 @@ GS.landingPages = new function() {
     };
 
     this.FAQ = function() {
-        var plusMinusIcon = '#faq li > span';
+        var plusMinusIcon = '.faq li > span';
         $(plusMinusIcon + ', .faq-question').click(function() {
 
             $(this).parent('li').find('.faq-question').toggleClass('active');

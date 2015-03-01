@@ -89,6 +89,8 @@ $flyoutActionLinkCheckerTwo = get_field('flyout_message_action_link_checker_two'
         $fullBlockTextBlockActionLink = get_sub_field('layout_section_text_block_action_link');
         $expandableTabs = get_sub_field('layout_section_expandable_tabs');
         $expandableTabsContent = get_sub_field('layout_section_expandable_tabs_content');
+        $expandableTabsActionLink = get_sub_field('layout_section_expandable_tabs_action_link');
+        $expandableTabsActionText = get_sub_field('layout_section_expandable_tabs_action');
         ?>
 
         <section id="section-<?php echo $i; ?>" class="<?php echo ($sectionBackground == 'Image' ? 'coverBG' : false);?> <?php echo ($sectionDividerCheck ? 'section-breaker' : 'content-section');?>" style="<?php echo ($sectionBackground == 'Image' ? 'background-image:url('.$sectionBackgroundImage.');' :'background:'. $sectionBackgroundColor.';');?> color: <?php echo $sectionTextColor; ?>">

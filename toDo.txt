@@ -1,8 +1,10 @@
 Blog:
-12) Start Blog Widget on a specific category
+12) When an admin selects FULL WIDTH -> BLOG BLOCK -> there should be an option to select default category -- otherwise it's just the latest news.
 18) port content from production site
 19) remove current post from list of inspiration posts in sidebar
 20) Have more blog posts slide up from bottom;
+21) Video fallback from Mobile
+22) Single Post Page -- show slideup for next post
 
 
 Landing Pages:
