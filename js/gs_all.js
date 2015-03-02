@@ -5,6 +5,7 @@ if(!GS){
 
 if($('#single-row-blogs').length > 0) {
     GS.postCount = 3;
+    GS.startCat = $('#single-row-blogs').attr('data-start-cat');
 } else {
     GS.postCount = 6;
 }
@@ -48,7 +49,15 @@ GS.resetPosts = function() {
     $('#load-more-posts').fadeIn(300);
 };
 
+GS.getStartCategory = function() {
+    GS.apiCall = 'get_category_posts/?category_slug='+GS.startCat+'&count='+GS.postCount+'&status=publish';
+    GS.startCat = 'none';
+}
+
 GS.loadPosts = function() {
+    if(GS.startCat != 'none' && GS.startCat != undefined) {
+        GS.getStartCategory();
+    }
     $('<div></div>').attr('id', 'blog-loading').appendTo(GS.wrapper);
     $('#no-content-message').remove();
     var baseURL = 'http://localhost/groundswell/redesign_wordpress';

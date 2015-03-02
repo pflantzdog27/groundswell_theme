@@ -76,6 +76,7 @@ $flyoutActionLinkCheckerTwo = get_field('flyout_message_action_link_checker_two'
         $rightBlockImage = get_sub_field('layout_section_right_image');
         // Full Width Layout Options
         $fullBlock = get_sub_field('layout_section_full_width_block');
+        $fullBlockBlogCat = get_sub_field('layout_section_full_width_block_blog_category');
         $fullBlockContent = get_sub_field('layout_section_full_width_content');
         $fullBlockTextBlock = get_sub_field('layout_section_full_width_text_block');
         $fullBlockCarouselItems = get_sub_field('layout_section_full_width_carousel');

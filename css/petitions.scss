@@ -77,6 +77,9 @@
         figure {
           @include box-shadow(0 4px 2px -2px, gray);
           padding: 0;
+            img {
+              max-height: 100px;
+            }
             figcaption {
               position: relative;
               span {

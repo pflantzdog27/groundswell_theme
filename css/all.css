@@ -1446,6 +1446,8 @@ body.vjs-full-window {
       -moz-box-shadow: 0 4px 2px -2px gray;
       box-shadow: 0 4px 2px -2px gray;
       padding: 0; }
+      .petition-widget .item figure img {
+        max-height: 100px; }
       .petition-widget .item figure figcaption {
         position: relative; }
         .petition-widget .item figure figcaption span {
