@@ -6,16 +6,16 @@
                     <h1><?php the_title(); ?></h1>
                 </header>
                 <div class="author-info row">
-                    <div class="post-intro col-sm-9">
-                       <p><?php echo $inspirationIntro; ?></p>
-                    </div>
-                    <div class="author col-sm-3">
-                        <figure>
-                            <?php echo get_avatar( $post->post_author, 50 ); ?>
-                        </figure>
-                        <div class="author-name">
-                            <h4><?php the_author(); ?></h4>
+                    <div class="post-intro col-sm-12">
+                        <div class="author pull-right col-sm-3">
+                            <figure>
+                                <?php echo get_avatar( $post->post_author, 50 ); ?>
+                            </figure>
+                            <div class="author-name">
+                                <h4><?php the_author(); ?></h4>
+                            </div>
                         </div>
+                       <p><?php echo $inspirationIntro; ?></p>
                     </div>
                 </div>
                 <article class="blog-post-full">

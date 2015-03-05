@@ -2709,8 +2709,6 @@ body.vjs-full-window {
     margin: 0;
     float: left;
     padding-right: 8px; }
-  .author-info .post-intro {
-    border-right: 1px solid #eaeaea; }
   .author-info .author {
     padding: 10px 0 10px 10px; }
 
@@ -3308,8 +3306,7 @@ body.vjs-full-window {
 #full-width-slider {
   position: relative;
   background: #333;
-  padding: 25px;
-  margin-bottom: 60px; }
+  padding: 25px; }
   #full-width-slider .item {
     color: #fff; }
     #full-width-slider .item figure {

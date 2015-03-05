@@ -3,7 +3,7 @@ if(!GS){
 }
 
 
-if($('#single-row-blogs').length > 0) {
+if($('#single-row-blogs').length > 0 ) {
     GS.postCount = 3;
     GS.startCat = $('#single-row-blogs').attr('data-start-cat');
 } else {
@@ -55,12 +55,13 @@ GS.getStartCategory = function() {
 }
 
 GS.loadPosts = function() {
-    if(GS.startCat != 'none' && GS.startCat != undefined) {
+    if(GS.startCat != 'none' && GS.startCat != undefined && GS.startCat != 'uncategorized') {
         GS.getStartCategory();
+        console.log('triggered')
     }
     $('<div></div>').attr('id', 'blog-loading').appendTo(GS.wrapper);
     $('#no-content-message').remove();
-    var baseURL = 'http://localhost/groundswell/redesign_wordpress';
+    var baseURL = 'http://shmishing.com/groundswell-wordpress';
     //var baseURL = window.location.protocol + "//" + window.location.host + "/";
     var api = baseURL + '/api/' + GS.apiCall;
     var templateData = [];
@@ -143,7 +144,11 @@ GS.navigation = new function(){
     this.navigationBoxShadow = function() {
         $('#primary-navigation-wrapper').css('box-shadow', 'none');
             var distance = $('.content-section').eq(0).offset().top;
-            var offset = 0;
+            if($('.video-js').length > 0) {
+                var offset = -200;
+            } else {
+                var offset = 0;
+            }
             $(window).scroll(function () {
                 if ($(window).scrollTop() >= distance - offset) {
                     $('#primary-navigation-wrapper').css('box-shadow', '0px 1px 8px 0px rgba(0, 0, 0, 0.6)');
@@ -879,47 +884,6 @@ $(function() {
     }
 
 // END
-
-    if(bodyClass == 'inspiration') { // INSPIRATION
-        GS.scrolloramaEffects.stats('#landing-page-content');
-        GS.scrolloramaEffects.mainNavBackground();
-        GS.navigation.navigationBoxShadow();
-        GS.scrolloramaEffects.zoom('#get-updates');
-        GS.scrolloramaEffects.blog_single_video('#get-updates');
-    }
-
-    if(bodyClass == 'what-we-do') { // WHAT WE DO
-        GS.scrolloramaEffects.mainNavBackground();
-        GS.navigation.navigationBoxShadow();
-        if ($(window).width() > 768) {
-            GS.sectionHacks.evenLengthColumns();
-        }
-        GS.scrolloramaEffects.parallax('#slider-wrapper');
-        //GS.scrolloramaEffects.columnSections();
-        GS.carousel.carouselInit('#full-width-slider');
-        GS.carousel.toggleTextDisplay();
-    }
-
-    if(bodyClass == 'action') { // ACTION
-        GS.scrolloramaEffects.mainNavBackground();
-        GS.navigation.navigationBoxShadow();
-        GS.carousel.carouselInit('#full-width-slider');
-        GS.scrolloramaEffects.parallax('#slider-wrapper');
-        GS.landingPages.FAQ();
-    }
-
-    if(bodyClass == 'trainings') { // TRAININGS
-        GS.scrolloramaEffects.mainNavBackground();
-        GS.navigation.navigationBoxShadow();
-        GS.landingPages.FAQ();
-        GS.teamDisplay.clickAction();
-        GS.teamDisplay.hoverAction();
-    }
-
-
-    if(bodyClass == 'talk-to-us') { // Talk to US
-        GS.scrolloramaEffects.talk_to_us('.talk-to-us');
-    }
 
 });
 
