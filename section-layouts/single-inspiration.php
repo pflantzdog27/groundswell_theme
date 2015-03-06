@@ -1,13 +1,13 @@
 <section id="blog-video">
     <div class="container">
         <div class="row">
-            <div class="col-sm-9">
+            <div class="col-sm-12 col-md-9">
                 <header class="single-post-header">
                     <h1><?php the_title(); ?></h1>
                 </header>
                 <div class="author-info row">
                     <div class="post-intro col-sm-12">
-                        <div class="author pull-right col-sm-3">
+                        <div class="author pull-right col-sm-5 col-md-3">
                             <figure>
                                 <?php echo get_avatar( $post->post_author, 50 ); ?>
                             </figure>
@@ -68,7 +68,7 @@
                 </footer>
             </div>
 
-            <div id="inspiration-sidebar" class="col-sm-3">
+            <div id="inspiration-sidebar" class="col-md-3 hidden-sm hidden-xs">
                 <?php dynamic_sidebar( 'sidebar_inspiration_single' ); //SIDEBAR WIDGETS ?>
             </div>
 

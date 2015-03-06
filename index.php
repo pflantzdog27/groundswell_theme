@@ -43,10 +43,11 @@
         </div>
     </aside>
 
-    <section id="petition-wrap" class="content-section" style="background: #44aeea;">
+    <section class="content-section" style="background: #44aeea;">
         <div class="container">
+            <h2 class="section-title">Campaigns</h2>
             <div class="parallax">
-                <?php include('section-layouts/components/petitions-app-large.php');?>
+                <?php include('section-layouts/components/petition-blocks.php');?>
             </div>
         </div>
     </section>

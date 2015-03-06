@@ -17,6 +17,15 @@
     <?php wp_head(); ?>
 </head>  
 <body <?php body_class(); ?>>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KV3F23"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KV3F23');</script>
+<!-- End Google Tag Manager -->
 
 <!-- fb script -->
 <div id="fb-root"></div>
@@ -28,11 +37,9 @@
                         status     : true,
                         xfbml      : true
         });
-        /*FB.Event.subscribe('edge.create', function(response) {
-            $('#resulting-view h2').fadeOut(200,function() {
-                $('.split h4').text('You can now look forward to getting inspiring, faithful stuff delivered regularly to your Facebook feed.');
-            });
-        });  */
+        /*FB.Event.subscribe('edge.create', function(targetUrl) {
+            ga('send', 'social', 'facebook', 'like', targetUrl);
+        });*/
     };
     (function(d, s, id){
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -80,17 +87,6 @@ $mobileNavigationArgs = array(
             <?php wp_nav_menu( $navigationArgs ); // NAVIGATION HERE ?>
             <?php wp_nav_menu( $mobileNavigationArgs ); // MOBILE NAVIGATION HERE ?>
 
-            <!--<ul class="nav navbar-nav navbar-right">
-                <li class="visible-xs darker-blue-bg"><a href="#">Action</a></li>
-                <li class="visible-xs darker-blue-bg"><a href="#">Trainings</a></li>
-                <li class="visible-xs darker-blue-bg"><a href="#">Inspiration</a></li>
-                <li><a href="#">Who We Are</a></li>
-                <li><a href="#">What We Do</a></li>
-                <li><a href="#">Blog</a></li>
-                <li class="visible-xs"><a href="#">Donate</a></li>
-                <li class="orange-bg"><a href="#">Talk to Us</a></li>
-                <li class="hidden-xs search-toggle"><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
-            </ul>-->
             <form id="primary-search-field" method="get" role="search" action="<?php echo home_url( '/' ); ?>">
                 <div class="form-group col-sm-12">
                     <input type="text" class="form-control" value="" name="s" placeholder="Search Blog Posts">

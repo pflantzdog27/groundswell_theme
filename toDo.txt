@@ -2,6 +2,7 @@ Blog:
 19) remove current post from list of inspiration posts in sidebar
 21) Video fallback from Mobile
 22) Single Post Page -- show slideup for next post
+23) Make search results page/post agnostic == search "Inspiration"
 
 
 Landing Pages:

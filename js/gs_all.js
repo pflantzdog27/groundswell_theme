@@ -531,6 +531,7 @@ GS.petitions = new function() {
             var displayLimit = 0;
             if(categorySlug == 'featured'){
                 var dataObject = data;
+                console.log(data)
             } else {
                 var dataObject = data.results;
             }
@@ -568,6 +569,7 @@ GS.petitions = new function() {
                     })
                 } else {
                     petitions.prepend(Mustache.render(galleryTemplate, petitionList));
+                    console.log('yup');
                 }
             })
             // error handling here
@@ -804,8 +806,6 @@ GS.carousel = new function() {
 
 $(function() {
 
-    var bodyClass = $('body').attr('class');
-
     GS.navigation.searchDisplay();
     GS.forms.emailSubscription();
     GS.navigation.mobileMenu();
@@ -823,7 +823,7 @@ $(function() {
         });
     }
 
-    if($('#petitions').length > 0) { // IF PETITIONS BLOCKS
+    if($('#petitions').length > 0 && $('#petition-wrap').length <= 0) { // IF PETITIONS BLOCKS
         GS.petitions.petitionsGenerator();
     }
 
