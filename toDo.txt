@@ -1,12 +1,11 @@
 Blog:
 19) remove current post from list of inspiration posts in sidebar
 21) Video fallback from Mobile
-22) Single Post Page -- show slideup for next post
 23) Make search results page/post agnostic == search "Inspiration"
 
 
 Landing Pages:
-2) Video intro creates navigation box shadow issue.
+
 
 
 General:
@@ -17,12 +16,11 @@ General:
 6) favicon
 7) Flyout doesn't close consistently using the X
 8) In page links
-9) Global option for flyout
+9) Global option for flyout message
 
 
 Questions for Michelle:
 1) Where's the form going on contact page?
 2) Full width image slider is to be updated -- who we are page -- what should we do with that?
 3) Where does donate link go?
-4) Would the Campaigns section in blue toward the footer be "de-apped"
 
