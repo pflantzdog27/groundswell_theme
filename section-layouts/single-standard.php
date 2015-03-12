@@ -14,7 +14,7 @@
                 <h1><?php the_title(); ?></h1>
             </header>
             <div class="visible-xs">
-                <?php include('components/social-share-bar.php');?>
+                <?php //include('components/social-share-bar.php');?>
             </div>
             <section id="blog-block">
                 <div class="author-info">
