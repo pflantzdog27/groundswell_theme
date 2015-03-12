@@ -12,5 +12,5 @@
                 <i class="icon-mail"></i><span class="hidden-xs"> Email</span>
         </a></li>
     </ul>
-    <div class="clearfix"></div>
+    <div class="clearfix">&nbsp;</div>
 </div>
