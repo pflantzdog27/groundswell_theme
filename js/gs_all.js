@@ -61,8 +61,15 @@ GS.loadPosts = function() {
     }
     $('<div></div>').attr('id', 'blog-loading').appendTo(GS.wrapper);
     $('#no-content-message').remove();
-    var baseURL = 'http://shmishing.com/groundswell-wordpress';
-    //var baseURL = window.location.protocol + "//" + window.location.host + "/";
+    var baseURL;
+    var environment = window.location.protocol + "//" + window.location.host;
+    if(environment == 'http://localhost') {
+        var baseURL = environment+'/groundswell/redesign_wordpress';
+    } else if(environment == 'http://shmishing.com') {
+        var baseURL = environment+'/groundswell-wordpress';
+    } else {
+        baseURL = environment;
+    }
     var api = baseURL + '/api/' + GS.apiCall;
     var templateData = [];
     $.getJSON(api, function (data) {

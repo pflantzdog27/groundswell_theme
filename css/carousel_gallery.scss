@@ -53,6 +53,7 @@
     top: 50%;
     @include font-size(50px);
     margin-top: -20px;
+    color: $gsBlue;
   }
   &.left {
     background: none;

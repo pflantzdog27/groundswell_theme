@@ -1,4 +1,4 @@
-<div id="petitions" class="block-layout-petitions" style="color: #333;"></div>
+<div id="petitions" class="block-layout-petitions"></div>
 
 <script id="petitionsLayout" type="text/html">
     <div class="row">

@@ -18,12 +18,8 @@
             </div>
             <section id="blog-block">
                 <div class="author-info">
-                    <figure>
-                        <?php echo get_avatar( $post->post_author, 50 ); ?>
-                    </figure>
                     <div class="author-name">
-                        <h4><?php the_author_posts_link(); ?></h4>
-                        <span><?php the_date();?></span>
+                        <h4><b><?php the_author_posts_link();?></b>&nbsp; |<span><?php the_date();?></span></h4>
                     </div>
                     <div class="clearfix"></div>
                 </div>

@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,900);
+//@import url(http://fonts.googleapis.com/css?family=Lato:300,400,900);
 @import 'glyphs';
 @import 'variable';
 @import 'mixins';
@@ -26,7 +26,7 @@ body {
 }
 
 a, button {
-  @include transition(all 0.4s);
+  @include transition(all 0.2s);
   color: inherit;
     &:hover {
       text-decoration: none;
@@ -64,33 +64,43 @@ strong {
 }
 .gs-btn {
   @include border-radius(0);
-  @include font-size(22px);
+  @include font-size(28px);
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 400;
   margin-top: 0;
-  line-height: 1.6;
+  line-height: 1.2;
   padding: 7px 12px;
+  @include box-shadow(1px 2px 8px -1px, rgba(0,0,0,0.4));
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  a {
+      color: rgba(255,255,255,1);
+        &:hover {
+          color: rgba(255,255,255,0.7)!important;
+        }
+    }
+    &:hover {
+      color: rgba(255,255,255,0.7)!important;
+    }
 }
 .gs-btn-blue {
   background: $gsBlue;
   color: #fff;
-    &:hover, a:hover {
-      color: #333!important;
+  @include font-size(36px);
+  font-weight: 700;
+    a {
+      text-decoration: none;
+        &:hover {
+          text-decoration: none;
+        }
     }
 }
 .gs-btn-orange {
   background: $gsOrange;
   color: #fff;
-    &:hover, a:hover {
-      color: #333!important;
-    }
 }
 .gs-btn-white {
   background: #fff;
   color: #333;
-    &:hover {
-      color: #333!important;
-    }
 }
 
 button:active {
@@ -304,7 +314,7 @@ form {
     input {
       padding-right: 50px;
       @include border-radius(0);
-      text-transform: uppercase;
+      //text-transform: uppercase;
       border: 0;
       box-shadow: none;
     }

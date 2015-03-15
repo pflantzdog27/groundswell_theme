@@ -63,6 +63,10 @@
         a {
           color: #fff;
           display: block;
+          font-weight: 200;
+            &:hover {
+              font-weight: 800;
+            }
             @include tablets {
               &:hover {
                 color: #fff;
@@ -74,7 +78,7 @@
         }
         &.search-toggle {
           padding-top: 15px;
-          color: #fff;
+          color: rgba(255,255,255,0.5);
           padding-left: 10px;
           padding-bottom: 0;
           cursor: pointer;

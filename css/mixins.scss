@@ -240,7 +240,9 @@ Extenders
 
 %imageBgH1 {
   font-weight: 300;
-  letter-spacing: .044em;
+  letter-spacing: 0;
+  word-spacing: 3px;
+  text-shadow: 2px 4px 7px rgba(0,0,0,0.8);
   @include large-desktops {
     @include font-size(70px);
   }
@@ -250,7 +252,6 @@ Extenders
   @include tablets {
     @include font-size(50px);
   }
-  text-shadow: 2px 4px 7px rgba(0,0,0,1);
 }
 %imageBgH2 {
   @include font-size(40px);

@@ -12,8 +12,6 @@ General:
 1) Install WP SEO plugin -- will use for Facebook Open Graph
 2) Set WP option to allow site to be indexed by search engines
 3) Caching software.
-4) 404 page
-6) favicon
 7) Flyout doesn't close consistently using the X
 8) In page links
 9) Global option for flyout message

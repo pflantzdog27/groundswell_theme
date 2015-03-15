@@ -57,7 +57,7 @@ endif; ?>
     </div>
 </aside>
 
-<section class="content-section" style="background: #44aeea;">
+<section class="content-section" style="background: #44aeea; color: #fff;">
     <div class="container">
         <h2 class="section-title">Campaigns</h2>
         <div class="parallax">

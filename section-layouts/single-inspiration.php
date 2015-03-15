@@ -7,13 +7,8 @@
                 </header>
                 <div class="author-info row">
                     <div class="post-intro col-sm-12">
-                        <div class="author pull-right col-sm-5 col-md-3">
-                            <figure>
-                                <?php echo get_avatar( $post->post_author, 50 ); ?>
-                            </figure>
-                            <div class="author-name">
-                                <h4><?php the_author(); ?></h4>
-                            </div>
+                        <div class="author-name">
+                            <h4>Posted by: <b><?php the_author_posts_link();?></b></h4>
                         </div>
                        <p><?php echo $inspirationIntro; ?></p>
                     </div>
