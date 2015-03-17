@@ -28,7 +28,7 @@
                 <?php } ?>
             </div>
             <span id="playback-control" class="icon-pause hidden-xs intro-button"></span>
-            <?php if(!$introVideoInfoChecker) { ?>
+            <?php if($introVideoInfoChecker == 'yes') { ?>
                 <button type="button" data-toggle="modal" data-target="#info-modal" id="video-info" class="intro-button"><span class="icon-info"></span></button>
                 <!-- Modal -->
                 <div class="modal fade" id="info-modal" tabindex="-1" role="dialog" aria-labelledby="video-info-modal" aria-hidden="true">
