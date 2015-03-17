@@ -287,7 +287,6 @@ button:active {
         padding-left: 0;
         margin: 0;
         li {
-          padding: 8px;
           cursor: pointer;
           &:last-child {
             border-bottom: 0;
@@ -297,6 +296,7 @@ button:active {
           }
             a {
               display: block;
+              padding: 8px;
             }
         }
       }

@@ -57,7 +57,6 @@ GS.getStartCategory = function() {
 GS.loadPosts = function() {
     if(GS.startCat != 'none' && GS.startCat != undefined && GS.startCat != 'uncategorized') {
         GS.getStartCategory();
-        console.log('triggered')
     }
     $('<div></div>').attr('id', 'blog-loading').appendTo(GS.wrapper);
     $('#no-content-message').remove();
@@ -75,10 +74,10 @@ GS.loadPosts = function() {
     $.getJSON(api, function (data) {
         GS.numberOfPages = data.pages;
         $.each(data.posts, function (i, item) {
-            pageNumber = item.pages;
+            var itemTitle = item.title;
             templateData.push({
                 id : item.id,
-                title: item.title,
+                title: html_entity_decode(itemTitle),
                 url: item.url,
                 image: item.thumbnail_images.full.url,
                 excerpt: item.custom_fields.blog_posts_excerpt,
@@ -107,6 +106,11 @@ GS.loadPosts = function() {
         }
         GS.noContentDisplay();
     });
+    function html_entity_decode(str) {
+        var ta=document.createElement("textarea");
+        ta.innerHTML=str.replace(/</g,"&lt;").replace(/>/g,"&gt;");
+        return ta.value;
+    }
 };
 
 GS.noContentDisplay = function() {
@@ -697,6 +701,7 @@ GS.blog = new function() {
             $('.select-box').find('b').toggleClass('icon-arrow-down, icon-arrow-up');
             $('.select-options').slideToggle(300);
             $('.select-box span').text(cat);
+
 
             GS.changePostCategory(catSlug);
         })

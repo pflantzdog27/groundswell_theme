@@ -3785,14 +3785,14 @@ button:active {
       padding-left: 0;
       margin: 0; }
       .select-menu .select-options ul li {
-        padding: 8px;
         cursor: pointer; }
         .select-menu .select-options ul li:last-child {
           border-bottom: 0; }
         .select-menu .select-options ul li:hover {
           background: #eaeaea; }
         .select-menu .select-options ul li a {
-          display: block; }
+          display: block;
+          padding: 8px; }
 
 form {
   width: 100%; }
