@@ -326,6 +326,11 @@ form {
     #emailInput {
       width: 100%;
     }
+    textarea {
+      border: 0;
+      @include box-shadow(0,0);
+      @include border-radius(0);
+    }
   }
 
 }

@@ -27,7 +27,21 @@
                     </div>
                 <?php } ?>
             </div>
-            <span id="playback-control" class="icon-pause hidden-xs"></span>
+            <span id="playback-control" class="icon-pause hidden-xs intro-button"></span>
+            <?php if(!$introVideoInfoChecker) { ?>
+                <button type="button" data-toggle="modal" data-target="#info-modal" id="video-info" class="intro-button"><span class="icon-info"></span></button>
+                <!-- Modal -->
+                <div class="modal fade" id="info-modal" tabindex="-1" role="dialog" aria-labelledby="video-info-modal" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <div class="modal-body">
+                                <?php echo $introVideoInfo; ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
         </div>
 
         <!-- get started button -->

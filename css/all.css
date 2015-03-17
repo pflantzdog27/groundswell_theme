@@ -1144,7 +1144,7 @@ body.vjs-full-window {
       align-items: center; }
       #intro-section #hero .container h1 {
         color: #fff; }
-    #intro-section #hero #playback-control {
+    #intro-section #hero .intro-button {
       position: absolute;
       bottom: 50px;
       right: 50px;
@@ -1157,8 +1157,16 @@ body.vjs-full-window {
       -moz-transition: all 0.5s;
       -webkit-transition: all 0.5s;
       transition: all 0.5s; }
-      #intro-section #hero #playback-control:hover {
+      #intro-section #hero .intro-button:hover {
         color: white; }
+    #intro-section #hero #playback-control {
+      right: 50px; }
+    #intro-section #hero #video-info {
+      right: 85px;
+      background: none;
+      font-size: 30px;
+      font-size: 1.875rem;
+      border: 0; }
   #intro-section #get-started {
     position: absolute;
     bottom: 50px;
@@ -3806,6 +3814,14 @@ form {
       top: 0; }
     form .form-group #emailInput {
       width: 100%; }
+    form .form-group textarea {
+      border: 0;
+      -webkit-box-shadow: 0 0;
+      -moz-box-shadow: 0 0;
+      box-shadow: 0 0;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0; }
 
 #slideDisplayWindow {
   position: fixed;

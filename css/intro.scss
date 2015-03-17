@@ -37,7 +37,7 @@
             @extend %imageBgH2;
           }
       }
-      #playback-control {
+      .intro-button {
         position: absolute;
         bottom: 50px;
         right: 50px;
@@ -48,6 +48,15 @@
         &:hover {
           color: rgba(255, 255, 255, 1);
         }
+      }
+      #playback-control {
+        right: 50px;
+      }
+      #video-info {
+        right: 85px;
+        background: none;
+        @include font-size(30px);
+        border: 0;
       }
   }
   #get-started {

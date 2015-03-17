@@ -19,6 +19,8 @@ $introHeroMessage = get_field('landing_page_hero_message');
 $introYoutubeSrc = get_field('landing_page_intro_video_src');
 $introContentChecker = get_field('landing_page_sub_intro_content_checker');
 $introContent = get_field('landing_page_sub_intro_content');
+$introVideoInfoChecker = get_field('landing_page_video_info');
+$introVideoInfo = get_field('landing_page_video_info_content');
     // flyout
 $flyoutMessage = get_field('flyout_message_checker');
 $flyoutTitle = get_field('flyout_message_title');
