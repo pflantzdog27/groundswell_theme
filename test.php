@@ -42,9 +42,9 @@
                 <h2 class="widget-title">Address</h2>
                 <div class="vcard">
                     <div class="adr">
+                        Groundswell<br>
                         <div class="street-address">475 Riverside Drive</div>
-                        <div class="locality">New York, NY <span class="postal-code">10015</span>
-                        </div>
+                        <div class="locality">New York, NY <span class="postal-code">10015</span></div>
                     </div>
                 </div>
             </div>

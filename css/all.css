@@ -1182,8 +1182,8 @@ body.vjs-full-window {
 
 #sub-intro-section {
   background: #44aeea;
-  padding-bottom: 50px;
-  padding-top: 50px;
+  padding-bottom: 35px;
+  padding-top: 45px;
   color: #fff;
   -webkit-box-shadow: 0 3px 8px -8px black;
   -moz-box-shadow: 0 3px 8px -8px black;
@@ -1372,9 +1372,11 @@ body.vjs-full-window {
 
 #contact-sidebar a {
   text-decoration: none; }
-#contact-sidebar #social-contacts li {
-  display: inline-block;
-  font-size: 25px; }
+#contact-sidebar #social-contacts {
+  margin-top: 30px; }
+  #contact-sidebar #social-contacts li {
+    display: inline-block;
+    font-size: 25px; }
 
 .overlay-text {
   padding: 15px;

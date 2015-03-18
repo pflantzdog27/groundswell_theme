@@ -21,7 +21,7 @@
 <?php if($introContentChecker == 'Yes') { ?>
     <div id="sub-intro-section">
         <div class="container">
-            <div class="row">
+            <div>
                 <?php echo  $introContent; ?>
             </div>
         </div>
