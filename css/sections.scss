@@ -187,9 +187,8 @@
 }
 #contact-form {
     > div {
-      padding: 20px 0;
         .form-group {
-          padding: 11px 15px;
+          padding: 15px;
           border: 0;
           input {
             @include border-radius(3px);
@@ -200,6 +199,17 @@
           @include font-size(50px);
         }
     }
+}
+#contact-sidebar {
+  a {
+    text-decoration: none;
+  }
+  #social-contact {
+    li {
+      display: inline-block;
+      font-size: 25px;
+    }
+  }
 }
 
 .overlay-text {

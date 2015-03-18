@@ -1358,19 +1358,23 @@ body.vjs-full-window {
 #contact {
   margin-top: 50px; }
 
-#contact-form > div {
-  padding: 20px 0; }
-  #contact-form > div .form-group {
-    padding: 11px 15px;
-    border: 0; }
-    #contact-form > div .form-group input {
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      border-radius: 3px;
-      text-transform: initial; }
-  #contact-form > div button {
-    font-size: 50px;
-    font-size: 3.125rem; }
+#contact-form > div .form-group {
+  padding: 15px;
+  border: 0; }
+  #contact-form > div .form-group input {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-transform: initial; }
+#contact-form > div button {
+  font-size: 50px;
+  font-size: 3.125rem; }
+
+#contact-sidebar a {
+  text-decoration: nonw; }
+#contact-sidebar #social-contact li {
+  display: inline-block;
+  font-size: 25px; }
 
 .overlay-text {
   padding: 15px;
