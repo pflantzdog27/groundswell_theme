@@ -32,6 +32,10 @@ a, button {
       text-decoration: none;
       color: $defaultHoverColor!important;
     }
+    &:focus {
+      color: inherit;
+      border: 0;  
+    }
 }
 p a {
   text-decoration: underline;

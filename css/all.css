@@ -1232,9 +1232,9 @@ body.vjs-full-window {
     margin-top: 25px; }
   .content-section .top-corner-btn {
     position: absolute;
-    top: 0;
+    top: -5px;
     right: 15px;
-    margin-top: 15px; }
+    margin-top: 0; }
 
 .training-section .container {
   position: relative; }
@@ -1371,8 +1371,8 @@ body.vjs-full-window {
   font-size: 3.125rem; }
 
 #contact-sidebar a {
-  text-decoration: nonw; }
-#contact-sidebar #social-contact li {
+  text-decoration: none; }
+#contact-sidebar #social-contacts li {
   display: inline-block;
   font-size: 25px; }
 
@@ -1385,6 +1385,9 @@ body.vjs-full-window {
 
 .in-section-social {
   padding: 0 !important; }
+
+.single-column-section {
+  position: relative; }
 
 #petition-wrap {
   color: #333; }
@@ -3533,6 +3536,9 @@ a, button {
   a:hover, button:hover {
     text-decoration: none;
     color: #ea5a3a !important; }
+  a:focus, button:focus {
+    color: inherit;
+    border: 0; }
 
 p a {
   text-decoration: underline; }
