@@ -354,8 +354,8 @@ GS.scrolloramaEffects = new function() {
                         {css: {bottom: 0}, immediateRender: true},
                         {css: {bottom: -100}}),
                     TweenMax.fromTo($('#sub-intro-section'), 1,
-                        {css: {'padding-top': 75}, immediateRender: true},
-                        {css: {'padding-top': 50}}),
+                        {css: {'padding-top': 50}, immediateRender: true},
+                        {css: {'padding-top': 40}}),
                     TweenMax.fromTo($('#back-top'), 1,
                         {css: {opacity: 0}, immediateRender: true},
                         {css: {opacity: 1}})
@@ -478,7 +478,7 @@ GS.scrolloramaEffects = new function() {
                             }
                             counterViews = 'complete';
                         }}),
-                    TweenMax.fromTo($(section+ ' li:eq(1)'),.3,
+                    TweenMax.fromTo($(section+ ' li:eq(1)'),.1,
                         {css: { top : '50%' }, immediateRender: true},
                         {css: { top: '80%'},onComplete: function(){
                             if(counterShares != 'complete') {
@@ -495,7 +495,7 @@ GS.scrolloramaEffects = new function() {
                             counterHours = 'complete';
                         }}),
 
-                    TweenMax.fromTo($('.circle'),.5,
+                    TweenMax.fromTo($('.circle'),.1,
                         {css: {'font-size': 20 }, immediateRender: true},
                         {css: {'font-size': 45, width: 100, height: 100, 'border-radius' : 50, 'margin-top': -50}}),
                     TweenMax.fromTo($('.circle:eq(0), .circle:eq(1)'),.5,
@@ -505,14 +505,14 @@ GS.scrolloramaEffects = new function() {
                     TweenMax.fromTo($('.circle abbr'),.5,
                         {css: {'margin-top': -25 }, immediateRender: true},
                         {css: {'margin-top': -45}}),
-                    TweenMax.fromTo($('.connecting-line:eq(0)'),.3,
+                    TweenMax.fromTo($('.connecting-line:eq(0)'),.1,
                         {css: {rotation: 0, 'border-color': 'rgb(68,174,234)' }, immediateRender: true},
                         {css: {rotation: 20, width: 100, left: 130, 'border-color': 'rgb(234,90,58)'}}),
-                    TweenMax.fromTo($('.connecting-line:eq(1)'),.3,
+                    TweenMax.fromTo($('.connecting-line:eq(1)'),.1,
                         {css: {rotation: 0 }, immediateRender: true},
                         {css: {rotation: -20, left: 300, width: 100}})
                 ]),
-            100, false);
+            1, false);
     };
     this.columnSections = function() {
         controller.addTween(
@@ -542,7 +542,6 @@ GS.petitions = new function() {
             var displayLimit = 0;
             if(categorySlug == 'featured'){
                 var dataObject = data;
-                console.log(data)
             } else {
                 var dataObject = data.results;
             }
@@ -580,7 +579,6 @@ GS.petitions = new function() {
                     })
                 } else {
                     petitions.prepend(Mustache.render(galleryTemplate, petitionList));
-                    console.log('yup');
                 }
             })
             // error handling here
@@ -727,7 +725,7 @@ GS.blog = new function() {
             var splitTweet = tweetIntent.split('url=');
             //url shortner for tweets
             $.get(call, function(data) {
-                $('.twitter-share > a').attr('href', splitTweet[0]+'url='+data+splitTweet[1]);
+                $('.twitter > a').attr('href', splitTweet[0]+'url='+data+splitTweet[1]);
             });
         }
     }
@@ -795,7 +793,6 @@ GS.carousel = new function() {
         $(carouselID).on('slid.bs.carousel', function () {
             var firstSlide = $(this).find('.item:eq(0)');
             var lastSlide = $(this).find('.item:eq('+eqValue+')');
-            console.log()
             // check if it's the first slide
             if(firstSlide.hasClass('active')) {
                 $(this).find('.left').css('display','none');

@@ -48,19 +48,19 @@
                 <button class="btn gs-btn" style="background : #eaeaea; padding: 8px 12px 2px;"><a class="twitter-follow-button" href="https://twitter.com/GroundswellMvmt" data-show-count="false" data-lang="en">Follow @GroundswellMvmt</a></button>
             <?php } ?>
             <?php if($flyoutAction == 'all_options') { ?>
-                <div class="btn gs-btn" style="background : #3b5998"><div class="fb-like" data-href="https://www.facebook.com/GroundswellMovement" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div></div>
-                <button class="btn gs-btn" style="background : #eaeaea; padding: 8px 12px 2px;"><a class="twitter-follow-button" href="https://twitter.com/GroundswellMvmt" data-show-count="false" data-lang="en">Follow @GroundswellMvmt</a></button>
+                <div class="btn gs-btn" style="background : #3b5998"><div class="fb-like" data-href="https://www.facebook.com/GroundswellMovement" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></div>
+                <button class="btn gs-btn" style="background : #eaeaea; padding: 8px 12px 2px;"><a class="twitter-follow-button" href="https://twitter.com/GroundswellMvmt" data-show-count="true" data-lang="en">Follow @GroundswellMvmt</a></button>
                 <button class="btn gs-btn gs-btn-white"><a href="#"><span class="icon-earth"></span>Donate</a></button>
             <?php } ?>
             <?php if($flyoutAction == 'custom') { ?>
                 <button class="btn gs-btn gs-btn-white"><a href="<?php echo $flyoutActionLink; ?>" <?php echo ($flyoutActionLinkChecker == true ? 'target="_blank"' : false);?>><?php echo $flyoutActionText; ?></a></button>
             <?php } ?>
             <?php if($flyoutAction == 'custom_fb') { ?>
-                <div class="btn gs-btn" style="background : #3b5998"><div class="fb-like" data-href="https://www.facebook.com/GroundswellMovement" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div></div>
+                <div class="btn gs-btn" style="background : #3b5998"><div class="fb-like" data-href="https://www.facebook.com/GroundswellMovement" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></div>
                 <button class="btn gs-btn gs-btn-white"><a href="<?php echo $flyoutActionLink; ?>" <?php echo ($flyoutActionLinkChecker == true ? 'target="_blank"' : false);?>><?php echo $flyoutActionText; ?></a></button>
             <?php } ?>
             <?php if($flyoutAction == 'custom_twitter') { ?>
-                <button class="btn gs-btn" style="background : #eaeaea; padding: 8px 12px 2px;"><a class="twitter-follow-button" href="https://twitter.com/GroundswellMvmt" data-show-count="false" data-lang="en">Follow @GroundswellMvmt</a></button>
+                <button class="btn gs-btn" style="background : #eaeaea; padding: 8px 12px 2px;"><a class="twitter-follow-button" href="https://twitter.com/GroundswellMvmt" data-show-count="true" data-lang="en">Follow @GroundswellMvmt</a></button>
                 <button class="btn gs-btn gs-btn-white"><a href="<?php echo $flyoutActionLink; ?>" <?php echo ($flyoutActionLinkChecker == true ? 'target="_blank"' : false);?>><?php echo $flyoutActionText; ?></a></button>
             <?php } ?>
             <?php if($flyoutAction == 'custom_donate') { ?>
