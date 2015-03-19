@@ -3536,10 +3536,12 @@ a, button {
   color: inherit; }
   a:hover, button:hover {
     text-decoration: none;
-    color: #ea5a3a !important; }
+    color: #ea5a3a !important;
+    outline: none; }
   a:focus, button:focus {
     color: inherit;
-    border: 0; }
+    border: 0;
+    outline: none; }
 
 p a {
   text-decoration: underline; }
@@ -3551,7 +3553,8 @@ p {
 a:active, a:visited {
   color: inherit;
   border: none;
-  text-decoration: none; }
+  text-decoration: none;
+  outline: none; }
 
 .blue-background {
   background: #44aeea;

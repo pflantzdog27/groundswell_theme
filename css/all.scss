@@ -31,10 +31,12 @@ a, button {
     &:hover {
       text-decoration: none;
       color: $defaultHoverColor!important;
+      outline: none;
     }
     &:focus {
       color: inherit;
       border: 0;
+      outline: none;
     }
 }
 p a {
@@ -48,6 +50,7 @@ p {
    color: inherit;
    border: none;
    text-decoration: none;
+   outline: none;
  }
 
 .blue-background {
