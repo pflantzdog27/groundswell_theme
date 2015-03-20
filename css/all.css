@@ -2758,7 +2758,8 @@ body.vjs-full-window {
     margin-bottom: 30px; }
     #right-sidebar .sidebar-widget .widget-title {
       color: #44aeea;
-      font-weight: 300; }
+      font-weight: 300;
+      margin-top: 5px; }
     #right-sidebar .sidebar-widget ul {
       list-style: none;
       padding: 0; }

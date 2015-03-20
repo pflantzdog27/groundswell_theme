@@ -238,7 +238,8 @@ GS.forms = new function() {
         $('#hidden_iframe').load(function(){
             if(submitted == true){
                 $('#contact-submit').hide(300,function() {
-                    $('<p></p>').addClass('.alert-warning').text('Thanks! We\'ll be getting back to you shortly').appendTo('#contact-form');
+                    $(this).parent('p').remove();
+                    $('<p></p>').addClass('alert-warning').text('Thanks! We\'ll be getting back to you shortly').appendTo('#contact-form');
                 });
             }
         });

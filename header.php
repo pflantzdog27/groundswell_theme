@@ -89,7 +89,7 @@ $mobileNavigationArgs = array(
 
             <form id="primary-search-field" method="get" role="search" action="<?php echo home_url( '/' ); ?>">
                 <div class="form-group col-sm-12">
-                    <input type="text" class="form-control" value="" name="s" placeholder="Search Blog Posts">
+                    <input type="text" class="form-control" value="" name="s" placeholder="Search">
                     <button type="submit" class="btn gs-btn gs-btn-blue"><span class="icon-arrow-right"></span></button>
                 </div>
             </form>
