@@ -19,7 +19,11 @@
             <section id="blog-block">
                 <div class="author-info">
                     <div class="author-name">
-                        <h4><b><?php the_author_posts_link();?></b>&nbsp; |<span><?php the_date();?></span></h4>
+                        <?php if($standardContentAuthor){?>
+                            <h4><b><?php echo $standardContentAuthor; ?></b>&nbsp; |<span><?php the_date();?></span></h4>
+                        <?php } else { ?>
+                            <h4><b><?php the_author_posts_link();?></b>&nbsp; |<span><?php the_date();?></span></h4>
+                        <?php } ?>
                     </div>
                     <div class="clearfix"></div>
                 </div>

@@ -5,6 +5,7 @@
         $postID = get_the_ID();
         $postType = get_field('blog_posts_post_type');
         $standardContent = get_field('blog_posts_standard_content');
+        $standardContentAuthor = get_field('blog_posts_standard_author');
         $inspirationIntro = get_field('blog_posts_inspiration_intro');
         $inspirationOutro = get_field('blog_posts_inspiration_outro');
         $inspirationAbout = get_field('blog_posts_inspiration_about');
