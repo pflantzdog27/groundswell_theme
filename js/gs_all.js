@@ -234,6 +234,15 @@ GS.forms = new function() {
             }
         });
     }
+    this.contactForm = function() {
+        $('#hidden_iframe').load(function(){
+            if(submitted == true){
+                $('#contact-submit').hide(300,function() {
+                    $('<p></p>').addClass('.alert-warning').text('Thanks! We\'ll be getting back to you shortly').appendTo('#contact-form');
+                });
+            }
+        });
+    }
 };
 
 GS.backgroundVideo = new function() {
@@ -890,6 +899,10 @@ $(function() {
 
     if($('#photo-gallery').length > 0) { // Photo Galleries
         GS.landingPages.photoGallery();
+    }
+
+    if($('#contact').length > 0) {
+        GS.forms.contactForm();
     }
 
 // END
