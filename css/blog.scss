@@ -274,3 +274,13 @@
       padding: 8px 0;
     }
 }
+
+.most-recent-toggle {
+  position: absolute;
+  right: 15px;
+  margin-top: 8px;
+  color: $gsOrange;
+  @include font-size(14px);
+  text-transform: uppercase;
+  cursor: pointer;
+}

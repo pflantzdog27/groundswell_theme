@@ -2833,6 +2833,16 @@ body.vjs-full-window {
 .single-post-page-wrapper p {
   padding: 8px 0; }
 
+.most-recent-toggle {
+  position: absolute;
+  right: 15px;
+  margin-top: 8px;
+  color: #ea5a3a;
+  font-size: 14px;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  cursor: pointer; }
+
 #team-graphic li {
   max-width: 16.66%;
   display: block;

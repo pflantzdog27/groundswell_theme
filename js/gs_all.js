@@ -25,6 +25,14 @@ GS.changePostCategory = function(slug) {
     GS.loadPosts();
 };
 
+$('body').on('click','.most-recent-toggle', function() {
+    $(this).remove();
+    $('.select-box span').text('-- Most Recent Posts --');
+    GS.resetPosts();
+    GS.apiCall = 'get_recent_posts/?count='+GS.postCount;
+    GS.loadPosts();
+});
+
 GS.loadMorePosts = function() {
     if(GS.pageNumber < GS.numberOfPages) {
         GS.pageNumber++;
@@ -373,19 +381,6 @@ GS.scrolloramaEffects = new function() {
             heightOfTweeningElement);
     };
 
-    this.trainings = function() {
-        var heightOfTweeningElement = $('#training').innerHeight();
-        controller.addTween(
-            '#training',
-            (new TimelineLite())
-                .append([
-                    TweenMax.fromTo($('.icon-comment'), 1,
-                        {css: {top: 30}, immediateRender: true},
-                        {css: {top: -45}})
-                ]),
-            heightOfTweeningElement);
-    };
-
     this.parallax = function(tweeningElement) {
         $(tweeningElement).each(function() {
             var contentSection = $(this).parent('section').attr('id');
@@ -413,27 +408,6 @@ GS.scrolloramaEffects = new function() {
                         {css:{zoom: 1.3}})
                 ]),
             heightOfTweeningElement);
-    };
-
-    this.talk_to_us = function(tweeningElement) {
-        controller.addTween(
-            tweeningElement,
-            (new TimelineLite())
-                .append([
-                    TweenMax.fromTo($(tweeningElement+ ' .company-meta-block:nth-child(0)'), .1 ,
-                        {css:{'padding-left' : 15 }, immediateRender:true},
-                        {css:{'padding-left' : 0}}),
-                    TweenMax.fromTo($(tweeningElement+ ' .company-meta-block:nth-child(1)'), .1 ,
-                        {css:{'padding-right' : 15 }, immediateRender:true},
-                        {css:{'padding-right' : 0}}),
-                    TweenMax.fromTo($(tweeningElement+ ' #contact-form'), .1 ,
-                        {css:{'padding-top' : 15 }, immediateRender:true},
-                        {css:{'padding-top' : 0}}),
-                    TweenMax.fromTo($(tweeningElement+ ' .large-icon'), .1 ,
-                        {css:{zoom: 0.8 }, immediateRender:true},
-                        {css:{zoom: 1}})
-                ]),
-            100);
     };
 
     this.steps = function(tweeningElement) {
@@ -643,15 +617,7 @@ GS.petitions = new function() {
             $('<div></div>').attr('id','loading-image').appendTo('#cat-list');
             GS.petitions.petitionsGenerator();
         });
-    }
-
-    this.modalWindow = function() {
-        $('#petition-wrap').on('click','.sign-init', function() {
-            var action = $(this).next('a').attr('href');
-            $('#petition-form').find('form').attr('action',action+'/signatures');
-        })
-    }
-
+    };
 };
 
 GS.sectionHacks = new function() {
@@ -709,10 +675,13 @@ GS.blog = new function() {
             $('.select-box').find('b').toggleClass('icon-arrow-down, icon-arrow-up');
             $('.select-options').slideToggle(300);
             $('.select-box span').text(cat);
-
-
+            GS.blog.mostRecentToggle();
             GS.changePostCategory(catSlug);
         })
+    };
+
+    this.mostRecentToggle = function() {
+        $('<span></span>').addClass('most-recent-toggle icon-calendar').text(' Display Most Recent Posts').appendTo('.select-menu');
     };
 
     this.blogRowHeights = function() {
