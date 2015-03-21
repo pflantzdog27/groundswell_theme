@@ -378,6 +378,20 @@ form {
 }
 
 
-
+#four04 {
+  ul {
+    text-align: center;
+    margin-top: 30px;
+    li {
+      display: inline-block;
+      border-right: 1px solid #eaeaea;
+      @include font-size(28px);
+      padding: 0 10px;
+      &:last-child {
+        border: 0;
+      }
+    }
+  }
+}
 
 

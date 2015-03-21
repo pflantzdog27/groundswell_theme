@@ -3880,3 +3880,15 @@ form {
       margin-top: 20px; }
       #slideDisplayWindow > div footer a {
         display: block; }
+
+#four04 ul {
+  text-align: center;
+  margin-top: 30px; }
+  #four04 ul li {
+    display: inline-block;
+    border-right: 1px solid #eaeaea;
+    font-size: 28px;
+    font-size: 1.75rem;
+    padding: 0 10px; }
+    #four04 ul li:last-child {
+      border: 0; }

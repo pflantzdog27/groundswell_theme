@@ -237,7 +237,7 @@ GS.forms = new function() {
         $('#hidden_iframe').load(function(){
             if(submitted == true){
                 $('#email-subscription form').hide(300,function() {
-                    $('<p></p>').addClass('alert alert-success').html('<i class="icon-checkmark"></i>Short confirmation message here').appendTo('#email-subscription');
+                    $('<p></p>').addClass('alert alert-success').html('<i class="icon-checkmark"></i>Welcome! Check your inbox and say "hi"​').appendTo('#email-subscription');
                 });
             }
         });
@@ -247,7 +247,7 @@ GS.forms = new function() {
             if(submitted == true){
                 $('#contact-submit').hide(300,function() {
                     $(this).parent('p').remove();
-                    $('<p></p>').addClass('alert-warning').text('Thanks! We\'ll be getting back to you shortly').appendTo('#contact-form');
+                    $('<p></p>').addClass('alert-warning').text('We can\'t wait to read your message. Talk soon.').appendTo('#contact-form');
                 });
             }
         });
