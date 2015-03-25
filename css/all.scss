@@ -40,7 +40,11 @@ a, button {
     }
 }
 p a {
-  text-decoration: underline;
+  //text-decoration: underline;
+  color: $gsOrange;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 p {

@@ -3555,7 +3555,9 @@ a, button {
     outline: none; }
 
 p a {
-  text-decoration: underline; }
+  color: #ea5a3a; }
+  p a:hover {
+    text-decoration: underline; }
 
 p {
   font-size: 30px;
