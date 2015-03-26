@@ -247,7 +247,7 @@ GS.forms = new function() {
             if(submitted == true){
                 $('#contact-submit').hide(300,function() {
                     $(this).parent('p').remove();
-                    $('<p></p>').addClass('alert alert-success').style('text-align','right').html('<i class="icon-checkmark"></i>We can\'t wait to read your message. Talk soon.').appendTo('#contact-form');
+                    $('<p></p>').addClass('alert alert-success').css('text-align','right').html('<i class="icon-checkmark"></i>We can\'t wait to read your message. Talk soon.').appendTo('#contact-form');
                 });
             }
         });
