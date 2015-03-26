@@ -74,6 +74,15 @@
   }
 }
 
+#info-modal {
+  .close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: block;
+  }
+}
+
 #sub-intro-section {
   background: $gsBlue;
   padding-bottom: 35px;

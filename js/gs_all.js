@@ -244,6 +244,7 @@ GS.forms = new function() {
     }
     this.contactForm = function() {
         $('#hidden_iframe').load(function(){
+            console.log(submitted);
             if(submitted == true){
                 $('#contact-submit').hide(300,function() {
                     $(this).parent('p').remove();
