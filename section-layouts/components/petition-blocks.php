@@ -15,7 +15,7 @@
                 </figure>
                 <h4>{{title}}</h4>
                 <footer class="petition-meta-info">
-                    <p><small><a href="{{url}}" target="_blank">Click to sign petition</a> or <a href="{{url}}" target="_blank">Learn more</a></small></p>
+                    <p style="color:#333;"><small><a href="{{url}}" target="_blank" style="color:#fff;">Click to sign petition</a> or <a href="{{url}}" target="_blank" style="color:#fff;">Learn more</a></small></p>
                 </footer>
             </div>
         {{/.}}

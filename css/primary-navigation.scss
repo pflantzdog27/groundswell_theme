@@ -65,7 +65,7 @@
           display: block;
           font-weight: 200;
             &:hover {
-              font-weight: 800;
+              color: rgba(255,255,255,0.7);
             }
             @include tablets {
               &:hover {
@@ -85,6 +85,11 @@
             a {
               display: none;
             }
+        }
+        &.current-menu-item {
+          a {
+            color: rgba(255,255,255,0.7);
+          }
         }
       }
     }

@@ -30,7 +30,6 @@ a, button {
   color: inherit;
     &:hover {
       text-decoration: none;
-      color: $defaultHoverColor!important;
       outline: none;
     }
     &:focus {
@@ -42,7 +41,9 @@ a, button {
 p a {
   //text-decoration: underline;
   color: $gsOrange;
+  text-decoration: none;
   &:hover {
+    color: inherit!important;
     text-decoration: underline;
   }
 }
@@ -322,6 +323,7 @@ form {
     padding: 1px 0;
     position: relative;
     border: 1px solid #eaeaea;
+    overflow: hidden;
     input {
       padding-right: 50px;
       @include border-radius(0);
@@ -364,6 +366,7 @@ form {
       right: 15px;
       top: 15px;
       cursor: pointer;
+      display: block;
     }
     header {
       padding: 10px;

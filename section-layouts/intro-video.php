@@ -6,7 +6,7 @@
                autoplay="autoplay"
                muted="muted"
                data-setup='{ "techOrder": ["youtube"], "src": "<?php echo $introYoutubeSrc ;?>"}'
-               poster="false">
+               >
             <img class="vjs-no-js" src="<?php bloginfo('template_url') ?>/images/training-bg.jpg">
         </video>
 

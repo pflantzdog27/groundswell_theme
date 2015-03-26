@@ -223,7 +223,7 @@ GS.cookies = new function()  {
         }
     };
     this.removeOverlay = function() {
-       $('.closePopup').click(function() {
+       $('body').on('click','.closePopup', function() {
             flyout.animate({bottom : '-1000px'}, 600,function() {
                 $(this).remove();
             });
@@ -247,7 +247,7 @@ GS.forms = new function() {
             if(submitted == true){
                 $('#contact-submit').hide(300,function() {
                     $(this).parent('p').remove();
-                    $('<p></p>').addClass('alert-warning').text('We can\'t wait to read your message. Talk soon.').appendTo('#contact-form');
+                    $('<p></p>').addClass('alert alert-success').style('text-align','right').html('<i class="icon-checkmark"></i>We can\'t wait to read your message. Talk soon.').appendTo('#contact-form');
                 });
             }
         });
@@ -265,7 +265,6 @@ GS.backgroundVideo = new function() {
 
         videojs(videoID).ready(function(){
 
-
             function resizeVideoJS(){
                 var width = document.getElementById(videoID).parentElement.offsetWidth;
                 myPlayer.width(width).height( width * aspectRatio );
@@ -274,7 +273,6 @@ GS.backgroundVideo = new function() {
 
             // end of video function
             this.on("ended", function(){
-                myPlayer.pause();
                 myPlayer.posterImage.show();
                 $('#playback-control').removeClass('icon-pause').addClass('icon-play');
                 isPlaying = false;
@@ -294,6 +292,7 @@ GS.backgroundVideo = new function() {
                     isPlaying = true;
                 }
             })
+
         });
     }
 };

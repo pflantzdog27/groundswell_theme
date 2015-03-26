@@ -75,13 +75,6 @@
     margin-bottom: 0;
     float: left;
   }
-  a {
-    text-decoration: underline;
-    &:hover {
-      color: #fff !important;
-      text-decoration: underline;
-    }
-  }
   .section-overlay {
     article {
       max-width: 768px;

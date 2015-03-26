@@ -243,6 +243,13 @@
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'avenir-heavy';
+  src: url("../fonts/avenir/avenir-heavy-webfont.eot");
+  src: url("../fonts/avenir/avenir-heavy-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/avenir/avenir-heavy-webfont.woff") format("woff"), url("../fonts/avenir/avenir-heavy-webfont.ttf") format("truetype"), url("../fonts/avenir/avenir-heavy-webfont.svg#avenir-heavy") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 /***  Transitions  ***/
 /***  Radius  ***/
 /***  Box Border  ***/
@@ -372,7 +379,7 @@ Extenders
       display: block;
       font-weight: 200; }
       #primary-navigation ul li a:hover {
-        font-weight: 800; }
+        color: rgba(255, 255, 255, 0.7); }
       @media only screen and (max-width: 768px) {
         #primary-navigation ul li a:hover {
           color: #fff; } }
@@ -386,6 +393,8 @@ Extenders
       cursor: pointer; }
       #primary-navigation ul li.search-toggle a {
         display: none; }
+    #primary-navigation ul li.current-menu-item a {
+      color: rgba(255, 255, 255, 0.7); }
   #primary-navigation form {
     padding: 15px 20px;
     -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
@@ -1268,11 +1277,6 @@ body.vjs-full-window {
   .section-breaker .form-group {
     margin-bottom: 0;
     float: left; }
-  .section-breaker a {
-    text-decoration: underline; }
-    .section-breaker a:hover {
-      color: #fff !important;
-      text-decoration: underline; }
   .section-breaker .section-overlay article {
     max-width: 768px;
     margin: 0 auto;
@@ -3547,7 +3551,6 @@ a, button {
   color: inherit; }
   a:hover, button:hover {
     text-decoration: none;
-    color: #ea5a3a !important;
     outline: none; }
   a:focus, button:focus {
     color: inherit;
@@ -3555,8 +3558,10 @@ a, button {
     outline: none; }
 
 p a {
-  color: #ea5a3a; }
+  color: #ea5a3a;
+  text-decoration: none; }
   p a:hover {
+    color: inherit !important;
     text-decoration: underline; }
 
 p {
@@ -3827,7 +3832,8 @@ form {
     margin: 0;
     padding: 1px 0;
     position: relative;
-    border: 1px solid #eaeaea; }
+    border: 1px solid #eaeaea;
+    overflow: hidden; }
     form .form-group input {
       padding-right: 50px;
       -webkit-border-radius: 0;
@@ -3871,7 +3877,8 @@ form {
       position: absolute;
       right: 15px;
       top: 15px;
-      cursor: pointer; }
+      cursor: pointer;
+      display: block; }
     #slideDisplayWindow > div header {
       padding: 10px;
       border-bottom: 2px solid #eaeaea;
