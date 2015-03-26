@@ -1189,11 +1189,13 @@ body.vjs-full-window {
     #intro-section #get-started a {
       color: #fff; }
 
-#info-modal .close {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  display: block; }
+#info-modal .modal-body {
+  padding: 25px; }
+  #info-modal .modal-body .close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: block; }
 
 #sub-intro-section {
   background: #44aeea;

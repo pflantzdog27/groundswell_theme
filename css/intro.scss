@@ -75,11 +75,14 @@
 }
 
 #info-modal {
-  .close {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    display: block;
+  .modal-body {
+    padding: 25px;  
+    .close {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      display: block;
+    }
   }
 }
 
