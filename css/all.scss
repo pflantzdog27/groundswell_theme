@@ -50,6 +50,7 @@ p a {
 
 p {
   @include font-size(30px);
+  line-height: 1.4;
 }
  a:active, a:visited {
    color: inherit;

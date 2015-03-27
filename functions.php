@@ -88,7 +88,7 @@
 
     }
     add_action( 'widgets_init', 'arphabet_widgets_init' );
-add_filter( 'widget_posts_args', 'exclude_posts_wpse_103570');
+    add_filter( 'widget_posts_args', 'exclude_posts_wpse_103570');
     // exclude current post from recent posts widget
     function exclude_posts_wpse_103570( $args ){
         global $post;

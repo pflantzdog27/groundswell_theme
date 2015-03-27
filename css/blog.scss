@@ -75,11 +75,14 @@
                 background: rgba(0, 0, 0, 0.3);
                 color: #fff;
                 padding: 10px;
+                  h3 {
+                    position: absolute;
+                    bottom: 0;
+                    font-weight: 900;
+                    text-shadow: 1px 1px 1px #333;
+                  }
               }
             }
-        }
-        p {
-          padding: 0 10px;
         }
         .single-inspiration {
           width: 50px;
