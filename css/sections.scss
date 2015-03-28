@@ -19,12 +19,10 @@
         }
     }
     .section-template {
-        .section-left-column, .section-right-column {
-          //padding-bottom: 50px;
-        }
         .section-right-column {
           @include flexbox;
-          //min-height: 250px;
+          margin-top: 15px;
+          margin-bottom: 15px;
           @include flexAlignItems(center);
           @include flexwrap(wrap);
         }

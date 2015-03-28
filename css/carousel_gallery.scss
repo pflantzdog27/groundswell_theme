@@ -77,6 +77,9 @@
       @include flexAlignItems(center);
       height: 175px;
       overflow: hidden;
+        @include tablets {
+          height: 100px;
+        }
     }
   }
 }

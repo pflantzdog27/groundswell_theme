@@ -407,6 +407,13 @@ Extenders
     display: none;
     background: #fff; }
 
+.navbar-toggle {
+  background: #44aeea;
+  border: 0; }
+  .navbar-toggle .icon-bar {
+    color: #fff;
+    font-weight: bold; }
+
 .vjs-default-skin {
   color: #ccc; }
 
@@ -1235,6 +1242,8 @@ body.vjs-full-window {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
     -webkit-box-align: center;
     -ms-flex-align: center;
     -webkit-align-items: center;
@@ -3364,6 +3373,9 @@ body.vjs-full-window {
   align-items: center;
   height: 175px;
   overflow: hidden; }
+  @media only screen and (max-width: 768px) {
+    .carousel .item .partner-figure {
+      height: 100px; } }
 
 #full-width-slider {
   position: relative;
@@ -3619,7 +3631,8 @@ strong {
   -webkit-box-shadow: 1px 2px 8px -1px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 1px 2px 8px -1px rgba(0, 0, 0, 0.4);
   box-shadow: 1px 2px 8px -1px rgba(0, 0, 0, 0.4);
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); }
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  white-space: normal; }
   .gs-btn a {
     color: white; }
     .gs-btn a:hover {
@@ -3727,6 +3740,9 @@ button:active {
   background-position: center center;
   background-repeat: no-repeat;
   min-height: 500px; }
+  @media only screen and (max-width: 768px) {
+    .coverBG {
+      max-height: 300px; } }
 
 .social-link-bar, .social-link-column {
   padding: 15px 0; }
@@ -3765,6 +3781,11 @@ button:active {
 
 #email-subscription {
   padding-top: 5px; }
+  @media only screen and (max-width: 768px) {
+    #email-subscription button {
+      font-size: 22px;
+      font-size: 1.375rem;
+      line-height: 1.5; } }
 
 .company-meta-block > div {
   height: 200px;

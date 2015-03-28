@@ -85,6 +85,7 @@ strong {
   padding: 7px 12px;
   @include box-shadow(1px 2px 8px -1px, rgba(0,0,0,0.4));
   text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  white-space: normal;
   a {
       color: rgba(255,255,255,1);
         &:hover {
@@ -195,6 +196,9 @@ button:active {
 .coverBG {
   @include coverBG();
   min-height: 500px;
+    @include tablets {
+      max-height: 300px;
+    }
 }
 
 .social-link-bar, .social-link-column {
@@ -241,6 +245,12 @@ button:active {
 
 #email-subscription {
   padding-top: 5px;
+  button {
+    @include tablets {
+      @include font-size(22px);
+      line-height: 1.5;
+    }
+  }
 }
 
 .company-meta-block {

@@ -104,5 +104,13 @@
       background: #fff;
     }
 }
+.navbar-toggle {
+  background: $gsBlue;
+  border: 0;  
+  .icon-bar {
+    color: #fff;
+    font-weight: bold;
+  }
+}
 
 
