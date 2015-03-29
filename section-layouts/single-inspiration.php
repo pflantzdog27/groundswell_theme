@@ -75,7 +75,7 @@
     <div class="container">
         <div class="row" style="margin-bottom: 25px;">
             <div class="col-sm-6">
-                <p>If you like this post<a href="#">Subscribe</a>, <a href="#">Donate</a> or read another below:</p>
+                <p>If you like this post <a href="#">Subscribe</a>, <a href="#">Donate</a> or read another below:</p>
             </div>
             <div class="select-menu col-sm-6 col-md-5 col-xs-12 pull-right">
                 <div class="select-box">

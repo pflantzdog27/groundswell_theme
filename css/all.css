@@ -2727,11 +2727,6 @@ body.vjs-full-window {
   padding-bottom: 50px; }
   #blog-block .blog-post-full {
     margin-bottom: 40px; }
-    #blog-block .blog-post-full p a {
-      text-decoration: none;
-      color: #ea5a3a; }
-      #blog-block .blog-post-full p a:hover {
-        text-decoration: underline; }
   #blog-block .author-info figure {
     margin: 0;
     float: left; }
@@ -3576,7 +3571,7 @@ a, button {
   a:hover, button:hover {
     text-decoration: none;
     outline: none; }
-  a:focus, button:focus {
+  a:focus, a:active, button:focus, button:active {
     color: inherit;
     border: 0;
     outline: none; }
@@ -3592,12 +3587,6 @@ p {
   font-size: 30px;
   font-size: 1.875rem;
   line-height: 1.4; }
-
-a:active, a:visited {
-  color: inherit;
-  border: none;
-  text-decoration: none;
-  outline: none; }
 
 .blue-background {
   background: #44aeea;

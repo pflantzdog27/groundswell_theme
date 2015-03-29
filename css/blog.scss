@@ -105,15 +105,6 @@
   padding-bottom: 50px;
     .blog-post-full {
       margin-bottom: 40px;
-        p {
-          a {
-            text-decoration: none;
-            color: $gsOrange;
-              &:hover {
-                text-decoration: underline;
-              }
-          }
-        }
     }
     .author-info {
       figure {

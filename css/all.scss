@@ -32,14 +32,12 @@ a, button {
       text-decoration: none;
       outline: none;
     }
-    &:focus {
+    &:focus, &:active,&:visited {
       color: inherit;
       border: 0;
       outline: none;
     }
-}
 p a {
-  //text-decoration: underline;
   color: $gsOrange;
   text-decoration: none;
   &:hover {
@@ -52,13 +50,6 @@ p {
   @include font-size(30px);
   line-height: 1.4;
 }
- a:active, a:visited {
-   color: inherit;
-   border: none;
-   text-decoration: none;
-   outline: none;
- }
-
 .blue-background {
   background: $gsBlue;
   padding: 3px;
