@@ -8,7 +8,7 @@
                 <div class="author-info row">
                     <div class="post-intro col-sm-12">
                         <div class="author-name">
-                            <h4>Posted by: <b><?php the_author_posts_link();?></b></h4>
+                            <h4>Posted by <?php the_author_posts_link();?></h4>
                         </div>
                        <p><?php echo $inspirationIntro; ?></p>
                     </div>
@@ -75,7 +75,7 @@
     <div class="container">
         <div class="row" style="margin-bottom: 25px;">
             <div class="col-sm-6">
-                <p>If you like this post <strong><a href="#">Subscribe</a></strong>, <strong><a href="#">Donate</a></strong> or read another below:</p>
+                <p>If you like this post<a href="#">Subscribe</a>, <a href="#">Donate</a> or read another below:</p>
             </div>
             <div class="select-menu col-sm-6 col-md-5 col-xs-12 pull-right">
                 <div class="select-box">

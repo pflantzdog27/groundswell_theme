@@ -2815,7 +2815,8 @@ body.vjs-full-window {
       border: 1px solid #eaeaea;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
-      border-radius: 50%; }
+      border-radius: 50%;
+      max-width: 100%; }
   #curator-info-block h1, #curator-info-block p {
     color: #333; }
 

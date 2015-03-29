@@ -105,7 +105,9 @@ GS.loadPosts = function() {
         });
         var galleryTemplate = $(GS.template).html();
         $(GS.wrapper).append(Mustache.render(galleryTemplate, templateData));
-        GS.blog.blogRowHeights();
+        if($(window).width() > 768) {
+            GS.blog.blogRowHeights();
+        }
         $(GS.wrapper).find('#blog-loading').fadeOut(800, function() {
             $(this).remove();
         });

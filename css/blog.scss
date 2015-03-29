@@ -221,6 +221,7 @@
         img {
           border: 1px solid #eaeaea;
           @include border-radius(50%);
+          max-width: 100%;
         }
     }
     h1, p {

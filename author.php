@@ -30,6 +30,7 @@
     <section id="blog" class="content-section">
         <div class="container">
             <div class="section-template parallax three-column-section row">
+                <h2 class="section-title">Posts by <?php the_author(); ?></h2>
                 <?php while ( have_posts() ) : the_post();?>
                     <div class="col-sm-4 blog-post" id="post-<?php the_ID();?>">
                         <article>
