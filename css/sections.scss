@@ -129,6 +129,9 @@
           font-family: $numberCustomFont;
           color: rgba(68, 174, 234, 0.2);
           line-height: 0.5;
+          @include tablets {
+            @include font-size(140px);
+          }
         }
       }
   }

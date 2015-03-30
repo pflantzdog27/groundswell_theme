@@ -1,6 +1,6 @@
 <div id="photo-gallery" class="carousel slide">
     <?php if( have_rows('layout_section_full_width_photo_gallery') ): ?>
-        <div class="col-xs-4">
+        <div class="col-sm-4">
             <?php while( have_rows('layout_section_full_width_photo_gallery') ): the_row(); ?>
                 <?php //vars
                 $photoGalleryID = get_sub_field('photo_gallery_id');

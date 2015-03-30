@@ -38,7 +38,7 @@ a, button {
     outline: none;
   }     
 }
-p a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+p a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, small a {
   color: $gsOrange;
   text-decoration: none;
   &:hover {
@@ -359,6 +359,7 @@ form {
   bottom: -1000px;
   color: #fff;
   z-index: 9;
+  max-height: 400px;
   > div {
     @include border-radius(5px 5px 0 0);
     padding-bottom: 20px;
