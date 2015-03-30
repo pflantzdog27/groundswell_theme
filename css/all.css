@@ -3910,7 +3910,8 @@ form {
       right: 15px;
       top: 15px;
       cursor: pointer;
-      display: block; }
+      display: block;
+      z-index: 9999; }
     #slideDisplayWindow > div header {
       padding: 10px;
       border-bottom: 2px solid #eaeaea;

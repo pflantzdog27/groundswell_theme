@@ -1,6 +1,6 @@
 <aside class="container" id="slideDisplayWindow" data-switch="<?php echo ($flyoutMessage == true ? 'active' : false);?>">
     <div class="col-md-6 col-xs-12" style="background: rgba(<?php echo $flyoutBackground; ?>,0.9);">
-        <span class="closePopup icon-cross"></span>
+        <span class="closePopup icon-cross">&nbsp;</span>
         <?php if($flyoutTitle) : ?>
             <header>
                 <h3><?php echo $flyoutTitle; ?></h3>
