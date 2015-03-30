@@ -37,13 +37,10 @@ GS.loadMorePosts = function() {
     if(GS.pageNumber < GS.numberOfPages) {
         GS.pageNumber++;
         GS.apiCall += '&page=' + GS.pageNumber;
-        var postHeight = $('.blog-post').eq(1).height();
-        var wrapperHeight = $(GS.wrapper).height();
-        $(GS.wrapper).height(postHeight + wrapperHeight);
+        GS.loadPosts();
         $('html, body').animate({
             scrollTop: $(".blog-post:last-child").offset().top
         }, 500);
-        GS.loadPosts();
     }
 };
 
