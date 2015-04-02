@@ -2985,7 +2985,7 @@ body.vjs-full-window {
 
 #stats {
   position: relative;
-  min-height: 275px; }
+  min-height: 220px; }
   #stats .connecting-line {
     border-top: 10px solid #44aeea;
     width: 50px;
