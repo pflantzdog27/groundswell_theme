@@ -2812,6 +2812,14 @@ body.vjs-full-window {
     width: 5%;
     z-index: 9; }
 
+#sticky-social-links {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.3); }
+
 .contact-curator {
   margin: 8px 0;
   color: #44aeea; }
@@ -2878,6 +2886,9 @@ body.vjs-full-window {
   font-size: 0.875rem;
   text-transform: uppercase;
   cursor: pointer; }
+
+#video-content {
+  margin-bottom: 15px; }
 
 #team-graphic li {
   max-width: 16.66%;
@@ -3601,6 +3612,10 @@ p a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, small a {
   p a:hover, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, small a:hover {
     color: inherit !important;
     text-decoration: underline; }
+  p a:focus, p a:active, p a:visited, h1 a:focus, h1 a:active, h1 a:visited, h2 a:focus, h2 a:active, h2 a:visited, h3 a:focus, h3 a:active, h3 a:visited, h4 a:focus, h4 a:active, h4 a:visited, h5 a:focus, h5 a:active, h5 a:visited, h6 a:focus, h6 a:active, h6 a:visited, small a:focus, small a:active, small a:visited {
+    color: #ea5a3a;
+    border: 0;
+    outline: none; }
 
 p {
   font-size: 30px;

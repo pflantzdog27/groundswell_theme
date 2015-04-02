@@ -198,6 +198,14 @@
         z-index: 9;
       }
 }
+#sticky-social-links {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background: rgba(0,0,0,0.3);
+}
 
 .contact-curator {
   margin: 8px 0;
@@ -278,4 +286,7 @@
   @include font-size(14px);
   text-transform: uppercase;
   cursor: pointer;
+}
+#video-content {
+  margin-bottom: 15px;
 }

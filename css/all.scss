@@ -45,6 +45,11 @@ p a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, small a {
     color: inherit!important;
     text-decoration: underline;
   }
+  &:focus, &:active, &:visited {
+    color: $gsOrange;
+    border: 0;
+    outline: none;
+  }
 }
 
 p {

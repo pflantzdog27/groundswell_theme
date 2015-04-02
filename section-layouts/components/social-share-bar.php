@@ -1,4 +1,4 @@
-<div class="social-link-bar">
+<div class="social-link-bar hidden-xs">
     <ul class="list-unstyled col-sm-8 col-sm-offset-2">
         <li class="facebook col-xs-4"><a class="facebook-share" href="" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog','width=626,height=436')">
                 <i class="icon-facebook"></i><span class="hidden-xs"> Share</span>
