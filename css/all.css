@@ -1261,6 +1261,10 @@ body.vjs-full-window {
     top: -5px;
     right: 15px;
     margin-top: 0; }
+    @media only screen and (max-width: 768px) {
+      .content-section .top-corner-btn {
+        top: -45px;
+        left: 0; } }
 
 .training-section .container {
   position: relative; }
@@ -1407,8 +1411,7 @@ body.vjs-full-window {
   padding: 15px;
   color: #fff;
   background: rgba(0, 0, 0, 0.75);
-  margin-top: 50px;
-  font-style: italic; }
+  margin-top: 50px; }
 
 .in-section-social {
   padding: 0 !important; }
@@ -2835,7 +2838,8 @@ body.vjs-full-window {
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       border-radius: 50%;
-      max-width: 100%; }
+      max-width: 100%;
+      height: auto; }
   #curator-info-block h1, #curator-info-block p {
     color: #333; }
 
@@ -2889,6 +2893,13 @@ body.vjs-full-window {
 
 #video-content {
   margin-bottom: 15px; }
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+  background-color: #44aeea;
+  border-color: #44aeea; }
+
+.pagination > li > a, .pagination > li > span {
+  color: #44aeea; }
 
 #team-graphic li {
   max-width: 16.66%;

@@ -35,6 +35,10 @@
       top: -5px;
       right: 15px;
       margin-top: 0;
+      @include tablets {
+        top: -45px;
+        left: 0;
+      }
     }
 }
 
@@ -212,7 +216,6 @@
   color: #fff;
   background: rgba(0,0,0,0.75);
   margin-top: 50px;
-  font-style:italic;
 }
 
 .in-section-social {

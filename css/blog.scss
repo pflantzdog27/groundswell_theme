@@ -221,6 +221,7 @@
           border: 1px solid #eaeaea;
           @include border-radius(50%);
           max-width: 100%;
+          height: auto;
         }
     }
     h1, p {
@@ -289,4 +290,11 @@
 }
 #video-content {
   margin-bottom: 15px;
+}
+.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus {
+  background-color: $gsBlue;
+  border-color: $gsBlue;
+}
+.pagination>li>a, .pagination>li>span {
+  color: $gsBlue;
 }

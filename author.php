@@ -10,12 +10,12 @@
     <header class="page-header">
         <div class="container">
             <div class="row" id="curator-info-block">
-                <div class="col-sm-2 col-xs-4">
+                <div class="col-md-2 col-xs-4">
                     <figure>
                         <?php echo get_avatar( $post->post_author, 165 ); ?>
                     </figure>
                 </div>
-                <div class="col-sm-10 col-xs-8">
+                <div class="col-md-10 col-xs-8">
                     <h1><?php the_author(); ?></h1>
                     <div class="contact-curator">
                         <a href="<?php echo $user_facebook ?>" target="_blank"><i class="icon-facebook"></i>Facebook</a>
