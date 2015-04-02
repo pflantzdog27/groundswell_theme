@@ -13,9 +13,6 @@
             <header class="single-post-header">
                 <h1><?php the_title(); ?></h1>
             </header>
-            <div class="visible-xs">
-                <?php include('components/social-share-bar.php');?>
-            </div>
             <section id="blog-block">
                 <div class="author-info">
                     <div class="author-name">
@@ -33,5 +30,19 @@
             </section>
         </div>
         <?php get_sidebar('sidebar_blog_single');?>
+    </div>
+    <div class="social-link-bar visible-xs" id="sticky-social-links">
+        <ul class="list-unstyled col-sm-8 col-sm-offset-2">
+            <li class="facebook col-xs-4"><a class="facebook-share" href="" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog','width=626,height=436')">
+                    <i class="icon-facebook"></i><span class="hidden-xs"> Share</span>
+                </a></li>
+            <li class="twitter col-xs-4"><a href="http://twitter.com/intent/tweet?url=&text=<?php the_title();?>&via=groundswellmvmt" target="_blank">
+                    <i class="icon-twitter"></i><span class="hidden-xs"> Tweet</span>
+                </a></li>
+            <li class="email col-xs-4"><a href="mailto:?subject=<?php the_title(); ?>&body=<?php the_permalink();?>">
+                    <i class="icon-mail"></i><span class="hidden-xs"> Email</span>
+                </a></li>
+        </ul>
+        <div class="clearfix"></div>
     </div>
 </div
