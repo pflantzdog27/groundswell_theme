@@ -251,6 +251,7 @@ Extenders
   }
   @include tablets {
     @include font-size(50px);
+    padding-top: 30px;
   }
 }
 %imageBgH2 {

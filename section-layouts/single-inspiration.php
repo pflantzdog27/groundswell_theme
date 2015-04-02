@@ -79,7 +79,7 @@
             </div>
             <div class="select-menu col-sm-6 col-md-5 col-xs-12 pull-right">
                 <div class="select-box">
-                    <h5>Topics <span> --- select --- </span> <b class="icon-arrow-down"></b></h5>
+                    <h5>Topics <span> — select — </span> <b class="icon-arrow-down"></b></h5>
                 </div>
                 <div class="select-options scroll-area">
                     <?php

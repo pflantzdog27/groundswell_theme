@@ -5,7 +5,7 @@
         {{#.}}
             <div class="col-sm-3 petition">
                 <figure>
-                    <img class="img-responsive" src="{{image}}" alt="{{title}}">
+                    <a href="{{url}}" target="_blank"><img class="img-responsive" src="{{image}}" alt="{{title}}"></a>
                     <figcaption class="progress">
                         <div class="progress-bar status-bar"  role="progressbar" aria-valuenow="{{ percent }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ percent }}%">
                             <p>&nbsp;</p>
@@ -15,7 +15,7 @@
                 </figure>
                 <h4>{{title}}</h4>
                 <footer class="petition-meta-info">
-                    <p style="color:#333;"><small><a href="{{url}}" target="_blank" style="color:#fff;">Click to sign petition</a> or <a href="{{url}}" target="_blank" style="color:#fff;">Learn more</a></small></p>
+                    <p style="color:#333;"><small><a href="{{url}}" target="_blank" style="color:#fff;">Click to take action</a></small></p>
                 </footer>
             </div>
         {{/.}}

@@ -72,7 +72,7 @@
         register_sidebar( array(
             'name'          => 'Blog Sidebar',
             'id'            => 'sidebar_blog_single',
-            'before_widget' => '<div class="sidebar-widget hidden-xs">',
+            'before_widget' => '<div class="sidebar-widget">',
             'after_widget'  => '</div>',
             'before_title'  => '<h2 class="widget-title">',
             'after_title'   => '</h2>',

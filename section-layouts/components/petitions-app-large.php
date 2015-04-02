@@ -15,7 +15,7 @@
             {{#.}}
             <div class="item row" id="petitionID-{{index}}">
                 <figure class="col-xs-12 col-sm-3">
-                    <img class="img-responsive" src="{{image}}" alt="{{title}}">
+                    <a href="{{url}}" target="_blank"><img class="img-responsive" src="{{image}}" alt="{{title}}"></a>
                     <figcaption class="progress">
                         <div class="progress-bar status-bar"  role="progressbar" aria-valuenow="{{ percent }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ percent }}%">
                             <p>&nbsp;</p>
@@ -28,7 +28,7 @@
                     <small>{{why}}</small>
                     <footer class="petition-meta-info">
                         <small>Created by: <b>{{creator}}</b></small>
-                        <p><small><a href="{{url}}" target="_blank">Click to sign petition</a> or <a href="{{url}}" target="_blank">Learn more</a></small></p>
+                        <p><small><a href="{{url}}" target="_blank">Click to take action</a></small></p>
                     </footer>
                 </div>
             </div>

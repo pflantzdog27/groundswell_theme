@@ -1,12 +1,11 @@
 <header id="intro-section-wrapper">
     <div id="intro-section">
-        <video id="homepage-videoBG" class="video-js hidden-xs"
+        <video id="homepage-videoBG" class="video-js hidden-xs hidden-sm"
                controls="false"
                preload="false"
                autoplay="autoplay"
                muted="muted"
-               data-setup='{ "techOrder": ["youtube"], "src": "<?php echo $introYoutubeSrc ;?>"}'
-               >
+               data-setup='{ "techOrder": ["youtube"], "src": "<?php echo $introYoutubeSrc ;?>"}'>
             <img class="vjs-no-js" src="<?php bloginfo('template_url') ?>/images/training-bg.jpg">
         </video>
 
@@ -27,9 +26,9 @@
                     </div>
                 <?php } ?>
             </div>
-            <span id="playback-control" class="icon-pause hidden-xs intro-button"></span>
+            <span id="playback-control" class="icon-pause hidden-xs hidden-sm intro-button"></span>
             <?php if($introVideoInfoChecker == 'yes') { ?>
-                <button type="button" data-toggle="modal" data-target="#info-modal" id="video-info" class="intro-button hidden-xs"><span class="icon-info"></span></button>
+                <button type="button" data-toggle="modal" data-target="#info-modal" id="video-info" class="intro-button hidden-xs hidden-sm"><span class="icon-info"></span></button>
                 <!-- Modal -->
                 <div class="modal fade" id="info-modal" tabindex="-1" role="dialog" aria-labelledby="video-info-modal" aria-hidden="true">
                     <div class="modal-dialog">

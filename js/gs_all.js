@@ -27,7 +27,7 @@ GS.changePostCategory = function(slug) {
 
 $('body').on('click','.most-recent-toggle', function() {
     $(this).remove();
-    $('.select-box span').text('-- Most Recent Posts --');
+    $('.select-box span').text('— Most Recent Posts —');
     GS.resetPosts();
     GS.apiCall = 'get_recent_posts/?count='+GS.postCount;
     GS.loadPosts();

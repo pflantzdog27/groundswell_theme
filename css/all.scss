@@ -189,7 +189,7 @@ button:active {
   @include coverBG();
   min-height: 500px;
     @include tablets {
-      max-height: 300px;
+      min-height: auto;
     }
 }
 

@@ -292,7 +292,8 @@ Extenders
   @media only screen and (max-width: 768px) {
     #intro-section #hero .container h1, .page-header h1, .jumbotron h1 {
       font-size: 50px;
-      font-size: 3.125rem; } }
+      font-size: 3.125rem;
+      padding-top: 30px; } }
 
 #intro-section #hero .container h2, .page-header h2, .jumbotron h2 {
   font-size: 40px;
@@ -384,7 +385,7 @@ Extenders
         #primary-navigation ul li a:hover {
           color: #fff; } }
     #primary-navigation ul li.darker-blue-bg {
-      background: #8B8EEA; }
+      background: #999; }
     #primary-navigation ul li.search-toggle {
       padding-top: 15px;
       color: rgba(255, 255, 255, 0.5);
@@ -1127,7 +1128,7 @@ body.vjs-full-window {
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.4); }
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 992px) {
       #intro-section #hero {
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -1442,6 +1443,9 @@ body.vjs-full-window {
     cursor: pointer;
     line-height: 1.5;
     border-left: 1px solid black; }
+    @media only screen and (max-width: 768px) {
+      .groundswell-campaigns #cat-selector {
+        margin-top: 14px; } }
     .groundswell-campaigns #cat-selector b {
       position: absolute;
       right: 5px;
@@ -1492,6 +1496,9 @@ body.vjs-full-window {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
     .petition-widget .item h4 {
       margin-top: 0; }
+      @media only screen and (max-width: 768px) {
+        .petition-widget .item h4 {
+          margin-top: 5px; } }
     .petition-widget .item figure {
       -webkit-box-shadow: 0 4px 2px -2px gray;
       -moz-box-shadow: 0 4px 2px -2px gray;
@@ -1508,8 +1515,13 @@ body.vjs-full-window {
           font-size: 18px;
           font-size: 1.125rem;
           color: #fff; }
-    .petition-widget .item .petition-meta-info a {
-      color: #ea5a3a; }
+    .petition-widget .item .petition-meta-info {
+      line-height: 1; }
+      .petition-widget .item .petition-meta-info a {
+        color: #ea5a3a; }
+      .petition-widget .item .petition-meta-info p {
+        margin-top: 10px;
+        text-transform: uppercase; }
 
 .progress {
   margin-bottom: 0;
@@ -3739,7 +3751,7 @@ button:active {
   min-height: 500px; }
   @media only screen and (max-width: 768px) {
     .coverBG {
-      max-height: 300px; } }
+      min-height: auto; } }
 
 .social-link-bar, .social-link-column {
   padding: 15px 0; }

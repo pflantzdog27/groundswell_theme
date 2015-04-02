@@ -24,6 +24,9 @@
       cursor: pointer;
       line-height: 1.5;
       border-left: 1px solid black;
+        @include tablets {
+          margin-top: 14px;
+        }
         b {
           position: absolute;
           right: 5px;
@@ -73,6 +76,9 @@
       border-bottom: 1px solid rgba(0,0,0,0.2);
         h4 {
           margin-top: 0;
+          @include tablets {
+            margin-top: 5px;
+          }
         }
         figure {
           @include box-shadow(0 4px 2px -2px, gray);
@@ -92,8 +98,13 @@
             }
         }
         .petition-meta-info {
+          line-height: 1;
             a {
               color: $gsOrange;
+            }
+            p {
+              margin-top: 10px;
+              text-transform: uppercase;
             }
         }
     }
