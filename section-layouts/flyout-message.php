@@ -6,7 +6,7 @@
             </header>
         <?php endif; ?>
         <article>
-            <span class="closePopup icon-cross">&nbsp;</span>
+            <span class="closePopup icon-cross close">&nbsp;</span>
             <?php if($flyoutContent == 'blog_post') {
                 $post_object = get_field('flyout_message_content_post_object');
                 if( $post_object ):
