@@ -161,19 +161,19 @@ GS.navigation = new function(){
 
     this.navigationBoxShadow = function() {
         $('#primary-navigation-wrapper').css('box-shadow', 'none');
-            var distance = $('.content-section').eq(0).offset().top;
-            if($('.video-js').length > 0) {
-                var offset = -200;
+        var distance = $('.content-section').eq(0).offset().top;
+        if($('.video-js').length > 0) {
+            var offset = -200;
+        } else {
+            var offset = 0;
+        }
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= distance - offset) {
+                $('#primary-navigation-wrapper').css('box-shadow', '0px 1px 8px 0px rgba(0, 0, 0, 0.6)');
             } else {
-                var offset = 0;
+                $('#primary-navigation-wrapper').css('box-shadow', 'none');
             }
-            $(window).scroll(function () {
-                if ($(window).scrollTop() >= distance - offset) {
-                    $('#primary-navigation-wrapper').css('box-shadow', '0px 1px 8px 0px rgba(0, 0, 0, 0.6)');
-                } else {
-                    $('#primary-navigation-wrapper').css('box-shadow', 'none');
-                }
-            });
+        });
     };
     this.mobileMenu = function() {
         $('.navbar-toggle').click(function() {
@@ -215,14 +215,15 @@ GS.cookies = new function()  {
 
     this.testCookie = function() {
         if(pageHasFlyout && cookieValue != 'true') {
-            flyout.animate({bottom : '0'}, 600);
+            flyout.stop().animate({bottom : '0'}, 600);
             //$.cookie('slideOverlay', 'true', { expires: 30, path: '/' });
+            GS.cookies.removeOverlay();
         } else {
             flyout.remove();
         }
     };
     this.removeOverlay = function() {
-       $('body').on('click','.closePopup', function() {
+        $('body').on('click','.closePopup', function() {
             flyout.animate({bottom : '-1000px'}, 600,function() {
                 $(this).remove();
             });
@@ -581,16 +582,16 @@ GS.petitions = new function() {
                 })
             });
         })
-        .done(function () {
+            .done(function () {
                 $('#loading-image').fadeOut(300,function() {
                     $(this).remove();
                 })
                 $('#cat-list').prepend(Mustache.render(galleryTemplate, list));
-        })
-        // error handling here
-        .fail(function () {
-            $('#cat-list').append('<p></p>').text('Sorry, there is something wrong with the category display at this moment.')
-        });
+            })
+            // error handling here
+            .fail(function () {
+                $('#cat-list').append('<p></p>').text('Sorry, there is something wrong with the category display at this moment.')
+            });
     };
     this.scrollBar = function() {
         $('.scroll-area').mCustomScrollbar( {
@@ -684,15 +685,15 @@ GS.blog = new function() {
     };
 
     this.blogRowHeights = function() {
-            var pageID = $('.single-post-page-wrapper').attr('id');
-            var maxHeight = 0;
-            $('.blog-post > article').each(function(){
-                maxHeight = $(this).height() > maxHeight ? $(this).height() : maxHeight;
-                if($(this).attr('id') == pageID && pageID != undefined) {
-                    $(this).parent('div').remove();
-                }
-            });
-            $('.blog-post > article').height(maxHeight);
+        var pageID = $('.single-post-page-wrapper').attr('id');
+        var maxHeight = 0;
+        $('.blog-post > article').each(function(){
+            maxHeight = $(this).height() > maxHeight ? $(this).height() : maxHeight;
+            if($(this).attr('id') == pageID && pageID != undefined) {
+                $(this).parent('div').remove();
+            }
+        });
+        $('.blog-post > article').height(maxHeight);
     };
 
     this.socialShare = function() {
@@ -788,7 +789,7 @@ GS.carousel = new function() {
 };
 
 /* ===========================================
-    DOCUMENT READY FUNCTIONS
+ DOCUMENT READY FUNCTIONS
  // ========================================== */
 
 $(function() {
@@ -797,7 +798,6 @@ $(function() {
     GS.forms.emailSubscription();
     GS.navigation.mobileMenu();
     GS.cookies.displayTrigger();
-    GS.cookies.removeOverlay();
 
 
     if($('#petition-wrap').length > 0) { // IF PETITIONS EXIST ON THE PAGE
@@ -877,6 +877,4 @@ $(function() {
 // END
 
 });
-
-
 

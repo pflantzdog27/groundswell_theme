@@ -3931,8 +3931,7 @@ form {
   right: 0;
   bottom: -1000px;
   color: #fff;
-  z-index: 9;
-  max-height: 400px; }
+  z-index: 9; }
   #slideDisplayWindow > div {
     -webkit-border-radius: 5px 5px 0 0;
     -moz-border-radius: 5px 5px 0 0;
@@ -3949,7 +3948,7 @@ form {
       top: 15px;
       cursor: pointer;
       display: block;
-      z-index: 9999; }
+      z-index: 99; }
     #slideDisplayWindow > div header {
       padding: 10px;
       border-bottom: 2px solid #eaeaea;

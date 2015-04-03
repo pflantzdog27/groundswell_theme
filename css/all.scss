@@ -365,7 +365,7 @@ form {
   bottom: -1000px;
   color: #fff;
   z-index: 9;
-  max-height: 400px;
+  //max-height: 400px;
   > div {
     @include border-radius(5px 5px 0 0);
     padding-bottom: 20px;
@@ -377,7 +377,7 @@ form {
       top: 15px;
       cursor: pointer;
       display: block;
-      z-index: 9999;
+      z-index: 99;
     }
     header {
       padding: 10px;
