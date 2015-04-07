@@ -1,5 +1,5 @@
 <aside class="container" id="slideDisplayWindow" data-switch="<?php echo ($flyoutMessage == true ? 'active' : false);?>">
-    <div class="col-md-6 col-xs-12" style="background: rgba(<?php echo $flyoutBackground; ?>,0.9);">
+    <div class="col-md-4 col-xs-10" style="background: rgba(<?php echo $flyoutBackground; ?>,0.9);">
         <?php if($flyoutTitle) : ?>
             <span class="closePopup icon-cross close">&nbsp;</span>
             <header>
@@ -12,7 +12,7 @@
                 if( $post_object ):
                     $post = $post_object;
                     setup_postdata( $post ); ?>
-                    <div class="blog-post col-sm-8 col-sm-offset-2">
+                    <div class="blog-post">
                         <article>
                             <figure>
                                 <a href="<?php the_permalink();?>">
