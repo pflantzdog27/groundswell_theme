@@ -368,7 +368,7 @@ form {
   //max-height: 400px;
   > div {
     @include border-radius(5px 5px 0 0);
-    padding: 10px 20px;
+    padding: 20px 35px 5px;
     @include box-shadow(1px 2px 2px 2px , rgba(0,0,0,0.5));
     .closePopup {
       @include font-size(30px);
