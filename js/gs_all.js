@@ -670,8 +670,7 @@ GS.blog = new function() {
         $('.select-options li a').click(function(e) {
             e.preventDefault();
             var cat = $(this).text(),
-                catLink = $(this).attr('href'),
-                catSlug = catLink.split("category/").pop();
+                catSlug = $(this).attr('href');
             $('.select-box').find('b').toggleClass('icon-arrow-down, icon-arrow-up');
             $('.select-options').slideToggle(300);
             $('.select-box span').text(cat);
