@@ -12,7 +12,7 @@
                         <h4><?php echo $stafferSelection['user_firstname'];?> <?php echo $stafferSelection['user_lastname'];?></h4>
                     </header>
                     <article class="hidden">
-                        <p><b><?php echo $stafferSelection['user_firstname'];?> <?php echo $stafferSelection['user_lastname'];?></b>, <i><?php echo $user_info->job_title ?></i>, <?php echo $stafferSelection['user_description'];?></p>
+                        <p><i><?php echo $user_info->job_title ?></i>, <?php echo $stafferSelection['user_description'];?></p>
                         <footer>
                             <p>Connect with <?php echo $stafferSelection['user_firstname'];?>:
                                 <a href="mailto:<?php echo $stafferSelection['user_email'];?>"><i class="icon-mail"></i></a>

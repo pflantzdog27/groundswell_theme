@@ -7,7 +7,7 @@
     function my_options_page_settings($options) {
         $options['title'] = _('Global');
         $options['pages'] = array(
-            _('Header'),
+            _('Blog Topics'),
             _('Footer'),
             _('Flyout'),
         );
