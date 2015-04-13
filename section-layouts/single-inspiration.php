@@ -43,7 +43,7 @@
                     <strong>Topics: </strong>
                     <?php
                     $categories = get_the_category();
-                    $separator = ' ';
+                    $separator = ',';
                     $output = '';
                     if($categories){
                         foreach($categories as $category) {
@@ -76,16 +76,9 @@
                 <div class="select-box">
                     <h5>Topics <span> — select — </span> <b class="icon-arrow-down"></b></h5>
                 </div>
-                <div class="select-options scroll-area">
-                    <?php
-                    $args = array(
-                        'show_option_all'    => false,
-                        'exclude'            => 1,
-                        'title_li'           => null,
-                    ); ?>
-                    <ul class="list-unstyled">
-                        <?php wp_list_categories( $args ); ?>
-                    </ul>
+                <div class="select-options scroll-area row">
+                    <?php $blogList = get_field('blog_list_topics', 'option'); ?>
+                    <?php echo $blogList; ?>
                 </div>
             </div>
         </div>
