@@ -15,7 +15,7 @@
                 </div>
                 <article class="blog-post-full">
                     <?php include('components/social-share-bar.php');?>
-
+                   <?php echo $contentWYSIWYG ?>
                     <?php if($inspirationContent == 'Video') : ?>
                             <div class="embed-responsive embed-responsive-16by9" id="video-content">
                                 <?php if(!$videoObject) { ?>
@@ -35,7 +35,7 @@
 
                     <?php if($inspirationContent == 'WYSIWYG Editor') : ?>
                         <?php echo $contentWYSIWYG ?>
-                    <?php endif; ?>         
+                    <?php endif; ?>
 
                     <?php if($inspirationContent == 'Slideshow') :
                        include('components/inspiration-slideshow.php');
