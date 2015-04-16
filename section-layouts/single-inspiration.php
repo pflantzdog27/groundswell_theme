@@ -33,13 +33,14 @@
                         </figure>
                     <?php endif; ?>
 
-                    <?php if($inspirationContent == 'wysiwyg') : ?>
+                    <?php if($inspirationContent == 'WYSIWYG Editor') : ?>
                         <?php echo $contentWYSIWYG ?>
-                    <?php endif; ?>
+                    <?php endif; ?>         
 
                     <?php if($inspirationContent == 'Slideshow') :
                        include('components/inspiration-slideshow.php');
                     endif; ?>
+
                     <?php echo $inspirationOutro ?>
                     <?php include('components/social-share-bar.php');?>
                 </article>
