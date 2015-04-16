@@ -315,6 +315,9 @@ button:active {
           a {
             display: block;
             padding: 2px 8px;
+              &:hover {
+                color: inherit; 
+              }
           }
       }
   }

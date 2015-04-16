@@ -27,7 +27,7 @@ GS.changePostCategory = function(slug) {
 
 $('body').on('click','.most-recent-toggle', function() {
     $(this).remove();
-    $('.select-box span').text('— Most Recent Posts —');
+    $('.select-box span').html('<i class="hidden-xs">—</i> Most Recent Posts <i class="hidden-xs">—</i>');
     GS.resetPosts();
     GS.apiCall = 'get_recent_posts/?count='+GS.postCount;
     GS.loadPosts();
@@ -244,7 +244,6 @@ GS.forms = new function() {
     }
     this.contactForm = function() {
         $('#hidden_iframe').load(function(){
-            console.log(submitted);
             if(submitted == true){
                 $('#contact-submit').hide(300,function() {
                     $(this).parent('p').remove();
@@ -636,8 +635,8 @@ GS.sectionHacks = new function() {
 
     this.rightColHeight = function() {
         $('.section-right-column').each(function () {
-            if ($(this).html().length > 0) {
-                console.log($(this).html().length);
+            if ($(this).children.length === 0) {
+                console.log('yea: '+ $(this).children.length);
                 var leftColHeight = $(this).parent('.section-template').find('.section-left-column').height();
                 $(this).css('min-height', leftColHeight);
             }

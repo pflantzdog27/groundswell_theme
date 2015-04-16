@@ -3891,6 +3891,8 @@ button:active {
       .select-menu .select-options li a {
         display: block;
         padding: 2px 8px; }
+        .select-menu .select-options li a:hover {
+          color: inherit; }
 
 form {
   width: 100%; }

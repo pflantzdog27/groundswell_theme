@@ -9,7 +9,7 @@
 
                 <div class="select-menu col-sm-6 col-md-5 col-xs-12 pull-right">
                     <div class="select-box">
-                        <h5>Topics <span> — Most Recent Posts — </span> <b class="icon-arrow-down"></b></h5>
+                        <h5>Topics <span> <i class="hidden-xs">—</i> Most Recent Posts <i class="hidden-xs">—</i></span> <b class="icon-arrow-down"></b></h5>
                     </div>
                     <div class="select-options scroll-area row">
                         <?php $blogList = get_field('blog_list_topics', 'option'); ?>
