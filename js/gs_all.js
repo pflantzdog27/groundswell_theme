@@ -635,12 +635,13 @@ GS.sectionHacks = new function() {
     }
 
     this.rightColHeight = function() {
-        if ($('.section-right-column').html().length > 0) {
-            $('.section-right-column').each(function () {
+        $('.section-right-column').each(function () {
+            if ($(this).html().length > 0) {
+                console.log($(this).html().length);
                 var leftColHeight = $(this).parent('.section-template').find('.section-left-column').height();
                 $(this).css('min-height', leftColHeight);
-            })
-        }
+            }
+        })
     }
 };
 
