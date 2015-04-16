@@ -316,7 +316,7 @@ button:active {
             display: block;
             padding: 2px 8px;
               &:hover {
-                color: inherit;
+                color: rgba(0,0,0,0.8);
               }
           }
       }

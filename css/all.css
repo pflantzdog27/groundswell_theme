@@ -1278,8 +1278,9 @@ body.vjs-full-window {
     margin-top: 0; }
     @media only screen and (max-width: 768px) {
       .content-section .top-corner-btn {
-        top: -45px;
-        left: 0; } }
+        position: static;
+        margin-top: 15px;
+        margin-bottom: 15px; } }
 
 .training-section .container {
   position: relative; }
@@ -2822,9 +2823,14 @@ body.vjs-full-window {
       padding: 0; }
       #right-sidebar .sidebar-widget ul li {
         padding: 10px 0;
-        border-bottom: 1px solid #eaeaea; }
+        border-bottom: 1px solid #eaeaea;
+        font-size: 23px;
+        font-size: 1.4375rem; }
         #right-sidebar .sidebar-widget ul li:last-child {
           border-bottom: 0; }
+        #right-sidebar .sidebar-widget ul li a:hover {
+          color: inherit;
+          text-decoration: underline; }
 
 #social-navigation {
   position: relative; }
@@ -3913,7 +3919,7 @@ button:active {
         display: block;
         padding: 2px 8px; }
         .select-menu .select-options li a:hover {
-          color: inherit; }
+          color: rgba(0, 0, 0, 0.8); }
 
 form {
   width: 100%; }

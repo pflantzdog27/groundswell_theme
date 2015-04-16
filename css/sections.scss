@@ -36,8 +36,9 @@
       right: 15px;
       margin-top: 0;
       @include tablets {
-        top: -45px;
-        left: 0;
+        position: static;
+        margin-top: 15px;
+        margin-bottom: 15px;
       }
     }
 }

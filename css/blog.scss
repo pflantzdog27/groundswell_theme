@@ -186,8 +186,15 @@
             li {
               padding: 10px 0;
               border-bottom: 1px solid #eaeaea;
+              @include font-size(23px);
                 &:last-child {
                   border-bottom: 0;
+                }
+                a {
+                  &:hover {
+                    color: inherit;
+                    text-decoration: underline;
+                  }
                 }
             }
         }
