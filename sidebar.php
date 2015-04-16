@@ -1,5 +1,6 @@
 <?php if ( is_active_sidebar( 'sidebar_blog_single' ) ) : ?>
     <aside class="col-sm-3 col-xs-12" id="right-sidebar">
+        <?php dynamic_sidebar( 'sidebar_blog_single' ); //WIDGETS ?>
         <?php  $post_ID = $wp_query->posts[0]->ID;
         $all_cats_of_post = get_the_category($post_ID);
         for($i = 0; $i < sizeof($all_cats_of_post); $i++) { ?>
@@ -15,7 +16,6 @@
                 </ul>
             </div>
         <?php } ?>
-        <?php dynamic_sidebar( 'sidebar_blog_single' ); //WIDGETS ?>
     </aside>
 <?php endif; ?>
 

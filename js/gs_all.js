@@ -38,9 +38,6 @@ GS.loadMorePosts = function() {
         GS.pageNumber++;
         GS.apiCall += '&page=' + GS.pageNumber;
         GS.loadPosts();
-        $('html, body').animate({
-            scrollTop: $(".blog-post:last-child").offset().top
-        }, 500);
     }
 };
 
@@ -863,7 +860,7 @@ $(function() {
         if($('#social-navigation').length > 0) {
             GS.blog.affixSocialIcons();
         };
-        if($('#sticky-social-links').length > 0) {
+        if($(window).width() < 768) {
             $('.navbar-header').css('display','none');
             $('#primary-navigation-wrapper').css({background : 'none', 'box-shadow' : '0 0 0 0'});
             $('.single-post-header').css('padding-top','20px');

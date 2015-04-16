@@ -39,8 +39,8 @@
                     <?php echo $inspirationOutro ?>
                     <?php include('components/social-share-bar.php');?>
                 </article>
-                <footer>
-                    <strong>Topics: </strong>
+                <footer class="blog-meta-info">
+                    <b>Topics: </b>
                     <?php
                     $categories = get_the_category();
                     $separator = ', ';
@@ -54,13 +54,41 @@
                     }
                     ?><br>
                     <?php if($inspirationAbout) { ?>
-                        <strong>About: </strong><?php echo $inspirationAbout; ?><br>
+                        <b>About: </b><?php echo $inspirationAbout; ?><br>
                     <?php } ?>
                 </footer>
             </div>
-
+            <!-- sidebar -->
             <div id="inspiration-sidebar" class="col-md-3 hidden-sm hidden-xs">
-                <?php dynamic_sidebar( 'sidebar_inspiration_single' ); //SIDEBAR WIDGETS ?>
+                <?php //dynamic_sidebar( 'sidebar_inspiration_single' ); //SIDEBAR WIDGETS ?>
+                <?php  $post_ID = $wp_query->posts[0]->ID;
+                $all_cats_of_post = get_the_category($post_ID);
+                for($i = 0; $i < sizeof($all_cats_of_post); $i++) { ?>
+                    <div class="sidebar-widget">
+                        <ul>
+                            <?php global $post; $cat_posts = get_posts('numberposts=3&exclude='.$post_ID.'&category='.$all_cats_of_post[$i]->cat_ID);
+                            if($cat_posts) { ?>
+                                <h2 class="widget-title">More Inspiration</h2>
+                            <?php }
+                            foreach($cat_posts as $post) : ?>
+                                <div class="blog-post" id="post-<?php the_ID();?>">
+                                    <article>
+                                        <figure>
+                                            <a href="<?php the_permalink();?>">
+                                                <?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+                                                    the_post_thumbnail('blog');
+                                                } ?>
+                                                <figcaption>
+                                                    <h3><?php the_title();?></h3>
+                                                </figcaption>
+                                            </a>
+                                        </figure>
+                                    </article>
+                                </div>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                <?php } ?>
             </div>
 
         </div>

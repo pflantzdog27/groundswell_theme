@@ -2757,20 +2757,23 @@ body.vjs-full-window {
     .blog-post article footer a {
       text-decoration: underline; }
 
-#blog-block {
-  padding-bottom: 50px; }
-  #blog-block .blog-post-full {
-    margin-bottom: 40px; }
-  #blog-block .author-info figure {
-    margin: 0;
-    float: left; }
-  #blog-block .author-info .author-name {
-    float: left; }
-  #blog-block footer {
-    margin-top: 20px; }
-    #blog-block footer strong {
-      color: #44aeea;
-      text-transform: uppercase; }
+#blog-block .blog-post-full {
+  margin-bottom: 40px; }
+#blog-block .author-info figure {
+  margin: 0;
+  float: left; }
+#blog-block .author-info .author-name {
+  float: left; }
+#blog-block footer {
+  margin-top: 20px; }
+  #blog-block footer strong {
+    color: #44aeea;
+    text-transform: uppercase; }
+
+.blog-meta-info {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eaeaea; }
 
 .author-info {
   margin-bottom: 10px; }
@@ -2805,7 +2808,8 @@ body.vjs-full-window {
   padding: 90px 15px 40px 15px; }
   @media only screen and (max-width: 768px) {
     #right-sidebar {
-      padding-top: 40px;
+      border-top: 1px solid #eaeaea;
+      padding-top: 0;
       padding-bottom: 20px; } }
   #right-sidebar .sidebar-widget {
     margin-bottom: 30px; }
@@ -2863,7 +2867,8 @@ body.vjs-full-window {
   padding-top: 10px; }
 
 #inspiration-sidebar {
-  margin-top: 75px; }
+  margin-top: 75px;
+  padding-right: 0; }
   #inspiration-sidebar ul {
     margin-left: 0;
     padding-left: 0; }

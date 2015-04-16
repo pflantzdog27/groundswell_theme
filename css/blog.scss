@@ -102,7 +102,6 @@
     }
 }
 #blog-block {
-  padding-bottom: 50px;
     .blog-post-full {
       margin-bottom: 40px;
     }
@@ -122,6 +121,11 @@
          text-transform: uppercase;
        }
      }
+}
+.blog-meta-info {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eaeaea;
 }
 
 
@@ -165,7 +169,8 @@
 #right-sidebar {
   padding: 90px 15px 40px 15px;
     @include tablets {
-      padding-top: 40px;
+      border-top: 1px solid #eaeaea;
+      padding-top: 0;
       padding-bottom: 20px;
     }
     .sidebar-widget {
@@ -237,6 +242,7 @@
 
 #inspiration-sidebar {
   margin-top: 75px;
+  padding-right: 0;
     ul {
       margin-left: 0;
       padding-left: 0;
