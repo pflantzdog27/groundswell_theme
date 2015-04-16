@@ -635,13 +635,13 @@ GS.sectionHacks = new function() {
     }
 
     this.rightColHeight = function() {
-        $('.section-right-column').each(function() {
-            var leftColHeight = $(this).parent('.section-template').find('.section-left-column').height();
-            $(this).css('min-height', leftColHeight);
-        })
+        if ($('.section-right-column').html().length > 0) {
+            $('.section-right-column').each(function () {
+                var leftColHeight = $(this).parent('.section-template').find('.section-left-column').height();
+                $(this).css('min-height', leftColHeight);
+            })
+        }
     }
-
-
 };
 
 GS.blog = new function() {
