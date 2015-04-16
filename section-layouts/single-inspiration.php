@@ -105,9 +105,14 @@
         <li class="twitter col-xs-4"><a href="http://twitter.com/intent/tweet?url=&text=<?php the_title();?>&via=groundswellmvmt" target="_blank">
                 <i class="icon-twitter"></i><span class="hidden-xs"> Tweet</span>
             </a></li>
-        <li class="email col-xs-4"><a href="mailto:?subject=<?php the_title(); ?>&body=<?php the_permalink();?>">
-                <i class="icon-mail"></i><span class="hidden-xs"> Email</span>
-            </a></li>
+        <li class="bottom-menu col-xs-4">
+            <button type="button" class="navbar-toggle collapsed" id="hamburger-toggle" data-toggle="collapse" data-target="#primary-navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar top"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </li>
     </ul>
     <div class="clearfix"></div>
 </div>

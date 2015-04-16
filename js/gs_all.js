@@ -182,6 +182,9 @@ GS.navigation = new function(){
                 $('#primary-navigation').addClass('menu-expanded');
                 setTimeout(function() {
                     $('body > *').animate({'margin-left': '-190px', 'margin-right': '190px'}, 500);
+                    if($('#sticky-social-links').length > 0) {
+                        $('#sticky-social-links li').not('.bottom-menu').fadeOut(500);
+                    }
                     $('#primary-navigation').height(windowHeight);
                     $('.menu-expanded').animate({right: 0},500);
                 }, 1);
@@ -189,6 +192,9 @@ GS.navigation = new function(){
             } else {
                 $('body > *').animate({'margin-left': '0', 'margin-right': '0'}, 500);
                 $('.menu-expanded').animate({right: '-190px'},500);
+                if($('#sticky-social-links').length > 0) {
+                    $('#sticky-social-links li').not('.bottom-menu').fadeIn(500);
+                }
                 $('#primary-navigation').removeClass('menu-expanded');
             }
         })
@@ -436,7 +442,7 @@ GS.scrolloramaEffects = new function() {
                     TweenMax.fromTo($('.social-link-bar ul li'),.1,
                         {css: {'padding-left': 15, 'padding-right': 15 }, immediateRender: true},
                         {css: {'padding-left': 0, 'padding-right': 0}}),
-                    TweenMax.fromTo($('.social-link-bar ul li a'),.1,
+                    TweenMax.fromTo($('.social-link-bar ul li a, .social-link-bar ul li button'),.1,
                         {css: {'padding-top': 8, 'padding-bottom': 8 }, immediateRender: true},
                         {css: {'padding-top': 15, 'padding-bottom': 15}})
                 ]),
@@ -857,6 +863,11 @@ $(function() {
         if($('#social-navigation').length > 0) {
             GS.blog.affixSocialIcons();
         };
+        if($('#sticky-social-links').length > 0) {
+            $('.navbar-header').css('display','none');
+            $('#primary-navigation-wrapper').css({background : 'none', 'box-shadow' : '0 0 0 0'});
+            $('.single-post-header').css('padding-top','20px');
+        }
         GS.scrolloramaEffects.blog_single_social_icons();
         GS.blog.socialShare();
     }

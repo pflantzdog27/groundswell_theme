@@ -107,9 +107,20 @@
 .navbar-toggle {
   background: $gsBlue;
   border: 0;
+  margin: 0;
+  padding-left: 25px;
+  padding-right: 25px;
+  @include border-radius(0);
   .icon-bar {
-    color: #fff;
-    font-weight: bold;
+    border: 2px solid #fff;
+    width: 32px;
+      &.top {
+        @include border-radius(2px 2px 0 0);
+        margin-top: 2px;
+      }
+      &:last-child {
+        @include border-radius(0 0 2px 2px);
+      }
   }
 }
 

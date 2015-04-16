@@ -74,7 +74,7 @@ $mobileNavigationArgs = array(
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" id="hamburger-toggle" data-toggle="collapse" data-target="#primary-navigation">
                 <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
+                <span class="icon-bar top"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>

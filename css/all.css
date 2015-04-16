@@ -410,10 +410,25 @@ Extenders
 
 .navbar-toggle {
   background: #44aeea;
-  border: 0; }
+  border: 0;
+  margin: 0;
+  padding-left: 25px;
+  padding-right: 25px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0; }
   .navbar-toggle .icon-bar {
-    color: #fff;
-    font-weight: bold; }
+    border: 2px solid #fff;
+    width: 32px; }
+    .navbar-toggle .icon-bar.top {
+      -webkit-border-radius: 2px 2px 0 0;
+      -moz-border-radius: 2px 2px 0 0;
+      border-radius: 2px 2px 0 0;
+      margin-top: 2px; }
+    .navbar-toggle .icon-bar:last-child {
+      -webkit-border-radius: 0 0 2px 2px;
+      -moz-border-radius: 0 0 2px 2px;
+      border-radius: 0 0 2px 2px; }
 
 .vjs-default-skin {
   color: #ccc; }
@@ -2821,7 +2836,8 @@ body.vjs-full-window {
   left: 0;
   right: 0;
   z-index: 99;
-  background: rgba(0, 0, 0, 0.3); }
+  background: white;
+  padding: 10px 0; }
 
 .contact-curator {
   margin: 8px 0;
