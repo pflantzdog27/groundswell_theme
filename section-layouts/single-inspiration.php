@@ -33,7 +33,7 @@
                         </figure>
                     <?php endif; ?>
 
-                    <?php if($inspirationContent == 'WYSIWYG Editor') : ?>
+                    <?php if($inspirationContent == 'wysiwyg') : ?>
                         <?php echo $contentWYSIWYG ?>
                     <?php endif; ?>
 
