@@ -8,7 +8,7 @@
                 <div class="author-info row">
                     <div class="post-intro col-sm-12">
                         <div class="author-name">
-                            <h4>Posted by <?php the_author_posts_link();?></h4>
+                            <h4>Posted by <?php echo ($standardContentAuthor ? $standardContentAuthor : the_author_posts_link());?></h4>
                         </div>
                        <p><?php echo $inspirationIntro; ?></p>
                     </div>
@@ -33,8 +33,12 @@
                         </figure>
                     <?php endif; ?>
 
+                    <?php if($inspirationContent == 'wysiwyg') : ?>
+                        <?php echo $contentWYSIWYG ?>
+                    <?php endif; ?>
+
                     <?php if($inspirationContent == 'Slideshow') :
-                       include('components/inspiration-content-carousel.php');
+                       include('components/inspiration-slideshow.php');
                     endif; ?>
                     <?php echo $inspirationOutro ?>
                     <?php include('components/social-share-bar.php');?>

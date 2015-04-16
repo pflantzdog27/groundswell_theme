@@ -11,6 +11,7 @@
         $inspirationAbout = get_field('blog_posts_inspiration_about');
         $inspirationContent = get_field('blog_posts_inspiration_content');
         $videoSrc = get_field('blog_posts_inspiration_video');
+        $contentWYSIWYG = get_field('blog_posts_inspiration_wysiwyg');
         $videoObject = get_field('blog_posts_inspiration_video_object');
         $imageSrc = get_field('blog_posts_inspiration_image');?>
 
