@@ -355,6 +355,14 @@ form {
   }
 
 }
+#search-results-display {
+  li {
+    border-bottom: 1px solid #eaeaea;
+      &:last-child {
+        border-bottom: 0; 
+      }
+  }
+}
 
 // Cookies
 #slideDisplayWindow {
@@ -409,5 +417,6 @@ form {
     }
   }
 }
+
 
 

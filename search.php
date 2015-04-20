@@ -5,17 +5,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-8">
-                    <h1>Search Results for : <b><?php echo get_search_query(); ?></b></h1>
+                    <h1>Blog Search Results for : <b><?php echo get_search_query(); ?></b></h1>
                 </div>
             </div>
         </div>
     </header>
-    <section class="content-section">
+    <section id="blog" class="content-section">
         <div class="container">
 			<?php if ( have_posts() ) { ?>
-                <ul class="list-unstyled">
+                <ul class="list-unstyled" id="search-results-display">
                     <?php while ( have_posts() ) : the_post();?>
-                        <li><a href="<?php the_permalink();?>"><?php the_title(); ?></a></li>
+                        <li><h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2></li>
                     <?php endwhile; ?>
                 </ul>
 				<nav style="text-align: center;">

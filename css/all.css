@@ -3949,6 +3949,11 @@ form {
       -moz-border-radius: 0;
       border-radius: 0; }
 
+#search-results-display li {
+  border-bottom: 1px solid #eaeaea; }
+  #search-results-display li:last-child {
+    border-bottom: 0; }
+
 #slideDisplayWindow {
   position: fixed;
   left: 0;
