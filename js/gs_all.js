@@ -881,6 +881,10 @@ $(function() {
         GS.forms.contactForm();
     }
 
+    $('img').each(function() {
+        $(this).addClass('img-responsive');
+    })
+
 // END
 
 });
