@@ -5,12 +5,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-8">
-                    <h1>Blog Search Results for : <b><?php echo get_search_query(); ?></b></h1>
+                    <h1>Search Results for : <b><?php echo get_search_query(); ?></b></h1>
                 </div>
             </div>
         </div>
     </header>
-    <section id="blog" class="content-section">
+    <section class="content-section">
         <div class="container">
 			<?php if ( have_posts() ) { ?>
                 <ul class="list-unstyled" id="search-results-display">
@@ -22,13 +22,11 @@
 					<?php wpbeginner_numeric_posts_nav(); ?>
 				</nav>
 			<?php } else { ?>
-				<div class="section-template parallax three-column-section row">
 					<header style="text-align: center;">
                         <span class="icon-earth" style="display: block; font-size: 150px"></span>
 						<h3>Sorry, your search hasn't returned with any results. </h3>
                         <p>Try searching using a different term by clicking the search icon (<span class="glyphicon glyphicon-search"></span>) in the top navigation bar.</p>
 					</header>
-				</div>
 			<?php } ?>
         </div>
     </section>
