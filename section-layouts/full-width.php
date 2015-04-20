@@ -40,7 +40,7 @@
     <?php endif; ?>
     <?php if($fullBlock == 'Expandable Tabs') : // ***** EXPANDABLE TABS ****** ?>
         <?php echo $expandableTabsContent;?>
-        <?php if($expandableTabsActionText) { ?>
+        <?php if($expandableTabsActionText != '') { ?>
             <button class="btn gs-btn gs-btn-orange top-corner-btn"><a href="<?php echo $expandableTabsActionLink; ?>"><?php echo $expandableTabsActionText ?></a></button>
         <?php } ?>
     <?php endif; ?>
