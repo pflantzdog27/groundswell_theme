@@ -21,8 +21,6 @@
     .section-template {
         .section-right-column {
           @include flexbox;
-          margin-top: 15px;
-          margin-bottom: 15px;
           @include flexAlignItems(center);
           @include flexwrap(wrap);
         }
