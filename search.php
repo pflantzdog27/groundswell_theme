@@ -17,7 +17,7 @@
 			<?php if ( have_posts() ) { ?>
                 <ul class="list-unstyled" id="search-results-display">
                     <?php while ( have_posts() ) : the_post();?>
-                        <li><h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2></li>
+                        <li><h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2><small class="alert-warning">Relevance score: <b><?php echo $post->relevance_score; ?></b></small></li>
                     <?php endwhile; ?>
                 </ul>
 				<nav style="text-align: center;">
