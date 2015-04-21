@@ -4,8 +4,10 @@
     <header class="page-header">
         <div class="container">
             <div class="row">
-                <div class="col-sm-8">
+                <div class="col-sm-12">
                     <h1>Search Results for : <b><?php echo get_search_query(); ?></b></h1>
+                    <?php if (function_exists('relevanssi_didyoumean')) { relevanssi_didyoumean(get_search_query(), '<p class="alert alert-danger">Did you mean: ', "</p>", 5);
+                    }?>
                 </div>
             </div>
         </div>
