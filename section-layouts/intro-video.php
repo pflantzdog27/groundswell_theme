@@ -2,9 +2,11 @@
     <div id="intro-section">
         <video id="homepage-videoBG" class="video-js hidden-xs hidden-sm"
                controls="false"
-               preload="false"
+               preload="auto"
                autoplay="autoplay"
+               poster="null"
                muted="muted"
+               loop="true"
                data-setup='{ "techOrder": ["youtube"], "src": "<?php echo $introYoutubeSrc ;?>"}'>
             <img class="vjs-no-js" src="<?php bloginfo('template_url') ?>/images/training-bg.jpg">
         </video>

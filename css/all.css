@@ -1365,21 +1365,21 @@ body.vjs-full-window {
           font-size: 140px;
           font-size: 8.75rem; } }
 
-.faq li {
+.faq ul > li {
   position: relative;
   cursor: pointer;
   border-top: 1px solid #eaeaea; }
-  .faq li > span {
+  .faq ul > li > span {
     position: absolute;
     left: 0;
     top: 7px;
     color: #44aeea; }
-  .faq li .faq-question {
+  .faq ul > li .faq-question {
     padding-left: 25px;
     font-weight: 900; }
-    .faq li .faq-question.active {
+    .faq ul > li .faq-question.active {
       color: #44aeea; }
-  .faq li:first-child {
+  .faq ul > li:first-child {
     border-top: none; }
 .faq .faq-answer {
   cursor: auto;

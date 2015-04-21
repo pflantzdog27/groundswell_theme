@@ -133,10 +133,10 @@
 <div class="social-link-bar visible-xs" id="sticky-social-links">
     <ul class="list-unstyled col-sm-8 col-sm-offset-2">
         <li class="facebook col-xs-4"><a class="facebook-share" href="" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog','width=626,height=436')">
-                <i class="icon-facebook"></i><span class="hidden-xs"> Share</span>
+                <i class="icon-facebook"></i> Share
             </a></li>
         <li class="twitter col-xs-4"><a href="http://twitter.com/intent/tweet?url=&text=<?php the_title();?>&via=groundswellmvmt" target="_blank">
-                <i class="icon-twitter"></i><span class="hidden-xs"> Tweet</span>
+                <i class="icon-twitter"></i> Tweet
             </a></li>
         <li class="bottom-menu col-xs-4">
             <button type="button" class="navbar-toggle collapsed" id="hamburger-toggle" data-toggle="collapse" data-target="#primary-navigation">

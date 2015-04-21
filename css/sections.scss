@@ -141,11 +141,12 @@
 }
 
 .faq {
-  li {
-    position: relative;
-    cursor: pointer;
-    border-top: 1px solid #eaeaea;
-      > span{
+  ul {
+    > li {
+      position: relative;
+      cursor: pointer;
+      border-top: 1px solid #eaeaea;
+      > span {
         position: absolute;
         left: 0;
         top: 7px;
@@ -154,13 +155,14 @@
       .faq-question {
         padding-left: 25px;
         font-weight: 900;
-          &.active {
-            color: $gsBlue;
-          }
+        &.active {
+          color: $gsBlue;
+        }
       }
-      &:first-child  {
+      &:first-child {
         border-top: none;
       }
+    }
   }
       .faq-answer {
         cursor: auto;
