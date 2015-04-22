@@ -131,7 +131,11 @@
         return $matches[1];
     }
 
-
+//----------------------------//
+// disable WordPress sanitization for User Profile Description fields
+//----------------------------//
+remove_filter('pre_user_description', 'wp_filter_kses');
+add_filter( 'pre_user_description', 'wp_filter_post_kses');
 
 //----------------------------//
     // Support for SVG uploads to media library
