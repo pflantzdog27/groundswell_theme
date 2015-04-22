@@ -2773,6 +2773,8 @@ body.vjs-full-window {
   margin-top: 15px;
   padding-top: 15px;
   border-top: 1px solid #eaeaea; }
+  .blog-meta-info a {
+    text-decoration: underline; }
 
 .author-info {
   margin-bottom: 10px; }
