@@ -3081,8 +3081,7 @@ body.vjs-full-window {
     #column-buckets article {
       border-right: 0; } }
   #column-buckets article header {
-    margin-top: 20px;
-    height: 100px;
+    margin-top: 0;
     /*h2 {
       color: #333;
       text-align: center;
