@@ -813,13 +813,7 @@ $(function() {
     }
 
     if($('#petitions').length > 0 && $('#petition-wrap').length <= 0) { // IF PETITIONS BLOCKS
-        GS.petitions.slideToggleCats();
-        GS.petitions.selectCategory();
         GS.petitions.petitionsGenerator();
-        GS.scrolloramaEffects.parallax('#petition-wrap');
-        $(window).load(function(){
-            GS.petitions.scrollBar();
-        });
     }
 
     if($('.parallax').length > 0) { // IF PARALLAX EXISTS ON THE PAGE

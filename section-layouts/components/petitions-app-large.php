@@ -1,14 +1,4 @@
 <div id="petition-content">
-    <header class="groundswell-campaigns">
-        <h5 id="cat-selector" class="pull-right"><span>Topics</span> <b class="icon-arrow-down"></b></h5>
-        <ul id="cat-list" class="list-unstyled clearfix">
-            <script id="categoryLayout" type="text/html">
-                {{#.}}
-                <li data-value="categories/{{slug}}">{{category}}</li>
-                {{/.}}
-            </script>
-        </ul>
-    </header>
     <div id="petitions" class="block-layout-petitions scroll-area">
         <script id="petitionsLayout" type="text/html">
             <div class="row">
