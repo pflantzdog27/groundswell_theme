@@ -1,7 +1,7 @@
 <div id="petition-content">
     <header class="groundswell-campaigns row">
         <h3 class="col-xs-5">Campaigns</h3>
-        <h5 id="cat-selector" class="col-xs-7"><i class="hidden-xs">—</i><span>Topics</span><i class="hidden-xs">—</i> <b class="icon-arrow-down"></b></h5>
+        <h5 id="cat-selector" class="col-xs-7"><i class="hidden-xs">—</i> <span>Topics</span> <i class="hidden-xs">—</i> <b class="icon-arrow-down"></b></h5>
         <ul id="cat-list" class="list-unstyled clearfix">
             <script id="categoryLayout" type="text/html">
                 {{#.}}

@@ -3896,7 +3896,7 @@ button:active {
       top: 10px; }
   .select-menu .select-options {
     overflow: hidden;
-    max-height: 18px;
+    max-height: 180px;
     background: #fff;
     display: none;
     position: absolute;
