@@ -26,7 +26,7 @@ endif; ?>
     <div class="container">
         <h2 class="section-title">Campaigns</h2>
         <div class="parallax">
-            <?php include('section-layouts/components/petition-blocks.php');?>
+            <?php include('section-layouts/components/petitions-app-large.php');?>
         </div>
     </div>
 </section>
