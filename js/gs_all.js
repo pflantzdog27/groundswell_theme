@@ -539,7 +539,7 @@ GS.petitions = new function() {
                         title: item.title,
                         signatures: item.signature_count,
                         goal: item.goal,
-                        image : item.image,
+                        image : item.image_url,
                         url: item.url,
                         slug: item.slug,
                         creator: item.creator_name,
@@ -569,7 +569,7 @@ GS.petitions = new function() {
             })
             // error handling here
             .fail(function () {
-                petitions.append('<div id="no-content-message"><span class="icon-earth"></span><p class="bg-info">Sorry, there must be somthing wrong with our Petition display. Please <a href="/talk-to-us">contact us</a> so we can look into this. </p></div>')
+                petitions.append('<div id="no-content-message"><span class="icon-earth"></span><p class="bg-info">Sorry, this campaigns feature is generated via an API that isn\'t accessible at the moment. We\'re working on a solution now - please check back in shortly. <br></brY>You\'re welcome to <a href="/talk-to-us">contact us</a> if you have any questions. </p></div>')
             });
     };
 
