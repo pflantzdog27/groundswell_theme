@@ -249,8 +249,6 @@ add_filter( 'pre_user_description', 'wp_filter_post_kses');
         /**	Link to last page, plus ellipses if necessary */
         if ( ! in_array( $max, $links ) ) {
             if ( ! in_array( $max - 1, $links ) )
-                echo '<li>…</li>' . "\n";
-
             $class = $paged == $max ? ' class="active"' : '';
             printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
         }

@@ -3436,9 +3436,6 @@ body.vjs-full-window {
   align-items: center;
   height: 175px;
   overflow: hidden; }
-  @media only screen and (max-width: 768px) {
-    .carousel .item .partner-figure {
-      height: 100px; } }
 
 #full-width-slider {
   position: relative;
