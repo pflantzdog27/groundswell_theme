@@ -39,12 +39,9 @@
         <?php include('components/petition-blocks.php'); ?>
     <?php endif; ?>
 
-    <?php if($expandableTabs) {
-        include('components/expandable-tabs.php');
-    } ?>
-
     <?php if($fullBlock == 'Expandable Tabs') : // ***** EXPANDABLE TABS ****** ?>
         <?php echo $expandableTabsContent;?>
+        <?php include('components/expandable-tabs.php'); ?>
         <?php if($expandableTabsActionText != '') { ?>
             <button class="btn gs-btn gs-btn-orange top-corner-btn"><a href="<?php echo $expandableTabsActionLink; ?>"><?php echo $expandableTabsActionText ?></a></button>
         <?php } ?>
