@@ -1427,7 +1427,9 @@ body.vjs-full-window {
   padding: 0 !important; }
   @media only screen and (max-width: 768px) {
     .in-section-social .gs-btn {
-      max-width: 160px; } }
+      max-width: 160px;
+      padding-left: 0;
+      padding-right: 0; } }
 
 .single-column-section {
   position: relative; }
