@@ -220,9 +220,10 @@
 
 .in-section-social {
   padding: 0!important;
-    .gs-btn {
-      padding-left: 2px;
-      padding-right: 0;
+    @include tablets {
+      .gs-btn {
+        max-width: 160px;
+      }
     }
 }
 .single-column-section {
