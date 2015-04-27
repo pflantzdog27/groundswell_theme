@@ -3640,8 +3640,7 @@ a, button {
   a:focus, a:active, a:visited, button:focus, button:active, button:visited {
     color: inherit;
     border: 0;
-    outline: none;
-    background: inherit !important; }
+    outline: none; }
 
 p a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, small a {
   color: #ea5a3a;
