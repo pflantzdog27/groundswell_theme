@@ -1424,7 +1424,7 @@ body.vjs-full-window {
 .in-section-social {
   padding: 0 !important; }
   .in-section-social .gs-btn {
-    line-height: inherit; }
+    line-height: 1; }
 
 .single-column-section {
   position: relative; }
