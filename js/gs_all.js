@@ -639,7 +639,6 @@ GS.sectionHacks = new function() {
     this.rightColHeight = function() {
         $('.section-right-column').each(function () {
             if ($(this).children.length === 0) {
-                console.log('yea: '+ $(this).children.length);
                 var leftColHeight = $(this).parent('.section-template').find('.section-left-column').height();
                 $(this).css('min-height', leftColHeight);
             }

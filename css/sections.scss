@@ -24,6 +24,9 @@
           @include flexAlignItems(center);
           @include flexwrap(wrap);
         }
+        .section-left-column {
+          min-height: 50px; 
+        }
     }
     .gs-btn {
       margin-top: 25px;
