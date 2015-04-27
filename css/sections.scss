@@ -217,6 +217,9 @@
 
 .in-section-social {
   padding: 0!important;
+    .gs-btn {
+      line-height: inherit;       
+    }
 }
 .single-column-section {
   position: relative;
