@@ -7,7 +7,7 @@
         </div>
     </header>
 
-    <section class="content-section">
+    <section class="page-section">
         <div class="container">
             <?php the_content(); ?>
         </div>
