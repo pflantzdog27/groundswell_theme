@@ -29,10 +29,6 @@
       margin-top: 25px;
     }
     .top-corner-btn {
-      position: absolute;
-      top: -5px;
-      right: 15px;
-      margin-top: 0;
       @include tablets {
         position: static;
         margin-top: 15px;

@@ -1268,16 +1268,11 @@ body.vjs-full-window {
     flex-wrap: wrap; }
   .content-section .gs-btn {
     margin-top: 25px; }
-  .content-section .top-corner-btn {
-    position: absolute;
-    top: -5px;
-    right: 15px;
-    margin-top: 0; }
-    @media only screen and (max-width: 768px) {
-      .content-section .top-corner-btn {
-        position: static;
-        margin-top: 15px;
-        margin-bottom: 15px; } }
+  @media only screen and (max-width: 768px) {
+    .content-section .top-corner-btn {
+      position: static;
+      margin-top: 15px;
+      margin-bottom: 15px; } }
 
 .training-section .container {
   position: relative; }
