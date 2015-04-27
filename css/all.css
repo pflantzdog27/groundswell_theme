@@ -1266,8 +1266,6 @@ body.vjs-full-window {
     -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
-  .content-section .section-template .section-left-column {
-    min-height: 50; }
   .content-section .gs-btn {
     margin-top: 25px; }
   @media only screen and (max-width: 768px) {
@@ -1326,6 +1324,8 @@ body.vjs-full-window {
       position: absolute;
       right: 0;
       bottom: 0; }
+  .section-breaker .section-left-column {
+    min-height: 50px; }
 
 #inspiration .section-number {
   color: rgba(255, 255, 255, 0.4); }
