@@ -3693,6 +3693,9 @@ strong {
   box-shadow: 1px 2px 8px -1px rgba(0, 0, 0, 0.4);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   white-space: normal; }
+  @media only screen and (max-width: 768px) {
+    .gs-btn {
+      padding: 7px; } }
   .gs-btn a {
     color: white; }
     .gs-btn a:hover {
