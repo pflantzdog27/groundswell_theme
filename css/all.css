@@ -3069,6 +3069,10 @@ body.vjs-full-window {
       left: 0;
       right: 0;
       text-align: center; }
+    @media only screen and (max-width: 768px) {
+      #stats li {
+        top: 48%;
+        left: 42%; } }
 
 #submit-articles {
   background: rgba(0, 0, 0, 0.2);

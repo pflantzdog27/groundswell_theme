@@ -84,6 +84,10 @@
           right: 0;
           text-align: center;
         }
+      @include tablets {
+        top: 48%;
+        left: 42%;  
+      }
     }
 }
 
