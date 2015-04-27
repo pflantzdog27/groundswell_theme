@@ -1326,6 +1326,9 @@ body.vjs-full-window {
       bottom: 0; }
   .section-breaker .section-left-column {
     min-height: 50px; }
+    @media only screen and (max-width: 768px) {
+      .section-breaker .section-left-column .gs-btn {
+        padding: 7px 2px; } }
 
 #inspiration .section-number {
   color: rgba(255, 255, 255, 0.4); }

@@ -95,6 +95,11 @@
   }
   .section-left-column {
     min-height: 50px;
+      @include tablets {
+        .gs-btn {
+          padding: 7px 2px;
+        }
+      }
   }
 }
 
@@ -224,7 +229,7 @@
       .gs-btn {
         max-width: 160px;
         padding-left: 0;
-        padding-right: 0; 
+        padding-right: 0;
       }
     }
 }
