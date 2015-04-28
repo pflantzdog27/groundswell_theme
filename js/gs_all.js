@@ -135,6 +135,7 @@ GS.navigation = new function(){
         searchButton.click(function(e) {
             e.preventDefault()
             form.slideToggle(400);
+            form.find('input').focus();
         })
     };
 
@@ -438,10 +439,7 @@ GS.scrolloramaEffects = new function() {
                 .append([
                     TweenMax.fromTo($('.social-link-bar ul li'),.1,
                         {css: {'padding-left': 15, 'padding-right': 15 }, immediateRender: true},
-                        {css: {'padding-left': 0, 'padding-right': 0}}),
-                    TweenMax.fromTo($('.social-link-bar ul li a, .social-link-bar ul li button'),.1,
-                        {css: {'padding-top': 8, 'padding-bottom': 8 }, immediateRender: true},
-                        {css: {'padding-top': 15, 'padding-bottom': 15}})
+                        {css: {'padding-left': 0, 'padding-right': 0}})
                 ]),
             200, false);
     };

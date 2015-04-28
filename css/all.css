@@ -3834,7 +3834,7 @@ button:active {
       background: #ccc; }
     .social-link-bar li a, .social-link-column li a {
       display: block;
-      padding: 8px 0;
+      padding: 15px 0;
       text-decoration: none; }
       .social-link-bar li a:hover, .social-link-column li a:hover {
         color: white !important; }
