@@ -201,7 +201,7 @@ add_filter( 'pre_user_description', 'wp_filter_post_kses');
     function wpbeginner_numeric_posts_nav() {
         if( is_singular() )
             return;
-        global $wp_query;
+            global $wp_query;
 
         /** Stop execution if there's only 1 page */
         if( $wp_query->max_num_pages <= 1 )
@@ -225,7 +225,7 @@ add_filter( 'pre_user_description', 'wp_filter_post_kses');
             $links[] = $paged + 1;
         }
 
-        echo '<ul>' . "\n";
+        echo '<ul class="pagination">' . "\n";
 
         /**	Previous Post Link */
         if ( get_previous_posts_link() )
@@ -236,9 +236,9 @@ add_filter( 'pre_user_description', 'wp_filter_post_kses');
             $class = 1 == $paged ? ' class="active"' : '';
 
             printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
-
             if ( ! in_array( 2, $links ) )
                 echo '<li>…</li>';
+
         }
 
         /**	Link to current page, plus 2 pages in either direction if necessary */
@@ -251,8 +251,6 @@ add_filter( 'pre_user_description', 'wp_filter_post_kses');
         /**	Link to last page, plus ellipses if necessary */
         if ( ! in_array( $max, $links ) ) {
             if ( ! in_array( $max - 1, $links ) )
-                echo '<li>…</li>' . "\n";
-
             $class = $paged == $max ? ' class="active"' : '';
             printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
         }
