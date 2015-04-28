@@ -1438,7 +1438,8 @@ body.vjs-full-window {
   position: relative; }
 
 .page-section {
-  margin-top: 30px; }
+  margin-top: 30px;
+  margin-bottom: 5; }
 
 #petition-wrap {
   color: #333; }
