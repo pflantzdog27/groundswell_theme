@@ -238,8 +238,8 @@ function wpbeginner_numeric_posts_nav() {
         printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
 
         if ( ! in_array( 2, $links ) ) {
-            echo '<li>…</li>';
-        }           
+            echo '<li><a href="#" onclick="event.preventDefault();">…</a></li>';
+        }
     }
 
     /**	Link to current page, plus 2 pages in either direction if necessary */
