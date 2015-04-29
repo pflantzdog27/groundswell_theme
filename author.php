@@ -3,8 +3,10 @@
 
 <?php if ( have_posts() ) : ?>
     <?php $user_bio = get_the_author_meta('description'); ?>
+    <?php $user_email = get_the_author_meta('user_email'); ?>
     <?php $user_twitter = get_the_author_meta('twitter'); ?>
     <?php $user_facebook = get_the_author_meta('facebook'); ?>
+    <?php $user_linkedin = get_the_author_meta('linkedin'); ?>
 
 
     <header class="page-header">
@@ -18,8 +20,10 @@
                 <div class="col-md-10 col-xs-8">
                     <h1><?php the_author(); ?></h1>
                     <div class="contact-curator">
-                        <a href="<?php echo $user_facebook ?>" target="_blank"><i class="icon-facebook"></i>Facebook</a>
-                        <a href="http://twitter.com/<?php echo $user_twitter ?>" target="_blank"><i class="icon-twitter"></i>Twitter</a>
+                        <a href="mailto:<?php echo $user_email;?>"><i class="icon-mail"></i></a>
+                        <?php if($user_twitter) : ?><a href="https://twitter.com/<?php echo $user_twitter ?>" target="_blank"><i class="icon-twitter"></i></a><?php endif; ?>
+                        <?php if($user_facebook) : ?><a href="<?php echo $user_facebook ?>" target="_blank"><i class="icon-facebook"></i></a><?php endif; ?>
+                        <?php if($user_linkedin) : ?><a href="<?php echo $user_info->linkedin ?>" target="_blank"><i class="icon-linkedin"></i></a><?php endif; ?>
                     </div>
                     <p><?php echo $user_bio; ?></p>
                 </div>
