@@ -642,6 +642,11 @@ GS.sectionHacks = new function() {
             }
         })
     }
+    this.responsiveImgs = function() {
+        $('img').each(function() {
+            $(this).addClass('img-responsive');
+        })
+    }
 };
 
 GS.blog = new function() {
@@ -797,6 +802,7 @@ $(function() {
     GS.forms.emailSubscription();
     GS.navigation.mobileMenu();
     GS.cookies.displayTrigger();
+    GS.sectionHacks.responsiveImgs();
 
 
     if($('#petition-wrap').length > 0) { // IF PETITIONS EXIST ON THE PAGE
@@ -877,10 +883,6 @@ $(function() {
     if($('#contact').length > 0) {
         GS.forms.contactForm();
     }
-
-    $('img').each(function() {
-        $(this).addClass('img-responsive');
-    })
 
 // END
 
