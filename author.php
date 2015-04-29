@@ -23,7 +23,7 @@
                         <a href="mailto:<?php echo $user_email;?>"><i class="icon-mail"></i></a>
                         <?php if($user_twitter) : ?><a href="https://twitter.com/<?php echo $user_twitter ?>" target="_blank"><i class="icon-twitter"></i></a><?php endif; ?>
                         <?php if($user_facebook) : ?><a href="<?php echo $user_facebook ?>" target="_blank"><i class="icon-facebook"></i></a><?php endif; ?>
-                        <?php if($user_linkedin) : ?><a href="<?php echo $user_info->linkedin ?>" target="_blank"><i class="icon-linkedin"></i></a><?php endif; ?>
+                        <?php if($user_linkedin) : ?><a href="<?php echo $user_linkedin ?>" target="_blank"><i class="icon-linkedin"></i></a><?php endif; ?>
                     </div>
                     <p><?php echo $user_bio; ?></p>
                 </div>
