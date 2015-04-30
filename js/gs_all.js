@@ -78,6 +78,7 @@ GS.loadPosts = function() {
         $.each(data.posts, function (i, item) {
             var itemTitle = item.title;
             var thumbImage;
+            console.log('log: '+ item.thumbnail_images.full.url);
             if(item.thumbnail_images.full.url != undefined) {
                 thumbImage = item.thumbnail_images.full.url;
             } else {
