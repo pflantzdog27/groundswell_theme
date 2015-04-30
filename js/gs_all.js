@@ -78,7 +78,7 @@ GS.loadPosts = function() {
         $.each(data.posts, function (i, item) {
             var itemTitle = item.title;
             var thumbImage;
-            console.log('log: '+ item.thumbnail_images.full.url);
+            console.log('log: '+ item.thumbnail_images);
             templateData.push({
                 id : item.id,
                 title: html_entity_decode(itemTitle),
