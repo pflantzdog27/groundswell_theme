@@ -79,16 +79,11 @@ GS.loadPosts = function() {
             var itemTitle = item.title;
             var thumbImage;
             console.log('log: '+ item.thumbnail_images.full.url);
-            if(item.thumbnail_images.full.url != undefined) {
-                thumbImage = item.thumbnail_images.full.url;
-            } else {
-                thumbImage = 'http://placehold.it/300x300';
-            }
             templateData.push({
                 id : item.id,
                 title: html_entity_decode(itemTitle),
                 url: item.url,
-                image: thumbImage,
+                //image: thumbImage,
                 excerpt: item.custom_fields.blog_posts_excerpt,
                 author: item.author.name,
                 authorID: item.author.id,
