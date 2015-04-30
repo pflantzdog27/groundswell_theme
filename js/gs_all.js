@@ -77,11 +77,17 @@ GS.loadPosts = function() {
         GS.numberOfPages = data.pages;
         $.each(data.posts, function (i, item) {
             var itemTitle = item.title;
+            var thumbImage;
+            if(item.thumbnail_images.full.url) {
+                thumbImage = item.thumbnail_images.full.url;
+            } else {
+                thumbImage = 'http://placehold.it/300x300';
+            }
             templateData.push({
                 id : item.id,
                 title: html_entity_decode(itemTitle),
                 url: item.url,
-                image: item.thumbnail_images.full.url,
+                image: thumbImage,
                 excerpt: item.custom_fields.blog_posts_excerpt,
                 author: item.author.name,
                 authorID: item.author.id,
