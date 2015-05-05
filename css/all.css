@@ -430,7 +430,7 @@ Extenders
       border-radius: 0 0 2px 2px; }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: #44aeea; }
+  background-color: #44aeea !important; }
 
 .vjs-default-skin {
   color: #ccc; }
