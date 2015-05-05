@@ -3683,9 +3683,7 @@ p {
   padding-bottom: 0; }
 
 strong {
-  font-weight: 900;
-  font-size: 30px;
-  font-size: 1.875rem; }
+  font-weight: 900; }
 
 .gs-btn {
   -webkit-border-radius: 0;

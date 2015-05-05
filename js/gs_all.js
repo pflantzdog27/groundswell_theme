@@ -84,7 +84,7 @@ GS.loadPosts = function() {
             } else {
                 thumbImage = 'http://placehold.it/300x300';
             }
-            templateData.push({     
+            templateData.push({
                 id : item.id,
                 title: html_entity_decode(itemTitle),
                 url: item.url,
