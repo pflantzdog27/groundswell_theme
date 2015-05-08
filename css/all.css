@@ -431,7 +431,7 @@ Extenders
       border-radius: 0 0 2px 2px; }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: none !important; }
+  background-color: transparent !important; }
 
 .vjs-default-skin {
   color: #ccc; }
