@@ -432,7 +432,7 @@ Extenders
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
   background-color: transparent !important; }
 
-.social-link-bar .navbar-default .navbar-toggle:hover, .social-link-bar .navbar-default .navbar-toggle:focus {
+.social-link-bar .navbar-default .navbar-toggle:hover, .social-link-bar .navbar-default .navbar-toggle:focus, .social-link-bar navbar-toggle {
   background-color: #44aeea !important; }
 
 .vjs-default-skin {
