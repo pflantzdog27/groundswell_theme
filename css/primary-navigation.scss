@@ -128,3 +128,9 @@
   background-color: transparent!important;
 }
 
+.social-link-bar {
+  .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: $gsBlue!important;
+  }
+}
+
