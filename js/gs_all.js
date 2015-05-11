@@ -848,7 +848,7 @@ $(function() {
         if($('#stats').length > 0) {
             GS.scrolloramaEffects.stats('.content-section');
         }
-        if($('.video-js').length > 0) {
+        if($('.video-js').length > 0 && navigator.userAgent.match(/iPad/i) == null) {
             GS.backgroundVideo.sizingFunction();
         }
         if($('.faq').length > 0) {
