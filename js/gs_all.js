@@ -278,6 +278,8 @@ GS.backgroundVideo = new function() {
 
             if (navigator.userAgent.match(/iPad/i) != null) {
                 myPlayer.dispose();
+                $('#playback-control').remove();
+                $('#video-info').remove();
             };
 
             function resizeVideoJS(){
