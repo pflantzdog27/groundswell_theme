@@ -280,6 +280,7 @@ GS.backgroundVideo = new function() {
                 var width = document.getElementById(videoID).parentElement.offsetWidth;
                 myPlayer.width(width).height( width * aspectRatio );
             }
+
             window.onresize = resizeVideoJS;
 
             // end of video function
@@ -847,7 +848,7 @@ $(function() {
         if($('#stats').length > 0) {
             GS.scrolloramaEffects.stats('.content-section');
         }
-        if($(window).width() > 768 && $('.video-js').length > 0) {
+        if($('.video-js').length > 0) {
             GS.backgroundVideo.sizingFunction();
         }
         if($('.faq').length > 0) {
