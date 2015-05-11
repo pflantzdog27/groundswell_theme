@@ -330,7 +330,7 @@ GS.teamDisplay = new function() {
                 $(this).addClass('active');
                 $('#team-member-bio').slideDown(300).html(hiddenHtml);
 
-                if ($(window).width() < 768) {
+                if ($(window).width() <= 768) {
                     var scrollHere = parseInt($("#team-member-bio").offset().top);
                     $('html, body').animate({
                         scrollTop: scrollHere - 60
@@ -859,7 +859,7 @@ $(function() {
         if($('.faq').length > 0) {
             GS.landingPages.FAQ();
         }
-        if($('#column-buckets').length > 0 && $(window).width() > 768) {
+        if($('#column-buckets').length > 0 && $(window).width() >= 768) {
             GS.sectionHacks.evenLengthColumns();
         }
     }
@@ -876,7 +876,7 @@ $(function() {
         if($('#social-navigation').length > 0) {
             GS.blog.affixSocialIcons();
         };
-        if($(window).width() < 768) {
+        if($(window).width() <= 768) {
             $('.navbar-header').css('display','none');
             $('#primary-navigation-wrapper').css({background : 'none', 'box-shadow' : '0 0 0 0'});
             $('.single-post-header').css('padding-top','20px');
