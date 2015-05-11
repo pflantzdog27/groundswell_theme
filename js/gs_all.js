@@ -274,8 +274,11 @@ GS.backgroundVideo = new function() {
         myPlayer.width(width).height( width * aspectRatio );
         $('#hero').find('.container').height(width * aspectRatio);
 
-        videojs(videoID).ready(function(){
-            myPlayer.dispose();
+        videojs(videoID).ready(function() {
+
+            if (navigator.userAgent.match(/iPad/i) != null) {
+                myPlayer.dispose();
+            };
 
             function resizeVideoJS(){
                 var width = document.getElementById(videoID).parentElement.offsetWidth;
@@ -849,8 +852,7 @@ $(function() {
         if($('#stats').length > 0) {
             GS.scrolloramaEffects.stats('.content-section');
         }
-        console.log(navigator.userAgent.match(/iPad/i));
-        if($('.video-js').length > 0 && navigator.userAgent.match(/iPad/i) == null) {
+        if($('.video-js').length > 0) {
             GS.backgroundVideo.sizingFunction();
         }
         if($('.faq').length > 0) {
