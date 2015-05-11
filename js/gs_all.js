@@ -78,7 +78,6 @@ GS.loadPosts = function() {
         $.each(data.posts, function (i, item) {
             var itemTitle = item.title;
             var thumbImage;
-            console.log('log: '+ item.thumbnail_images);
             if(item.thumbnail_images != undefined) {
                 thumbImage = item.thumbnail_images.full.url;
             } else {
@@ -106,7 +105,7 @@ GS.loadPosts = function() {
         });
         var galleryTemplate = $(GS.template).html();
         $(GS.wrapper).append(Mustache.render(galleryTemplate, templateData));
-        if($(window).width() > 768) {
+        if($(window).width() >= 768) {
             GS.blog.blogRowHeights();
         }
         $(GS.wrapper).find('#blog-loading').fadeOut(800, function() {
