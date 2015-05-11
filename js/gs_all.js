@@ -848,8 +848,8 @@ $(function() {
         if($('#stats').length > 0) {
             GS.scrolloramaEffects.stats('.content-section');
         }
-        console.log(navigator.userAgent.match(/iPad/i) != null);        
-        if($('.video-js').length > 0 && navigator.userAgent.match(/iPad/i) == null) {
+        console.log(navigator.userAgent.match(/iPad/i));            
+        if($('.video-js').length > 0 && navigator.userAgent.match(/iPad/i) == false) {
             GS.backgroundVideo.sizingFunction();
         }
         if($('.faq').length > 0) {
