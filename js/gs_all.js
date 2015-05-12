@@ -899,7 +899,7 @@ $(function() {
     }
 
     if($(window).width() == 768) {
-        $('#hamburger').css({display : 'block!important', position: 'absolute', right: 0});
+        $('#hamburger-toggle').css({display : 'block!important', position: 'absolute', right: 0});
         $('.mobile-menu').css('display','block!important');
         $('.full-menu').css('display','none!important');
 
