@@ -1147,7 +1147,6 @@ body.vjs-full-window {
     top: 0;
     left: 0;
     right: 0;
-    min-height: 100%;
     background: rgba(0, 0, 0, 0.4); }
     @media only screen and (max-width: 992px) {
       #intro-section #hero {
@@ -1161,7 +1160,8 @@ body.vjs-full-window {
         position: relative;
         top: auto;
         left: auto;
-        right: auto; } }
+        right: auto;
+        height: 400px; } }
     #intro-section #hero .container {
       display: -webkit-box;
       display: -moz-box;
