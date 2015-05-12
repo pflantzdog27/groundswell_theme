@@ -437,6 +437,10 @@ Extenders
 .social-link-bar .navbar-default .navbar-toggle:hover, .social-link-bar .navbar-default .navbar-toggle:focus, .social-link-bar .navbar-toggle {
   background-color: #44aeea !important; }
 
+.mobile-menu {
+  width: 100%;
+  position: absolute; }
+
 .vjs-default-skin {
   color: #ccc; }
 
