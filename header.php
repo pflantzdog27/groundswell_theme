@@ -57,7 +57,7 @@ $navigationArgs = array(
     'menu_class'      => 'menu',
     'echo'            => true,
     'fallback_cb'     => 'wp_page_menu',
-    'items_wrap'      => '<ul class="full-menu nav navbar-nav navbar-right hidden-xs">%3$s</ul>'
+    'items_wrap'      => '<ul class="nav navbar-nav navbar-right hidden-xs">%3$s</ul>'
 );
 $mobileNavigationArgs = array(
     'theme_location'  => 'mobile_nav',
@@ -65,7 +65,7 @@ $mobileNavigationArgs = array(
     'menu_class'      => 'menu',
     'echo'            => true,
     'fallback_cb'     => 'wp_page_menu',
-    'items_wrap'      => '<ul class="mobile-menu nav navbar-nav visible-xs">%3$s</ul>'
+    'items_wrap'      => '<ul class="nav navbar-nav navbar-right visible-xs">%3$s</ul>'
 );
 
 ?>
