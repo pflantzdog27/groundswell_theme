@@ -12,13 +12,18 @@
 //***  Media Queries  ***/
 //***********************************************
 @mixin tablets {
-  @media only screen and (max-width: 769px) { @content; }
+  @media only screen and (max-width: 768px) { @content; }
 }
 @mixin desktops {
   @media only screen and (max-width: 992px) { @content; }
 }
 @mixin large-desktops {
   @media only screen and (max-width: 1200px) { @content; }
+}
+
+// height
+@mixin short-height {
+  @media only screen and (max-height: 750px) { @content; }
 }
 
 
