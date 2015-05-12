@@ -1147,7 +1147,7 @@ body.vjs-full-window {
     top: 0;
     left: 0;
     right: 0;
-    height: 100%;
+    min-height: 100%;
     background: rgba(0, 0, 0, 0.4); }
     @media only screen and (max-width: 992px) {
       #intro-section #hero {

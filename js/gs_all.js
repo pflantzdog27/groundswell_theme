@@ -859,7 +859,7 @@ $(function() {
         if($('.faq').length > 0) {
             GS.landingPages.FAQ();
         }
-        if($('#column-buckets').length > 0 && $(window).width() >= 768) {
+        if($('#column-buckets').length > 0 && $(window).width() > 768) {
             GS.sectionHacks.evenLengthColumns();
         }
     }

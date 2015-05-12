@@ -1,5 +1,5 @@
 <header id="intro-section-wrapper">
-    <div id="intro-section" style="background:url(<?php bloginfo('template_url') ?>/images/training-bg.jpg)">
+    <div id="intro-section">
         <video id="homepage-videoBG" class="video-js hidden-xs hidden-sm"
                controls="false"
                preload="auto"
