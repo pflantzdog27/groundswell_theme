@@ -903,9 +903,7 @@ $(function() {
     }
 
     $(window).resize(function() {
-        if($(window).width() > 768) {
-            $('.mobile-menu').css('display','none');
-        }
+        $('.mobile-menu').css('display','none');
     });
 
 // END

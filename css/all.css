@@ -3837,7 +3837,9 @@ button:active {
     -ms-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -webkit-transition: all 0.5s;
-    transition: all 0.5s; }
+    transition: all 0.5s;
+    padding-left: 0;
+    padding-right: 0; }
     .social-link-bar li.facebook a, .social-link-column li.facebook a {
       background: #3b5998; }
     .social-link-bar li.twitter a, .social-link-column li.twitter a {
