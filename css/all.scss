@@ -206,6 +206,8 @@ button:active {
       font-weight: 900;
       text-align: center;
       @include transition(all 0.5s);
+      padding-left: 0;
+      padding-right: 0;
         &.facebook a  {
           background: #3b5998;
         }

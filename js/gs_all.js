@@ -180,28 +180,39 @@ GS.navigation = new function(){
         });
     };
     this.mobileMenu = function() {
-        $('.navbar-toggle').click(function() {
+        $('#hamburger').click(function() {
             var windowHeight = $(window).height();
-            if($('.collapse.in').length == 0) {
-                $('#primary-navigation').addClass('menu-expanded');
-                setTimeout(function() {
+            var statusCheck;
+            if(statusCheck != 'open') {
+                $('.mobile-menu').addClass('menu-expanded');
                     $('body > *').animate({'margin-left': '-190px', 'margin-right': '190px'}, 500);
                     if($('#sticky-social-links').length > 0) {
                         $('#sticky-social-links li').not('.bottom-menu').fadeOut(500);
                     }
                     $('#primary-navigation').height(windowHeight);
                     $('.menu-expanded').animate({right: 0},500);
-                }, 1);
-
+                    statusCheck = 'open';
             } else {
                 $('body > *').animate({'margin-left': '0', 'margin-right': '0'}, 500);
                 $('.menu-expanded').animate({right: '-190px'},500);
                 if($('#sticky-social-links').length > 0) {
                     $('#sticky-social-links li').not('.bottom-menu').fadeIn(500);
                 }
-                $('#primary-navigation').removeClass('menu-expanded');
+                $('.mobile-menu').removeClass('menu-expanded');
             }
         })
+    }
+
+    this.toggleMenuDisplay = function() {
+        if($(window).width <= 768) {
+            $('#hamburger').css('display','block');
+            $('.mobile-menu').css('display','block');
+            $('.full-menu').css('display','none');
+        } else {
+            $('#hamburger').css('display','none');
+            $('.mobile-menu').css('display','none');
+            $('.full-menu').css('display','block');
+        }
     }
 
 };
@@ -814,6 +825,10 @@ $(function() {
     GS.navigation.searchDisplay();
     GS.forms.emailSubscription();
     GS.navigation.mobileMenu();
+    GS.toggleMenuDisplay();
+    $(window).resize(function() {
+        GS.toggleMenuDisplay();
+    });
     GS.cookies.displayTrigger();
     GS.sectionHacks.responsiveImgs();
 
@@ -900,5 +915,5 @@ $(function() {
 
 // END
 
-});
+});                 
 

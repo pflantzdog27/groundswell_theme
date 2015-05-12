@@ -57,7 +57,7 @@ $navigationArgs = array(
     'menu_class'      => 'menu',
     'echo'            => true,
     'fallback_cb'     => 'wp_page_menu',
-    'items_wrap'      => '<ul class="nav navbar-nav navbar-right hidden-xs">%3$s</ul>'
+    'items_wrap'      => '<ul class="full-menu nav navbar-nav navbar-right">%3$s</ul>'
 );
 $mobileNavigationArgs = array(
     'theme_location'  => 'mobile_nav',
@@ -65,14 +65,14 @@ $mobileNavigationArgs = array(
     'menu_class'      => 'menu',
     'echo'            => true,
     'fallback_cb'     => 'wp_page_menu',
-    'items_wrap'      => '<ul class="nav navbar-nav navbar-right visible-xs">%3$s</ul>'
+    'items_wrap'      => '<ul class="mobile-menu">%3$s</ul>'
 );
 
 ?>
 <nav id="primary-navigation-wrapper" class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" id="hamburger-toggle" data-toggle="collapse" data-target="#primary-navigation">
+            <button type="button" id="hamburger-toggle">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar top"></span>
                 <span class="icon-bar"></span>
@@ -81,7 +81,7 @@ $mobileNavigationArgs = array(
             <a class="navbar-brand" href="<?php echo get_home_url(); ?>"><img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/logo.svg" alt="Groundswell Logo"></a>
         </div>
 
-        <div class="collapse navbar-collapse pull-right" id="primary-navigation">
+        <div class="pull-right" id="primary-navigation">
             <h4 class="visible-xs" style="text-align:center;color:#fff">Menu</h4>
 
             <?php wp_nav_menu( $navigationArgs ); // NAVIGATION HERE ?>
