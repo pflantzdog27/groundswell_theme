@@ -65,7 +65,7 @@ $mobileNavigationArgs = array(
     'menu_class'      => 'menu',
     'echo'            => true,
     'fallback_cb'     => 'wp_page_menu',
-    'items_wrap'      => '<ul style="width:100%; position: absolute;" class="nav navbar-nav"><h4 style="text-align:center;color:#fff; background:#44aeea;">Menu</h4>%3$s</ul>'
+    'items_wrap'      => '<ul style="width:100%; position: absolute;" class="nav navbar-nav hidden-sm"><h4 style="text-align:center;color:#fff; background:#44aeea;">Menu</h4>%3$s</ul>'
 );
 
 ?>
@@ -82,8 +82,6 @@ $mobileNavigationArgs = array(
         </div>
 
         <div class="collapse navbar-collapse pull-right" id="primary-navigation">
-            <h4 class="visible-xs" style="text-align:center;color:#fff">Menu</h4>
-
             <?php wp_nav_menu( $navigationArgs ); // NAVIGATION HERE ?>
             <?php wp_nav_menu( $mobileNavigationArgs ); // MOBILE NAVIGATION HERE ?>
 
