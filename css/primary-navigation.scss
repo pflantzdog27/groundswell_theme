@@ -111,6 +111,8 @@
   padding-left: 25px;
   padding-right: 25px;
   @include border-radius(0);
+  position: absolute;
+  right: 0;
   .icon-bar {
     border: 2px solid #fff;
     width: 32px;

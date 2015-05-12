@@ -65,7 +65,7 @@ $mobileNavigationArgs = array(
     'menu_class'      => 'menu',
     'echo'            => true,
     'fallback_cb'     => 'wp_page_menu',
-    'items_wrap'      => '<ul class="nav navbar-nav navbar-right visible-xs">%3$s</ul>'
+    'items_wrap'      => '<ul class="nav navbar-nav">%3$s</ul>'
 );
 
 ?>
