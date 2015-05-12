@@ -880,8 +880,9 @@ $(function() {
             $('.navbar-header').css('display','none');
             $('#primary-navigation-wrapper').css({background : 'none', 'box-shadow' : '0 0 0 0'});
             $('.single-post-header').css('padding-top','20px');
+            $('#sticky-social-links').css('display','block');
         }
-        GS.scrolloramaEffects.blog_single_social_icons();
+        //GS.scrolloramaEffects.blog_single_social_icons();
         GS.blog.socialShare();
     }
 
