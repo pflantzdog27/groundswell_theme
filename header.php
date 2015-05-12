@@ -12,7 +12,7 @@
 	<link rel="shortcut icon" href="<?php bloginfo('template_url') ?>/images/favicon.ico">
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS2 Feed" href="<?php bloginfo('rss2_url'); ?>">  
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">  
-	<!--<link rel="stylesheet" href="<?php // bloginfo('template_url') ?>/css/bootstrap.min.css">-->
+	<link rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/all.css">
     <?php wp_head(); ?>
 </head>  
