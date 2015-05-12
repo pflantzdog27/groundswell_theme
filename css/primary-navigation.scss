@@ -104,13 +104,13 @@
       background: #fff;
     }
 }
-#hamburger {
+.navbar-toggle {
+  //background-color: $gsBlue;
   border: 0;
   margin: 0;
   padding-left: 25px;
   padding-right: 25px;
   @include border-radius(0);
-  display: none;
   .icon-bar {
     border: 2px solid #fff;
     width: 32px;
@@ -124,4 +124,13 @@
   }
 }
 
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: transparent!important;
+}
+
+.social-link-bar {
+  .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus, .navbar-toggle {
+    background-color: $gsBlue!important;
+  }
+}
 
