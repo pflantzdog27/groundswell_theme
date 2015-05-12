@@ -898,6 +898,16 @@ $(function() {
         GS.forms.contactForm();
     }
 
+    if($(window).width() > 768) {
+        $('.mobile-menu').css('display','none');
+    }
+
+    $(window).resize(function() {
+        if($(window).width() > 768) {
+            $('.mobile-menu').css('display','none');
+        }
+    });
+
 // END
 
 });
