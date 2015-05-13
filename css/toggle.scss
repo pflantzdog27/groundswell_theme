@@ -131,6 +131,10 @@ $button-trans-delay: 0.3s;
     background: #eaeaa;
     span {
       background: $gsBlue;
+      &::before,
+      &::after {
+        background-color: $gsBlue;
+      }
     }
   }
 }

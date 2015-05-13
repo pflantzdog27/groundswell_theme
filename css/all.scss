@@ -222,12 +222,15 @@ button:active {
           display: block;
           padding: 10px 15px;
           text-decoration: none;
+            @include tablets {
+              padding: 2px 12px;
+            }
             &:hover {
               color: #fff!important;
             }
         }
       &:hover {
-        margin-top: -10px;
+        //margin-top: -10px;
         text-decoration: none;
       }
     }
