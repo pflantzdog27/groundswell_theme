@@ -6,8 +6,8 @@
 
 $button-width: 50px;
 $button-height: 50px;
-$bar-thickness: 8px;
-$button-pad: 13px;
+$bar-thickness: 3px;
+$button-pad: 15px;
 $button-trans-delay: 0.3s;
 
 /**
@@ -79,7 +79,7 @@ $button-trans-delay: 0.3s;
  */
 
 .cmn-toggle-switch__htx {
-  background-color: $gsBlue;
+  background-color: none;
 }
 
 .cmn-toggle-switch__htx span {
