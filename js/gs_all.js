@@ -287,7 +287,7 @@ GS.backgroundVideo = new function() {
         var aspectRatio = 4/9.4;
         var width = document.getElementById(videoID).parentElement.offsetWidth;
         myPlayer.width(width).height( width * aspectRatio );
-        $('#hero').find('.container').height(width * aspectRatio);
+        $('#hero').find('.container').height($('hero').height());
 
         videojs(videoID).ready(function() {
 
