@@ -22,7 +22,7 @@ $button-trans-delay: 0.3s;
   display: block;
   position: relative;
   overflow: hidden;
-  margin: 5px 10px;
+  margin: 0 10px;
   padding: 0;
   width: $button-width;
   height: $button-height;
@@ -33,7 +33,7 @@ $button-trans-delay: 0.3s;
   appearance: none;
   box-shadow: none;
   border-radius: none;
-  border: 1px solid #fff;
+  border: none;
   cursor: pointer;
   transition: background $button-trans-delay;
 }

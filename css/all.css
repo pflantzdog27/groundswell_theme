@@ -430,8 +430,7 @@ Extenders
       border-radius: 0 0 2px 2px; }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: transparent !important;
-  border: 1px solid #fff; }
+  background-color: transparent !important; }
 
 .social-link-bar .navbar-default .navbar-toggle:hover, .social-link-bar .navbar-default .navbar-toggle:focus, .social-link-bar .navbar-toggle {
   background-color: #44aeea !important; }
@@ -3595,7 +3594,7 @@ a img.aligncenter {
   display: block;
   position: relative;
   overflow: hidden;
-  margin: 5px 10px;
+  margin: 0 10px;
   padding: 0;
   width: 40px;
   height: 40px;
@@ -3606,7 +3605,7 @@ a img.aligncenter {
   appearance: none;
   box-shadow: none;
   border-radius: none;
-  border: 1px solid #fff;
+  border: none;
   cursor: pointer;
   transition: background 0.3s; }
 
