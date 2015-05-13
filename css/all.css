@@ -292,8 +292,7 @@ Extenders
   @media only screen and (max-width: 767px) {
     #intro-section #hero .container h1, .page-header h1, .jumbotron h1 {
       font-size: 50px;
-      font-size: 3.125rem;
-      padding-top: 200px; } }
+      font-size: 3.125rem; } }
 
 #intro-section #hero .container h2, .page-header h2, .jumbotron h2 {
   font-size: 40px;
@@ -1159,6 +1158,7 @@ body.vjs-full-window {
         background-image: url(../images/training-bg.jpg);
         position: relative;
         top: auto;
+        bottom: 0;
         left: auto;
         right: auto;
         min-height: 400px; } }

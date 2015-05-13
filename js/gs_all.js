@@ -298,6 +298,7 @@ GS.backgroundVideo = new function() {
             };
 
             function resizeVideoJS(){
+                $('#hero').find('.container').height(width * aspectRatio);
                 var width = document.getElementById(videoID).parentElement.offsetWidth;
                 myPlayer.width(width).height( width * aspectRatio );
             }
