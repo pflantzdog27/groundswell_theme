@@ -8,7 +8,7 @@
                muted="muted"
                loop="true"
                data-setup='{ "techOrder": ["youtube"], "src": "<?php echo $introYoutubeSrc ;?>"}'>
-            <img class="vjs-no-js" src="<?php bloginfo('template_url') ?>/images/training-bg.jpg">
+            <img class="vjs-no-js" src="<?php bloginfo('template_url') ?>/images/gs-cover-photo.jpg">
         </video>
 
         <div id="hero">
