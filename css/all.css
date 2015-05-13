@@ -2843,7 +2843,7 @@ body.vjs-full-window {
   right: 0;
   z-index: 99;
   background: white;
-  padding: 10px 0;
+  padding: 3px 0;
   display: none; }
 
 .contact-curator {
@@ -3662,7 +3662,7 @@ a img.aligncenter {
   transition-delay: 0s, 0.3s; }
 
 .bottom-menu .cmn-toggle-switch {
-  background: #eaeaa; }
+  background: #eaeaea; }
   .bottom-menu .cmn-toggle-switch span {
     background: #44aeea; }
     .bottom-menu .cmn-toggle-switch span::before, .bottom-menu .cmn-toggle-switch span::after {
@@ -3924,7 +3924,9 @@ button:active {
     padding-right: 0; }
     @media only screen and (max-width: 767px) {
       .social-link-bar li, .social-link-column li {
-        margin-top: 5px; } }
+        margin-top: 5px; }
+        .social-link-bar li:last-child, .social-link-column li:last-child {
+          margin-top: 0; } }
     .social-link-bar li.facebook a, .social-link-column li.facebook a {
       background: #3b5998; }
     .social-link-bar li.twitter a, .social-link-column li.twitter a {
@@ -3937,7 +3939,7 @@ button:active {
       text-decoration: none; }
       @media only screen and (max-width: 767px) {
         .social-link-bar li a, .social-link-column li a {
-          padding: 5px 12px; } }
+          padding: 8px 12px; } }
       .social-link-bar li a:hover, .social-link-column li a:hover {
         color: white !important; }
     .social-link-bar li:hover, .social-link-column li:hover {

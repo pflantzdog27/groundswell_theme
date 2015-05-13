@@ -211,6 +211,9 @@ button:active {
       padding-right: 0;
       @include tablets {
         margin-top: 5px;
+        &:last-child {
+          margin-top: 0;
+        }
       }
         &.facebook a  {
           background: #3b5998;
@@ -226,7 +229,7 @@ button:active {
           padding: 10px 15px;
           text-decoration: none;
             @include tablets {
-              padding: 5px 12px;
+              padding: 8px 12px;
             }
             &:hover {
               color: #fff!important;
