@@ -125,3 +125,13 @@ $button-trans-delay: 0.3s;
   transition-delay: 0s, $button-trans-delay;
 }
 
+
+.bottom-menu {
+  .cmn-toggle-switch {
+    background: #eaeaa;
+    span {
+      background: $gsBlue;
+    }
+  }
+}
+

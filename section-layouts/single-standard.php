@@ -31,7 +31,7 @@
         </div>
         <?php get_sidebar('sidebar_blog_single');?>
     </div>
-    <div class="social-link-bar" id="sticky-social-links">
+    <div class="social-link-bar visible-xs" id="sticky-social-links">
         <ul class="list-unstyled col-sm-8 col-sm-offset-2">
             <li class="facebook col-xs-4"><a class="facebook-share" href="" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog','width=626,height=436')">
                     <i class="icon-facebook"></i> Share
@@ -40,11 +40,8 @@
                     <i class="icon-twitter"></i> Tweet
                 </a></li>
             <li class="bottom-menu col-xs-4">
-                <button type="button" class="navbar-toggle collapsed" id="hamburger-toggle" data-toggle="collapse" data-target="#primary-navigation">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar top"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                <button type="button" class="navbar-toggle collapsed cmn-toggle-switch cmn-toggle-switch__htx visible-xs" id="hamburger-toggle" data-toggle="collapse" data-target="#primary-navigation">
+                    <span>toggle menu</span>
                 </button>
             </li>
         </ul>

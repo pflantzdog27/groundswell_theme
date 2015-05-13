@@ -1,5 +1,5 @@
 #primary-navigation-wrapper {
-  background: $gsBlue;      
+  background: $gsBlue;
   border: 0;
   height: 45px;
   margin-bottom: 0;
@@ -128,15 +128,10 @@
   background-color: transparent!important;
 }
 
-.social-link-bar {
-  .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus, .navbar-toggle {
-    background-color: $gsBlue!important;
-  }
-}
-
 .page-template-landing-page {
   #primary-navigation-wrapper {
     background-color: transparent;
+    @include box-shadow(0 0 0 0,rgba(0, 0, 0, 0));
   }
 }
 
