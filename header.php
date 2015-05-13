@@ -72,11 +72,8 @@ $mobileNavigationArgs = array(
 <nav id="primary-navigation-wrapper" class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed visible-xs" id="hamburger-toggle" data-toggle="collapse" data-target="#primary-navigation">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar top"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+            <button type="button" class="navbar-toggle collapsed cmn-toggle-switch visible-xs" id="hamburger-toggle" data-toggle="collapse" data-target="#primary-navigation">
+                <span>toggle menu</span>
             </button>
             <a class="navbar-brand" href="<?php echo get_home_url(); ?>"><img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/logo.svg" alt="Groundswell Logo"></a>
         </div>
