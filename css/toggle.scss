@@ -129,6 +129,8 @@ $button-trans-delay: 0.3s;
 .bottom-menu {
   .cmn-toggle-switch {
     background: #eaeaa;
+    height: 30px;
+    width: 30px;
     span {
       background: $gsBlue;
       &::before,
