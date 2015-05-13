@@ -3128,6 +3128,9 @@ body.vjs-full-window {
   -moz-border-radius: 0;
   border-radius: 0; }
 
+.modal-backdrop {
+  z-index: -1; }
+
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
 .fancybox-wrap,
 .fancybox-skin,
