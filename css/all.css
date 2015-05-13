@@ -3596,8 +3596,8 @@ a img.aligncenter {
   overflow: hidden;
   margin: 0;
   padding: 0;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   font-size: 0;
   text-indent: -9999px;
   -webkit-appearance: none;
@@ -3615,9 +3615,9 @@ a img.aligncenter {
 .cmn-toggle-switch span {
   display: block;
   position: absolute;
-  top: 23px;
-  left: 10px;
-  right: 10px;
+  top: 18px;
+  left: 2px;
+  right: 2px;
   height: 4px;
   background: white; }
 
@@ -3632,10 +3632,10 @@ a img.aligncenter {
   content: ""; }
 
 .cmn-toggle-switch span::before {
-  top: -13px; }
+  top: -16px; }
 
 .cmn-toggle-switch span::after {
-  bottom: -13px; }
+  bottom: -16px; }
 
 /**
  * Style 2
