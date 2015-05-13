@@ -430,7 +430,8 @@ Extenders
       border-radius: 0 0 2px 2px; }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: transparent !important; }
+  background-color: transparent !important;
+  border: 1px solid #fff; }
 
 .social-link-bar .navbar-default .navbar-toggle:hover, .social-link-bar .navbar-default .navbar-toggle:focus, .social-link-bar .navbar-toggle {
   background-color: #44aeea !important; }
@@ -3594,7 +3595,7 @@ a img.aligncenter {
   display: block;
   position: relative;
   overflow: hidden;
-  margin: 0 10px;
+  margin: 5px 10px;
   padding: 0;
   width: 40px;
   height: 40px;
@@ -3616,8 +3617,8 @@ a img.aligncenter {
   display: block;
   position: absolute;
   top: 18px;
-  left: 10px;
-  right: 10px;
+  left: 8px;
+  right: 8px;
   height: 4px;
   background: white; }
 
@@ -3632,10 +3633,10 @@ a img.aligncenter {
   content: ""; }
 
 .cmn-toggle-switch span::before {
-  top: -8px; }
+  top: -10px; }
 
 .cmn-toggle-switch span::after {
-  bottom: -8px; }
+  bottom: -10px; }
 
 /**
  * Style 2
@@ -3662,7 +3663,7 @@ a img.aligncenter {
 
 /* active state, i.e. menu open */
 .cmn-toggle-switch__htx.active {
-  background-color: #181e49; }
+  background-color: rgba(255, 255, 255, 0.2); }
 
 .cmn-toggle-switch__htx.active span {
   background: none; }

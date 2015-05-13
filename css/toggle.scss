@@ -7,7 +7,7 @@
 $button-width: 40px;
 $button-height: 40px;
 $bar-thickness: 4px;
-$button-pad: 10px;
+$button-pad: 8px;
 $button-trans-delay: 0.3s;
 
 /**
@@ -22,7 +22,7 @@ $button-trans-delay: 0.3s;
   display: block;
   position: relative;
   overflow: hidden;
-  margin: 0 10px;
+  margin: 5px 10px;
   padding: 0;
   width: $button-width;
   height: $button-height;
@@ -33,7 +33,7 @@ $button-trans-delay: 0.3s;
   appearance: none;
   box-shadow: none;
   border-radius: none;
-  border: 1px solid #fff; 
+  border: 1px solid #fff;
   cursor: pointer;
   transition: background $button-trans-delay;
 }
@@ -103,7 +103,7 @@ $button-trans-delay: 0.3s;
 /* active state, i.e. menu open */
 
 .cmn-toggle-switch__htx.active {
-  background-color: darken(rgb(50, 62, 149), 20%);
+  background-color: rgba(255,255,255,0.2);
 }
 
 .cmn-toggle-switch__htx.active span {
