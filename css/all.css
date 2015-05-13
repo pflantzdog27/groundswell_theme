@@ -3662,9 +3662,7 @@ a img.aligncenter {
   transition-delay: 0s, 0.3s; }
 
 .bottom-menu .cmn-toggle-switch {
-  background: #eaeaa;
-  height: 30px;
-  width: 30px; }
+  background: #eaeaa; }
   .bottom-menu .cmn-toggle-switch span {
     background: #44aeea; }
     .bottom-menu .cmn-toggle-switch span::before, .bottom-menu .cmn-toggle-switch span::after {
