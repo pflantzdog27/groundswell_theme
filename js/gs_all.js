@@ -297,14 +297,6 @@ GS.backgroundVideo = new function() {
                 $('#video-info').remove();
             };
 
-            function resizeVideoJS(){
-                $('#hero').find('.container').height(width * aspectRatio);
-                var width = document.getElementById(videoID).parentElement.offsetWidth;
-                myPlayer.width(width).height( width * aspectRatio );
-            }
-
-            window.onresize = resizeVideoJS;
-
             // end of video function
             this.on("ended", function(){
                 myPlayer.posterImage.show();
@@ -926,4 +918,10 @@ $(function() {
 // END
 
 });
+
+$(window).resize(function() {
+    if($('.video-js').length > 0) {
+        GS.backgroundVideo.sizingFunction();
+    }
+})
 
