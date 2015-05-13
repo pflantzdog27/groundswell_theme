@@ -3924,9 +3924,7 @@ button:active {
     padding-right: 0; }
     @media only screen and (max-width: 767px) {
       .social-link-bar li, .social-link-column li {
-        margin-top: 5px; }
-        .social-link-bar li:last-child, .social-link-column li:last-child {
-          margin-top: 0; } }
+        margin-top: 5px; } }
     .social-link-bar li.facebook a, .social-link-column li.facebook a {
       background: #3b5998; }
     .social-link-bar li.twitter a, .social-link-column li.twitter a {
