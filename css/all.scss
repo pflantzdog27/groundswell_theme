@@ -226,7 +226,7 @@ button:active {
           padding: 10px 15px;
           text-decoration: none;
             @include tablets {
-              padding: 8px 12px;
+              padding: 9px 5px;     
             }
             &:hover {
               color: #fff!important;

@@ -3940,7 +3940,7 @@ button:active {
       text-decoration: none; }
       @media only screen and (max-width: 767px) {
         .social-link-bar li a, .social-link-column li a {
-          padding: 8px 12px; } }
+          padding: 9px 5px; } }
       .social-link-bar li a:hover, .social-link-column li a:hover {
         color: white !important; }
     .social-link-bar li:hover, .social-link-column li:hover {

@@ -19,7 +19,7 @@
     background: rgba(0,0,0,0.4);
       @include desktops {
         @include coverBG();
-        background-image: url(../images/gs-cover-photo.jpg);        
+        background-image: url(../images/gs-cover-photo.jpg);
         position: relative;
         top: auto;
         left: auto;
