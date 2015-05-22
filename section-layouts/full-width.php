@@ -28,11 +28,11 @@
         <?php include('components/photo-gallery-buckets.php'); ?>
     <?php endif; ?>
 
-    <?php if($fullBlock == 'Blog Block') : // ***** BLOG POSTS ****** ?>
+    <?php if($fullBlock == 'Blog Block') : // ***** BLOG POSTS ****** ?>                    
         <?php $blogCat = get_category($fullBlockBlogCat);?>
         <div id="single-row-blogs" data-start-cat="<?php echo $blogCat->slug;?>">
             <?php include('components/blog-widget.php'); ?>
-            <button class="btn gs-btn gs-btn-orange"><a href="#">Read more of the latest on our blog</a></button>
+            <button class="btn gs-btn gs-btn-orange"><a href="/blog">Read more of the latest on our blog</a></button>
         </div>
     <?php endif; ?>
     <?php if($fullBlock == 'Recent Campaigns') : // ***** RECENT CAMPAIGNS ****** ?>
