@@ -28,7 +28,7 @@
         <?php include('components/photo-gallery-buckets.php'); ?>
     <?php endif; ?>
 
-    <?php if($fullBlock == 'Blog Block') : // ***** BLOG POSTS ****** ?>                    
+    <?php if($fullBlock == 'Blog Block') : // ***** BLOG POSTS ****** ?>
         <?php $blogCat = get_category($fullBlockBlogCat);?>
         <div id="single-row-blogs" data-start-cat="<?php echo $blogCat->slug;?>">
             <?php include('components/blog-widget.php'); ?>
