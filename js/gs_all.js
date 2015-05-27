@@ -906,6 +906,7 @@ $(function() {
     }
 
     $('.wysiwyg-content').find('iframe').wrap('<div class="embed-responsive embed-responsive-16by9"></div>')
+    $('.wysiwyg-content').find('embed').wrap('<div class="embed-responsive embed-responsive-16by9"></div>')
 
 });
 
