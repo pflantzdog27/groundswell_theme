@@ -34,7 +34,7 @@
                     <?php endif; ?>
 
                     <?php if($inspirationContent == 'wysiwyg') : ?>
-                        <div class="embed-responsive embed-responsive-16by9">
+                        <div>
                             <?php echo $contentWYSIWYG ?>
                         </div>
                     <?php endif; ?>
