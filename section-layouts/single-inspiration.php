@@ -34,7 +34,7 @@
                     <?php endif; ?>
 
                     <?php if($inspirationContent == 'wysiwyg') : ?>
-                        <div>
+                        <div class="wysiwyg-content">
                             <?php echo $contentWYSIWYG ?>
                         </div>
                     <?php endif; ?>
