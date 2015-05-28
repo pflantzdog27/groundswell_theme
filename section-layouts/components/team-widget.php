@@ -7,7 +7,7 @@
                 $user_info = get_userdata($stafferSelection['ID']);
                 ?>
                 <li>
-                    <header>
+                    <header class="team-member">
                         <img src="<?php echo get_avatar_url(get_avatar( $stafferSelection['ID'], 300 )); ?>" alt="<?php echo $stafferSelection['user_firstname'];?> <?php echo $stafferSelection['user_lastname'];?>" class="img-responsive">
                         <h4><?php echo $stafferSelection['user_firstname'];?> <?php echo $stafferSelection['user_lastname'];?></h4>
                     </header>
