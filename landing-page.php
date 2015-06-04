@@ -59,6 +59,7 @@ $flyoutActionLinkCheckerTwo = get_field('flyout_message_action_link_checker_two'
         $sectionTextColor = get_sub_field('layout_section_text_color');
         $sectionBackground = get_sub_field('section_background');
         $sectionBackgroundColor = get_sub_field('section_background_color');
+        $sectionBackgroundColorPicker = get_sub_field('section_background_color_picker');
         $sectionBackgroundImage = get_sub_field('section_background_image');
         $sectionNumberCheck = get_sub_field('section_layout_number_check');
         $sectionNumber = get_sub_field('section_layout_number');
@@ -96,7 +97,10 @@ $flyoutActionLinkCheckerTwo = get_field('flyout_message_action_link_checker_two'
         $expandableTabsActionText = get_sub_field('layout_section_expandable_tabs_action');
         ?>
 
-        <section id="section-<?php echo $i; ?>" class="<?php echo ($sectionBackground == 'Image' ? 'coverBG' : false);?> <?php echo ($sectionDividerCheck ? 'section-breaker' : 'content-section');?>" style="<?php echo ($sectionBackground == 'Image' ? 'background-image:url('.$sectionBackgroundImage.');' :'background:'. $sectionBackgroundColor.';');?> color: <?php echo $sectionTextColor; ?>">
+        <section id="section-<?php echo $i; ?>" class="<?php echo ($sectionBackground == 'Image' ? 'coverBG' : false);?> <?php echo ($sectionDividerCheck ? 'section-breaker' : 'content-section');?>"
+                 style="<?php echo ($sectionBackground == 'Image' ? 'background-image:url('.$sectionBackgroundImage.');' : null);?>
+                        <?php echo ($sectionBackground == 'Color' && $sectionBackgroundColor != 'custom' ? 'background:'.$sectionBackgroundColor.';' : null);?>
+                        <?php echo ($sectionBackground == 'Color' && $sectionBackgroundColor == 'custom' ? 'background:'.$sectionBackgroundColorPicker.';' : null);?> color: <?php echo $sectionTextColor; ?>">
             <?php if($sectionNumberCheck) : ?>
                 <aside class="section-number hidden-xs hidden-sm">
                     <span style="color:<?php echo ($sectionNumberColor == 'Dark' ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.2)');?>"><?php echo $sectionNumber; ?></span>
