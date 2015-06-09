@@ -6,7 +6,7 @@
         $all_cats_of_post = get_the_category($post_ID);
         for($i = 0; $i < sizeof($all_cats_of_post); $i++) { ?>
             <?php global $post; $cat_posts = get_posts('numberposts=3&exclude='.$post_ID.'&category='.$all_cats_of_post[0]->cat_ID);
-            if($cat_posts) { ?>
+            if($cat_posts && $all_cats_of_post[0]->cat_ID != 27 && $all_cats_of_post[0]->cat_ID != 26 && $all_cats_of_post[0]->cat_ID != 28 && $all_cats_of_post[0]->cat_ID != 29 && $all_cats_of_post[0]->cat_ID != 1) { ?>
                 <div class="sidebar-widget">
                     <ul>
                         <h2 class="widget-title">On <?php echo $all_cats_of_post[$i]->cat_name; ?></h2>
