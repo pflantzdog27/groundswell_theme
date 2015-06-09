@@ -5,7 +5,7 @@
         <?php  $post_ID = $wp_query->posts[0]->ID;
         $all_cats_of_post = get_the_category($post_ID);
         for($i = 0; $i < sizeof($all_cats_of_post); $i++) { ?>
-            <?php global $post; $cat_posts = get_posts('numberposts=3&exclude='.$post_ID.'&category='.$all_cats_of_post[$i]->cat_ID);
+            <?php global $post; $cat_posts = get_posts('numberposts=3&exclude='.$post_ID.'&category='.$all_cats_of_post[0]->cat_ID);
             if($cat_posts) { ?>
                 <div class="sidebar-widget">
                     <ul>
