@@ -5,7 +5,7 @@
         <?php  $post_ID = $wp_query->posts[0]->ID;
         $all_cats_of_post = get_the_category($post_ID);
         for($i = 0; $i < sizeof($all_cats_of_post); $i++) { ?>
-			<?php if($all_cats_of_post[i]->cat_ID != 27 && $all_cats_of_post[i]->cat_ID != 26 && $all_cats_of_post[i]->cat_ID != 28 && 		$all_cats_of_post[i]->cat_ID != 29 && $all_cats_of_post[i]->cat_ID != 1) { ?>
+			<?php if($all_cats_of_post[$i]->cat_ID != 27 && $all_cats_of_post[$i]->cat_ID != 26 && $all_cats_of_post[$i]->cat_ID != 28 && 		$all_cats_of_post[$i]->cat_ID != 29 && $all_cats_of_post[$i]->cat_ID != 1) { ?>
 				<?php global $post; $cat_posts = get_posts('numberposts=3&exclude='.$post_ID.'&category='.$all_cats_of_post[i]->cat_ID);
 				if($cat_posts) { ?>
 					<div class="sidebar-widget">
