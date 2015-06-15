@@ -3777,6 +3777,9 @@ p {
   -moz-border-radius: 5px;
   border-radius: 5px; }
 
+td, th {
+  padding: 4px; }
+
 .no-border {
   -webkit-box-shadow: 0 0;
   -moz-box-shadow: 0 0;
