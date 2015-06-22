@@ -72,7 +72,7 @@
                 $all_cats_of_post = get_the_category($post_ID); ?>
                 <div class="sidebar-widget">
                     <ul>
-                        <?php global $post; $cat_posts = get_posts('numberposts=3&exclude='.$post_ID.'&category='.$all_cats_of_post[$i]->cat_ID);
+                        <?php global $post; $cat_posts = get_posts('numberposts=3&exclude='.$post_ID.'&category_name=inspiration');
                         if($cat_posts) { ?>
                             <h2 class="widget-title">More Inspiration</h2>
                         <?php }
