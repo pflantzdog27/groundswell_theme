@@ -137,6 +137,12 @@
       left: 0;
       right: 0;
       text-align: center;
+      @include tablets {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        right: auto;
+      }
       button {
         width: 60%;
       }

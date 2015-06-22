@@ -3107,6 +3107,12 @@ body.vjs-full-window {
     left: 0;
     right: 0;
     text-align: center; }
+    @media only screen and (max-width: 767px) {
+      #column-buckets article footer {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        right: auto; } }
     #column-buckets article footer button {
       width: 60%; }
   #column-buckets article:last-child {

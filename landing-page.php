@@ -1,4 +1,3 @@
-
 <?php
 /*
 Template Name: Landing Page
@@ -117,7 +116,6 @@ $flyoutActionLinkCheckerTwo = get_field('flyout_message_action_link_checker_two'
 
 <?php if($flyoutMessage) : ?>
    <?php include('section-layouts/flyout-message.php'); ?>
-
 <?php endif; ?>
 <?php endwhile; endif; // END primary if/while statements ?>
 

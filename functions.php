@@ -9,7 +9,6 @@
         $options['pages'] = array(
             _('Blog Topics'),
             _('Footer'),
-            _('Flyout'),
         );
         return $options;
     }
