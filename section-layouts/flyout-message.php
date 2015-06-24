@@ -1,3 +1,17 @@
+<?php
+$flyoutTitle = get_field('flyout_message_title');
+$flyoutContent = get_field('flyout_message_content');
+$flyoutContentWysiwyg = get_field('flyout_message_content_wysiwyg_editor');
+$flyoutBackground = get_field('flyout_message_background');
+$flyoutAction = get_field('flyout_message_action');
+$flyoutActionText = get_field('flyout_message_action_text');
+$flyoutActionLink = get_field('flyout_message_action_link');
+$flyoutActionLinkChecker = get_field('flyout_message_action_link_checker');
+$flyoutActionTextTwo = get_field('flyout_message_action_text_two');
+$flyoutActionLinkTwo = get_field('flyout_message_action_link_two');
+$flyoutActionLinkCheckerTwo = get_field('flyout_message_action_link_checker_two');
+?>
+
 <aside class="container hidden-xs" id="slideDisplayWindow" data-switch="<?php echo ($flyoutMessage == true ? 'active' : false);?>">
     <div class="col-md-4 col-sm-8" style="background: rgba(<?php echo $flyoutBackground; ?>,1);">
         <?php if($flyoutTitle) : ?>
