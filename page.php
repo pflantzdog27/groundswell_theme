@@ -12,7 +12,9 @@
             <?php the_content(); ?>
         </div>
     </section>
-
+    <?php if($flyoutMessage) : ?>
+        <?php include('section-layouts/flyout-message.php'); ?>
+    <?php endif; ?>
     <?php endwhile; endif; ?>
 
 <?php get_footer(); ?>
